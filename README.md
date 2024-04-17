@@ -1,6 +1,6 @@
 # NEOCORTEX
 
-> _This is my personal [obsidian](obsidian.md) vault, which won't be entirely readable / coherent through GitHub._
+> _This is my personal [obsidian](https://obsidian.md) vault, which won't be entirely readable / coherent through GitHub._
 > 
 > _I'll release a published website of this vault soon._
 ### Structure
