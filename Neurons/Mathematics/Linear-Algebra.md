@@ -9,17 +9,14 @@ The transpose of a matrix is essentially the flipping of rows of the matrix with
 
 Given the matrix $X$
 
-
 $X = \begin{pmatrix} 2, 3 \\ 3, 2 \\ 5, 1 \\ 4, 2 \end{pmatrix}$
-
 
 the tranpose of it is:
 
-
 $X^T = \begin{pmatrix} 2, 3, 5, 4 \\ 3, 2, 1, 2 \end{pmatrix} $
 
-
 </details>
+
 <details>
 <summary> Example 2 </summary>
 

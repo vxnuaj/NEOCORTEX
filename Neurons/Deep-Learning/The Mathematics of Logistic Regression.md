@@ -1,4 +1,4 @@
-## The Mathematics of Logistic Regression
+#deeplearning #mathematics
 
 >_Full implementation [here](logreg2.py)_
 
