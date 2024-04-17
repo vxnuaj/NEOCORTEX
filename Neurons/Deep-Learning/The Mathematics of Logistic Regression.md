@@ -1,5 +1,3 @@
->_Full implementation [here](logreg2.py)_
-
 Given that we're using
 - Weight matrix $W$
 - Input matrix $X$
