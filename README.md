@@ -5,4 +5,4 @@ This folder holds all the "neurons" of this "neocortex". It holds all the ideas,
 ##### FOR MYSELF
 This folder holds my personal philosophy, thoughts, and ideas that apply to my life.
 
-**Both will (or will be) continuously updated.**
+**Both are being (or will be) continuously updated.**
