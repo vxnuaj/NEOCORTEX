@@ -1,5 +1,3 @@
-#deeplearning #mathematics
-
 >_Full implementation [here](logreg2.py)_
 
 Given that we're using

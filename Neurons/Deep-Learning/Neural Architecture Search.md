@@ -1,5 +1,3 @@
-#deeplearning 
-
 Neural Architecture search (NAS) is a method to automate the design of [[Neural network]].
 
 Essentially, it allows us to design high-performing deep learning model architectures using other ML models, billions of times faster than humans
