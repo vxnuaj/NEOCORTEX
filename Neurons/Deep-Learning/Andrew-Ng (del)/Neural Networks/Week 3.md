@@ -18,7 +18,7 @@ First neuron in the second layer:
 
 $z_{1}^2 = w_{1}^{[2]T}x_1^{[2]} + b_{1}^{[2]} $
 
-</details> <br>
+</details> 
 
 A neural network is essentially a combination of logistic regression computations. A single logistic regression model can be equivalent to a single neuron of a neural network.
 
