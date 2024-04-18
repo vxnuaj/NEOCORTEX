@@ -9,6 +9,6 @@ It's key features contain these key components:
 2. A **memory** **unit**
 3. An **Input/Output device**
 
-The **[[CPU]]** is defined as the circuit which is used for the execution of a specific computer program. It's made up of a [[Control Unit]] (CU), an Arithmetic and Logic Unit ([[ALU]]), and a variety of [[registers]]. 
+The **[[CPU]]** is the circuit which is used for the execution of a specific computer program. It's made up of a [[Control Unit]] (CU), an Arithmetic and Logic Unit ([[ALU]]), and a variety of [[registers]]. 
 
-The control unit 
+
