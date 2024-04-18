@@ -1,3 +1,5 @@
+#mathematics
+
 Given that we're using
 - Weight matrix $W$
 - Input matrix $X$

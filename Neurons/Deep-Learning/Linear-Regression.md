@@ -1,3 +1,5 @@
+#models
+
 Linear regression is a statistical method used to model the line of best fit amongst existing datapoints, to predict a next point, at least as accurate as a linear model can.
 
 The line of best fit is modeled using $y = mx + b$ (think 6th/7th grade algebra), where 

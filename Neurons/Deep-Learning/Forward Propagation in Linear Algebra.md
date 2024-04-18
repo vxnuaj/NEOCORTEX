@@ -1,3 +1,5 @@
+#mathematics
+
 > _For only a single training / test sample!_
 
 Let's consider a simple network:
