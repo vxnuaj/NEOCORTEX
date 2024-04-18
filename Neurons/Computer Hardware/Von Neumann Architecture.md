@@ -5,8 +5,10 @@
 The von Neumann architecture outlines the basic structure for a computer's central processing unit ([[CPU]]) 
 
 It's key features contain these key components:
-1. **Memory**, for storing data and programs that are being executed by the [[CPU]]
-2. A **[[CPU]],** responsible for executing the instructions stored within the 
-3. Arithmetic logic unit ([[ALU]])
+1. A **[[CPU]]**
+2. A **memory** **unit**
+3. An **Input/Output device**
 
-The key
+The **[[CPU]]** is defined as the circuit which is used for the execution of a specific computer program. It's made up of a [[Control Unit]] (CU), an Arithmetic and Logic Unit ([[ALU]]), and a variety of [[registers]]. 
+
+The control unit 
