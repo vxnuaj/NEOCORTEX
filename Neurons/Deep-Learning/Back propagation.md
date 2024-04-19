@@ -30,4 +30,8 @@ $\frac{∂L}{∂B_1} = (\frac{∂L}{∂Z_1})(\frac{∂Z_1}{∂B_1}) = W \frac{�
 
 [^1]:  The $(\frac{∂L}{∂A_2})(\frac{∂A_2}{∂Z_2})$ is equivalent to $A - Y$ (given by $\frac{∂L}{∂Z_2}$) and the $\frac{∂Z_2}{∂W_2}$ is equivalent to $X$ given that in the original linear combination, the multiplication of $W \cdot X$ is equal to $Z$.
 
-[^2]: The $\frac{∂L}{∂B_2}$ is equivalent to $A - Y$ as $(\frac{∂L}{∂A_2})(\frac{∂A_2}{∂Z_2}) = \frac{∂L}{∂Z_2} = A - Y$ and $(\frac{∂Z_2}{∂B_2})$ yields $0$ given that $B$ is a constant in the linear combination of $W \cdot X + B$
+[^2]: The $\frac{∂L}{∂B_2}$ is equivalent to $A - Y$ as $(\frac{∂L}{∂A_2})(\frac{∂A_2}{∂Z_2}) = \frac{∂L}{∂Z_2} = A - Y$ and $(\frac{∂Z_2}{∂B_2})$ yields $0$ given that $B$ is a constant in the linear combination of $W \cdot X + B$. **(*So wouldn't the gradient of loss w.r.t bias always be 0?*)**
+
+
+
+
