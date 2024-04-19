@@ -10,7 +10,7 @@ Mathematically, given a neural network of one output layer and one hidden layer,
 
 $\frac{∂L}{∂Z_2} =  (\frac{∂L}{∂A_2})(\frac{∂A_2}{∂Z_2}) = A_2 - Y$
 
-$\frac{∂L}{∂W_2} = (\frac{∂L}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂W_2}) = A_1 (A_2 - Y)$[^1]
+$\frac{∂L}{∂W_2} = (\frac{∂L}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂W_2}) = A_1^T (A_2 - Y)$[^1]
 
 $\frac{∂L}{∂B_2} = (\frac{∂L}{∂Z_2})(\frac{∂Z_2}{∂B_2}) = A_2 - Y$[^2]
 
@@ -24,7 +24,7 @@ $B = B - ⍺(\frac{∂L}{∂B_2})$
 
 $\frac{∂L}{∂Z_1} = (\frac{∂L}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂A_1})(\frac{∂A_1}{∂Z_1}) = W_2 \frac{∂L}{∂Z_2} * \frac{∂L}{∂A_1}$ 
 
-$\frac{∂L}{∂W_1} = (\frac{∂L}{∂Z_1})(\frac{∂Z_1}{∂W_1}) = \frac{∂L}{∂Z_1}X$ [^3]
+$\frac{∂L}{∂W_1} = (\frac{∂L}{∂Z_1})(\frac{∂Z_1}{∂W_1}) = \frac{∂L}{∂Z_1}X^T$ [^3]
 
 $\frac{∂L}{∂B_1} = (\frac{∂L}{∂Z_1})(\frac{∂Z_1}{∂B_1}) = W_1 \frac{∂L}{∂Z_2} * \frac{∂L}{∂A_1} = \frac{∂L}{∂Z_1}$[^4]
 
