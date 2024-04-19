@@ -8,11 +8,11 @@ Mathematically, given a neural network of one output layer and one hidden layer,
 
 ***Output layer:***
 
-$\frac{∂L}{∂Z_2} =  (\frac{∂L}{∂A_2})(\frac{∂A_2}{∂Z_2}) = A - Y$
+$\frac{∂L}{∂Z_2} =  (\frac{∂L}{∂A_2})(\frac{∂A_2}{∂Z_2}) = A_2 - Y$
 
-$\frac{∂L}{∂W_2} = (\frac{∂L}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂W_2}) = X (A - Y)$[^1]
+$\frac{∂L}{∂W_2} = (\frac{∂L}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂W_2}) = A_1 (A_2 - Y)$[^1]
 
-$\frac{∂L}{∂B_2} = (\frac{∂L}{∂Z_2})(\frac{∂Z_2}{∂B_2}) = A - Y$[^2]
+$\frac{∂L}{∂B_2} = (\frac{∂L}{∂Z_2})(\frac{∂Z_2}{∂B_2}) = A_2 - Y$[^2]
 
 > *$\frac{∂Z}{∂B_2}$ is $1$ given that $B$ is an isolated value, hence we get $A - Y$ for $\frac{∂L}{∂B_2}$*
 
