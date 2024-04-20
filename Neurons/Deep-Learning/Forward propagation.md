@@ -1,3 +1,4 @@
+#mathematics 
 Forward propagation is the feeding forward an input sample into a neural network to get a final prediction based on that same input.
 
 The mathematics, in the case of 2 layer neural network, is defined as:
