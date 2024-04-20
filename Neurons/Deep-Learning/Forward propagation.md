@@ -4,23 +4,23 @@ The mathematics, in the case of 2 layer neural network, is defined as:
 
 ***First layer:***
 
-$Z^1 = W^1X + B^1$[^1]
-$A^1 = g(Z^1)$
+$Z_1 = W_1X + B_1$[^1]
+$A_1 = g(Z_1)$
 
 ***Second layer:***
 
-$Z^2 = W^2A^1 + B^1$[^1]
-$A^2 = g(Z^2)$
-$\hat{y} = A^2$
+$Z_2 = W_2A_1 + B_1$[^1]
+$A_2 = g(Z_2)$
+$\hat{y} = A_2$
 
 where,
 
-- $W^j$ is the weighted matrix at $jth$ layer
-- $B^j$ is the bias column vector at $jth$ layer
-- $Z^j$ is the weighted sum at $jth$ layer
-- - $g()$ is the activation function of the model.
-- $A^j$ is the activation matrix from the $jth$ layer
+- $W_j$ is the weighted matrix at $jth$ layer
+- $B_j$ is the bias column vector at $jth$ layer
+- $Z_j$ is the weighted sum at $jth$ layer
+- $g()$ is the activation function of the model.
+- $A_j$ is the activation matrix from the $jth$ layer
 
-[^1]: You might need to transpose $W$ depending on how you initialize the shape of the matrix or the shape of your input, $X$ / $A^1$
+[^1]: You might need to transpose $W$ depending on how you initialize the shape of the matrix or the shape of your input, $X$ / $A_1$
 
 
