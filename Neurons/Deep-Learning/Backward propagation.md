@@ -2,7 +2,11 @@
 
 Back propagation updates parameters to a global minima of a given loss function through the calculation of the gradients of a [[loss function]] with respect to specific parameters and an [[update rule]].
 
-The mathematics, in the case of a 2 layer network, is defined as:
+The vectorized mathematics, 
+
+>*Reminder: If we're calculating the gradient in a non-vectorized manner, we don't need to compute the averages through divisions by $m$ or summations.*
+
+in the case of a 2 layer network, is defined as:
 
 > *Using the [[sigmoid]] activation function and [[log loss]] function*
 
