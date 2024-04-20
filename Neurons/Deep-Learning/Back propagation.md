@@ -2,6 +2,17 @@
 
 Back propagation updates parameters to a global minima of a given loss function through the calculation of the gradients of a [[loss function]] with respect to specific parameters and an [[update rule]].
 
+The mathematics, in the case of a 2 layer network, is defined as:
+
+***First Layer:***
+
+
+
+
+
+
+---
+
 Mathematically, given a neural network of one output layer and one hidden layer, this might looks as:
 
 > *If we use [[Log Loss]] as our [[loss function]]*
