@@ -1,29 +1,24 @@
-Gradient descent is an optimization algorithm commonly used in neural networks which involves [[forward propagation]] to get the prediction of a model, [[Back propagation]] to get the gradients of a model, and then an [[update rule]] to optimize the parameters of a model through a [[learning rate]] for a specific number of epochs to the global minima of a [[loss function]].
+Gradient descent is an optimization algorithm commonly used in neural networks that involves [[forward propagation]] to get the prediction of a model, [[back propagation]] to get the gradients of the loss w.r.t to params of a model, and then an [[update rule]] to optimize the params of a model through a [[learning rate]] for a specific number of epochs to the global minima of a [[loss function]].
 
-For example, let's say we have a simple logistic regression model with 3 inputs, hence we have 3 weight parameters and one bias parameter
+For example, say we had a neural network of:
+--- start-multi-column: ExampleRegion1  
+```column-settings  
+number of columns: 2
+largest column: right
+border:off
+shadow:off
+```
+$w^1$, of dims ()
+$b^1$ 
+$w^2$ 
+$b^2$ 
 
-- The weight matrix is defined as $W$ and the bias matrix is defined as $B$.
-- The loss function is defined as $L$
-- The activation output is defined as $A$
-- The weighted sum is defined as $Z$
+--- end-column ---
 
-Gradient descent for updating the weights of this model would mathematically look as:
+$n_x = n^0$, corresponding to total input features.
+$n^1$, corresponding to number of neurons in hidden layer.
+$n^2$, corresponding to number of neurons in the output layer
 
-$A = σ(W · X + B)$
 
-$L = -Y*log(A) - (1 - Y)*log(1 - A)$
-
-$\frac{∂L}{∂W} = (\frac{∂L}{∂A})(\frac{∂A}{∂Z})(\frac{∂Z}{∂W})$
-
-$W = W - ⍺ * \frac{∂L}{∂W}$
-
-while the gradient descent for updating the bias would look as:
-
-$A = σ(W · X + B)$
-
-$L = -Y*log(A) - (1 - Y)*log(1 - A)$
-
-$\frac{∂L}{∂B} = (\frac{∂L}{∂Z})(\frac{∂Z}{∂B})$
-
-$B = B - ⍺ * \frac{∂L}{∂B}$
+--- end-multi-column
 

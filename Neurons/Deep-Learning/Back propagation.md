@@ -10,7 +10,7 @@ Mathematically, given a neural network of one output layer and one hidden layer,
 
 $\frac{∂L}{∂Z_2} =  (\frac{∂L}{∂A_2})(\frac{∂A_2}{∂Z_2}) = A_2 - Y$
 
-$\frac{∂L}{∂W_2} = (\frac{∂L}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂W_2}) = A_1^T (A_2 - Y)$[^1]
+$\frac{∂L}{∂W_2} = (\frac{∂L}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂W_2}) = A_1^T (A_2 - Y)$[^1] [^6]
 
 $\frac{∂L}{∂B_2} = (\frac{∂L}{∂Z_2})(\frac{∂Z_2}{∂B_2}) = A_2 - Y$[^2]
 
@@ -41,3 +41,5 @@ The reason we don't taking the summation when calculating $\frac{∂L}{∂W}$ is
 [^4]: Similarly to footnote 2,[^2],  $(\frac{∂Z_1}{∂B_1})$ will yield 1 hence the $\frac{∂L}{∂B_1}$ is determined by $\frac{∂L}{∂Z_1}$ and $B$ is updated by $\frac{∂L}{∂Z_1}$
 
 [^5]: This is to the best of my knowledge, though there's a significant chance I'm wrong. What I know for certain is that we don't take the summation, but my reasoning behind it might be fallible. I need to learn the linear algebra.
+
+[^6]: We take the transpose of $A_1$ to make sure that the dimensions of $A$ align for the matrix multiplication.
