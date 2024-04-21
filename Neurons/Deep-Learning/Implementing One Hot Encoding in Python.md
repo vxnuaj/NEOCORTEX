@@ -1,6 +1,8 @@
 #programming
 
 >*The example is based on the MNIST dataset with class labels from 0 to 9 and a total sample size of 60,000*
+>
+>*y is of dimensions (1, 60000)*
 
 To implement [[one hot encoding]] in python, you first create a matrix of zeros with a row size equivalent to the number samples and column size equivalent to the number of classes in your dataset.
 
@@ -23,6 +25,8 @@ one_hot_y[np.arange(y.size), y] = 1
 ```
 
 >*The array created by `np.arange` holds 60000 values of range 0 to 59999*
+>
+>*Here, you want y to either be a 1D array or a row vector[^1]*
 
 Essentially, the `one_hot_y` matrix, with dimensions $(60000, 1)$ is indexed by 
 
@@ -31,3 +35,4 @@ Essentially, the `one_hot_y` matrix, with dimensions $(60000, 1)$ is indexed by
 
 This is computed over all 60000 samples simultaneously to properly encode each sample label into a `one_hot_y` matrix.
 
+[^1]: I'm still not sure why, I'm figuring it out.
