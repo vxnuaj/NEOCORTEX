@@ -11,6 +11,6 @@ $θ = θ - ⍺ * gradient$
 The means of how we compute these gradients vary with the loss function and activation function we use.
 
 Check the following out for more details:
-1. [[Mathematics of Backpropagation (MSE and Linear Regression]]
+1. [[Mathematics of Backpropagation (MSE and Linear Regression)]]
 2. [[Mathematics of Backpropagation (Sigmoid and Log Loss)]]
 3. [[Mathematics of Backpropagation (Softmax / ReLU and Categorical Cross Entropy)]]
