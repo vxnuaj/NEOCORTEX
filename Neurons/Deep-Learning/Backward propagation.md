@@ -8,6 +8,9 @@ $gradient = \frac{∂L}{∂θ}$
 
 $θ = θ - ⍺ * gradient$
 
-The means of how we compute these gradients differentiate in the loss function and activation function we use. The mathematical operations are different when we use the [[sigmoid]] over the [[softmax]] or the [[log loss]] over the [[categorical cross entropy]].[^1]
+The means of how we compute these gradients vary with the loss function and activation function we use.
 
-[^1]: See: [[Mathematics of Backpropagation (Sigmoid and Log Loss)]] or [[Mathematics of Backpropagation (Softmax / ReLU and Categorical Cross Entropy)]]
+Check the following out for more details:
+1. [[Mathematics of Backpropagation (MSE and Linear Regression]]
+2. [[Mathematics of Backpropagation (Sigmoid and Log Loss)]]
+3. [[Mathematics of Backpropagation (Softmax / ReLU and Categorical Cross Entropy)]]

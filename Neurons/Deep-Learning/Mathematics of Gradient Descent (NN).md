@@ -2,7 +2,7 @@
 
 >*Reminder: The derivative of a matrix and it's original value, have the same dimensions*
 
-As an example, say we had a neural network of one hidden layer, and an output layer of one sample.
+Say we had a neural network of one hidden layer, and an output layer of one sample.
 
 $W^1$, of dims $(n^1, n^0)$
 $B^1$, of dims $(n^1, 1)$
