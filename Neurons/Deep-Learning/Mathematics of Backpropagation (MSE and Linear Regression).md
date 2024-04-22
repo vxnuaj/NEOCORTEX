@@ -6,9 +6,9 @@ $MSE = \frac{1}{n} \sum_{i=1}^{n}(Y_i - \hat{Y_i})^2$
 
 $\frac{∂MSE}{∂\hat{y}} = \frac{2}{n}(\hat{y} - y)$
 
-$\frac{∂MSE}{∂W} = (\frac{∂MSE}{∂\hat{y}})(\frac{∂\hat{y}}{∂W})$
+$\frac{∂MSE}{∂W} = (\frac{∂MSE}{∂\hat{Y}})(\frac{∂\hat{Y}}{∂W}) = -\frac{2}{n}(Y-\hat{Y})X^T$
 
-$\frac{∂MSE}{∂B} = (\frac{∂MSE}{∂\hat{y}})(\frac{∂\hat{y}}{∂B})$
+$\frac{∂MSE}{∂B} = (\frac{∂MSE}{∂\hat{y}})(\frac{∂\hat{y}}{∂B}) = \frac{2}{n}\sum(y-\hat{y})$
 
 $W_{new} = W - ⍺ * \frac{∂MSE}{∂W}$ 
 
