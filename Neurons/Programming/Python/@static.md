@@ -33,3 +33,7 @@ obj.non_static_method()
 
 ```
 
+Here, with the static method, you can call a function through a class by using `MyClass.static_method()` while you can use use instance variables of the created class instance when using the non static method and calling `obj.non_static_method()`.
+
+##### Curiosities
+- [ ] What if I call a function without using [[@static]]?

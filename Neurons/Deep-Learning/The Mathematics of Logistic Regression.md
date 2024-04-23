@@ -1,5 +1,9 @@
 #mathematics
 
+>*A little outdated, not fully representative of a vectorized form despite me saying so.*
+>
+>*Good for intuition though, will update if I see a need.*
+
 Given that we're using
 - Weight matrix $W$
 - Input matrix $X$
@@ -43,3 +47,4 @@ btw, gradients of loss (not cost) w.r.t param $W$ and $b$ is:
 - $\frac{∂L}{∂W} = (a - y) * X$
 - $\frac{∂L}{∂b} = (a - y)$
 - $θ = θ - ⍺ * \frac{∂J}{∂θ}$
+
