@@ -11,6 +11,3 @@ Some types of loss functions include:
 - [[Sigmoid]]
 - [[Mean Squared Error]]
 - [[Log loss]]
-- [[ReLU]]
-- [[Leaky ReLU]]
-- [[Tanh]]
