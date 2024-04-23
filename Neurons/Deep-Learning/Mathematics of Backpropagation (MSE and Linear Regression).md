@@ -1,4 +1,4 @@
-#mathematics 
+******#mathematics 
 
 The vectorized mathematics for [[backward propagation]] in [[linear regression]] assuming a use of the [[mean squared error]] as the loss function can be defined as such:
 
