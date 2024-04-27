@@ -14,6 +14,11 @@ Within the binary vector, each class in a dataset is represented by a unique bin
 
 We use one hot encoding to avoid [[label leakage]]. Otherwise, our model would learn to assign weights of higher value to predict labels of higher value which would ultimately throw off how our model trains [^1]
 
+It also provides a more explicit representation of a target class given that it involves vectors of 0s and 1s of a size equivalent to the total class labels. This allows for a model to more accurately map relationships of the entire dataset.[^2]
+
+A detriment of one hot encoding is the fact that it can prove to be memory intensive, especially when dealing with a large number of classes.
+
 [[Implementing One Hot Encoding in Python]]
 
 [^1]: See [[label leakage]]
+[^2]: Why?
