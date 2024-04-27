@@ -2,7 +2,7 @@
 
 > _Proposed by John von Neumann in the 1940s
 
-The von Neumann architecture outlines the basic structure where a computer's central processing unit ([[CPU]]), memory, and input/output devices are connected through a singular [[system bus]] to perform computations.
+The von Neumann architecture outlines the basic structure where a computer's central processing unit ([[CPU]]), memory, and input/output devices are connected through a singular [[System Bus]] to perform computations.
 
 It's key features contain these key components:
 1. **[[CPU]]**
@@ -17,5 +17,3 @@ It's divided into an Arithmetic Logic Unit ([[ALU]]), which is responsible for l
 The **Memory** in this architecture is a unified storage area that holds both instructions and data, unlike the [[Harvard Architecture]]. The contents of this memory can be interpreted as an instruction or as data to be processed, allowing for more flexibility in how programs and data are manipulated.
 
 The **I/O** devices function as the bridge for for the computer and the outside world. They take inputs from users and provide output. These devices are then connected to the rest of the architecture through the [[System Bus]] allowing for data to be exchanged amongst the rest of the components.
-
---- 
