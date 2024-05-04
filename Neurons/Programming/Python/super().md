@@ -32,6 +32,8 @@ if __name__ == "__main__":
 	print(rec.r_area())
 ```
 
-we'd get `6` as the output. This works because we initialized the methods and attributes of the class `Square` within the class `Rectangle` by setting the class argument of `Rectangle` to `Square` and calling it's `__init__()` method with `super()`. 
+We'd get `6` as the output. 
 
-This method is typically used to simplify and reduce the lines of code by reducing the total lines of code
+This works because we indicated that `Rectangle` inherits methods from `Square` as `Rectangle(Square)` and initialized the attributes of the `Rectangle` class (`height` and `width`) by calling `Square`'s `__init__()` method with `super()`. 
+
+This inheritance allows `Rectangle` to use the `s_area()` method from `Square` to calculate its area correctly.
