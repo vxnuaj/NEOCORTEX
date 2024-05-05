@@ -14,3 +14,4 @@ Check the following out for more details:
 1. [[Mathematics of Backpropagation (MSE and Linear Regression)]]
 2. [[Mathematics of Backpropagation (Sigmoid and Log Loss)]]
 3. [[Mathematics of Backpropagation (Softmax / ReLU and Categorical Cross Entropy)]]
+4. [[Mathematics of Backpropagation (Neural Network)]]
