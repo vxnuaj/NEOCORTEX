@@ -9,3 +9,6 @@ $dZ^l = dA^l * dG^l(Z^l)$
 $dW^l = dZ^l \cdot A^{[l-1]T} * \frac{1}{m}$
 $dB^l = \frac{1}{m} * \sum dZ^l$
 $dA^{[l-1]} = W^{[l]T} \cdot dZ^l$
+
+
+![[Screenshot 2024-05-05 at 11.59.43 AM.png]]
