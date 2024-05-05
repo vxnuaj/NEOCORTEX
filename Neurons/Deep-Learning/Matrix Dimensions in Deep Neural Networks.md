@@ -14,3 +14,22 @@ where $l$ is the current layer.
 
 Essentially, the dimensions of a given layer are defined as the first dimension being equivalent to the number of neurons in the current layer $(l)$ and the columns being equivalent to the number of neurons in the previous layer $(l-1)$
 
+Now the dimensions of the [[weighted sum]], $Z^l$,
+
+$Z^l =  W^lX + b^l$
+
+are defined as:
+
+$W^l : (n^{[l]}, n^{[l-1]})$
+$X : (input features, m)$
+$b^{[l]}: (n^{[l]}, 1)$
+
+$Z^l : (n^{[l]}, m)$
+
+The matrix multiplication of $W^l$ and $X$ yields the final dimensions of $Z^l$ as the first dimension being the number of neurons in the current layer and the second dimension being the total number of training samples.
+
+The dimensions for $A^l$ are the same as $Z^l$ as the activation function is applied element wise.
+
+Again, the gradients of each are the same as the original values.
+
+
