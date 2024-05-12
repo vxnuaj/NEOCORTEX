@@ -22,9 +22,31 @@ Each activation function has a set of key features, that need to be considered w
 
 	[[Monotonicity]], ensures that as the input of a model changes, the output remains consistently moving in a given direction (increasing or decreasing). 
 	
-	This can be important for the interpretability of a model (especially when computing probabilities), the gradient descent
+	This can be important for the interpretability of a model (especially when computing probabilities) and the gradient descent and optimization.
 
-5. Continuity
-6. Differentiability
-7. Sparsity
-8. Computational Complexity
+	If a function isn't monotonic, the gradient sign may change irregularly over different inputs which can then lead to the model converging to the wrong set of parameters at a local minima instead of a global minima. This then makes the model less interpretable in how it learns.
+
+4. Continuity
+
+	Continuity in an activation function allows for smooth continuous changes. As the inputs change, the outputs change slightly. This becomes important for ensuring smooth gradient descent computations during [[backward propagation]].
+
+5. Differentiability
+
+	Differentiability allows for gradient based optimization algorithms ([[backward propagation]]) to properly allow gradients to be computed for the weight updates. 
+
+	If differentiability wasn't the case within the domain of an activation function, it's possible that NaN values begin to propagate throughout a model.
+
+6. Sparsity
+
+	The [[sparsity]] of activation functions can be beneficial when looking for more efficient computations. The more sparse an activation function is, the less computations it might have to compute in order to reach it's output, then also leading to better memory efficiency.
+
+	[[Sparsity]] can also improve regularization. By encouraging neurons to be inactive at $0$, it reduces complexity which in certain contexts can mitigate overfitting and improve generalization.
+
+	Too much sparsity, on the other hand, can limit the power of a model to learn complex and nuanced patterns in a dataset. 
+
+	An activation function should be sparse enough to provide efficient computations and good [[regularization]].
+
+
+7. Computational Complexity
+
+	The more computationally expensive an activation function is to compute, the slower a neural network will take to learn and then provide inference. It's better to use activation functions that are computationally efficient, in order to speed up the learning process and save valuable resources.

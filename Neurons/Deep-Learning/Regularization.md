@@ -1,0 +1,1 @@
+Regularization is a set of techniques that are used to prev\ent the overfitting in neural networks, to then improve the accuracy of a deep learning model when presented new unseen data, known as generalization.
