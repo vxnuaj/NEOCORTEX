@@ -36,5 +36,18 @@ $σ'(z) = - \frac{-e^{-z}}{(1 +e^{-z})^{2}}$
 
 $σ'(z) = \frac{e^{-z}}{(1 +e^{-z})^{2}}$
 
+Sigmoid can be considered a smooth function, given that it's derivative is continuous for all real values of $z$, making it proper for using optimization algorithms such as [[gradient descent]].
+
+It's also a monotonically increasing function, with no abrupt changes in it's sign value. This then allow for a model to better converge onto a global minima.
+
+Regarding it's computational efficiency, given that it contains the exponential function, $e^z$, it's computationally expensive given that it requires *"hundreds of addition, subtraction, multiplication, and division instructions on a general-purpose CPU.*[^1]
+
+**Advantages**
+
+- Sigmoid is a good choice for binary classification. Given that it has a larger gradient at it's middle (around $x = 0$) and a smaller gradient at the edges, it will aim to converge to either 0 or 1 during [[gradient descent]], given it's range being between 0 and 1.
+- Given that it's a smooth and continuous function, it'll provide for better learning during [[Backward propagation]]
+
+**Disadvantages**
 
 
+[^1]: https://www.sciencedirect.com/topics/computer-science/sigmoid-function#:~:text=High%20computational%20complexity.,Thus%2C%20the%20computation%20is%20inefficient.
