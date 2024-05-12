@@ -48,6 +48,7 @@ Regarding it's computational efficiency, given that it contains the exponential 
 - Given that it's a smooth and continuous function, it'll provide for better learning during [[Backward propagation]]
 
 **Disadvantages**
-
+- Nearing $0$ and $1$, the gradient is very small. This becomes a problem in deeper networks, where to get the gradients of earlier layers through [[backward propagation]] and the chain rule, we need to multiply the gradient of the output layers with earlier layers. Given that sigmoid yields a small gradient when it converges to near $0$ or $1$, the deeper we get into a network, the smaller a gradient will be then leading to slower learning.
+- It's very computationally expensive given the use of Euler's number, $e$.
 
 [^1]: https://www.sciencedirect.com/topics/computer-science/sigmoid-function#:~:text=High%20computational%20complexity.,Thus%2C%20the%20computation%20is%20inefficient.
