@@ -1,3 +1,5 @@
+#calculus
+
 A limit within a function is essentially, a type of "wall".
 
 A value, say $x$ that you can get closer and closer to but never fully reach.
@@ -16,4 +18,4 @@ For a limit to exist in it's two-sided form, the limit has to equal a same $y$ v
 
 Essentially: $\lim_{x\rightarrow 4^-} =\lim_{x\rightarrow 4^+}$
 
-If that doesn't hold to be true, then the 
+If that doesn't hold to be true, then the $\lim_{x\rightarrow 4^-}$ will be defined differently to $\lim_{x\rightarrow 4^+}$ and then the general limit, $\lim_{x\rightarrow 4}$ does not exist.
