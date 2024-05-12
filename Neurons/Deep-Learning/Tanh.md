@@ -16,25 +16,46 @@ $= \frac{(e^z + e^{-z})^2 - (e^z - e^{-z})^z}{(e^z + e^{-z})^2}$
 
 $= \frac{(e^z + e^{-z})^2}{(e^z + e^{-z})^2} - \frac{(e^z - e^{-z})^2}{(e^z + e^{-z})^2}$
 
-$= 1 - tanh(z)^2$ 
+$= 1 - tanh(z)^2$
 
-It's range is between, $-1$ and $1$ symmetric around the origin of $0,0$.
+**Characteristics:**
+
+It's range is between, $-1$ and $1$ symmetric around the origin of $0,0$, which ends up yielding a steeper gradient than the [[sigmoid]] function[^2].
+
+The Tanh function is smooth and continuous everywhere, making it differentiable amongst it's entire range.
+
+The smoothness enables [[backward propagation]] to effectively compute the gradients and update a model's parameters without issues of numerical instability while the continuity enables a smooth [[gradient descent]] mitigating sudden and abrupt changes in the model parameters.
+
+Being a monotonically increasing function, there are no abrupt changes in it's sign making the learning during [[backward propagation]] smooth and interpretable.
+
+The computational efficiency of tanh is a burden, requiring the computation of multiple 
+ `np.exp`'s, more than [[sigmoid]]. 
+
+**Common use-cases:**
+
+- Activations in the hidden layer of a neural network, to introduce non-linearity, though typically [[ReLU]] is favored as it's shown to train six times faster than tanh[^1]
+- Gating mechanisms such as [[LSTM]]s or [[GRU]]s to control the flow of information within the network.
 
 **Advantages**
 
-1. The range between $-1$ and $1$ means that it has 
+1. The larger range between $-1$ and $1$ yields steeper gradients than the [[sigmoid]] function allowing for faster learning and helps cope with the [[vanishing gradient]]
+2. It's zero-centered
 
+**Disadvantages:**
+
+1. Cannot represent a binary probability for binary classification.
 
 ---
 
 - [x] Mathematical Definition
-- [ ] Range
+- [x] Range
 - [x] Derivative
-- [ ] Smoothness, is it smooth everywhere?
-- [ ] Monotonicity
-- [ ] Computational Efficiency
+- [x] Smoothness, is it smooth everywhere?
+- [x] Monotonicity
+- [x] Computational Efficiency
 - [ ] Common Use Cases
 - [ ] Advantages / Disadvantages
 
+[^1]: https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf
 
-
+[^2]: ![[Pasted image 20240512183720.png|300]]
