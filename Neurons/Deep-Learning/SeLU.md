@@ -30,17 +30,16 @@ Though the additional multiplication automatically normalizes a layer, reducing 
 
 SeLU isn't commonly used yet, though can be promising for the hidden layers of a network.[^1]
 
+**Advantages**
+- No vanishing gradient problem
+- Can't die, no dead neurons
+- They learn faster and better than other activation functions without further processing (batch normalization)
+
+**Disadvantages**
+- More computationally expensive.
+
+
 ---
 
-- [x] Mathematical Definition
-- [x] Code Definition
-- [x] Range
-- [x] Derivative
-- [x] Smoothness, is it smooth everywhere?
-- [x] Monotonicity
-- [x] Computational Efficiency
-- [ ] Common Use Cases
-- [ ] Advantages / Disadvantages
-- [ ] Implementation in a Model vs Others
 
-[^1]: To understand more, read [link](https://arxiv.org/pdf/1706.02515) for more details. eek, gotta know 
+[^1]: To understand more, read [link](https://arxiv.org/pdf/1706.02515) for more details. eek, gotta know ur math lol.
