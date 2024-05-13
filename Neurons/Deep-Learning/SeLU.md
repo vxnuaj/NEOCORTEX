@@ -1,4 +1,4 @@
-
+Scaled Exponential Linear Unit or SELU for short is an activation function
 
 
 
