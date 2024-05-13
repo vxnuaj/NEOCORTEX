@@ -43,16 +43,3 @@ Common use cases of ReLU include activations at the hidden layers of deep networ
 **Disadvantages**
 - Not differentiable at $0$ (but can be easily bypassed in code)
 - Less computationally efficient than [[ReLU]]
-
----
-
-- [x] Mathematical Definition
-- [x] Code Definition
-- [x] Range
-- [x] Derivative
-- [x] Smoothness, is it smooth everywhere?
-- [x] Monotonicity
-- [x] Computational Efficiency
-- [x] Common Use Cases
-- [x] Advantages / Disadvantages
-- [ ] Implementation in a Model vs Others
