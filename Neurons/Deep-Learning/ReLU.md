@@ -1,3 +1,5 @@
+#mathematics 
+
 ReLU is an [[activation function]] commonly used in the hidden layers of deeper neural networks, to introduce non-linearity.
 
 Mathematically, it's defined as:
@@ -38,26 +40,19 @@ ReLU is not a 'smooth' function throughout it's entire range. At $0$, ReLU is no
 
 Either or, the lack of 'smoothness' can be bypassed in code through `z > 0`, where the discontinuity isn't factored in.
 
-ReLU is a strictly monotonically increasing function. As the inputs increase, i
+ReLU is a strictly monotonically increasing function. As the inputs increase, the activations gotten with ReLU will linearly increase when $z > 0$. When $z<0$, ReLU never decreases and stays at $0$. This helps the inference of a model when training become more predictable.
+
+ReLU is also more computationally efficient than most activation functions such as [[sigmoid]] or [[tanh]]. It's simple use of the $max()$ function and absence of Euler's $e$, makes for computationally efficient operations.
+
+Given it's lack of suitability for output layers, with it's unbounded upper range, it's lowered computational complexity, and avoidance of the [[vanishing gradient]] problem, ReLU is commonly used in the hidden layers of a deep network, especially when [[sparsity]] is desired.
 
 
 **Advantages**
+- Computationally efficient when compared to [[sigmoid]] or [[tanh]]
+- Avoidance of the [[vanishing gradient]]
+- Sparse at $z<0$ (can be beneficial if used right)
+
 
 **Disadvantages**
 - ReLU can be prone to outputting dead neurons, where neurons always output zero. This happens when a neuron is always negative then causing it to never activate at a number other than $0$. (This can be mitigated using [[Leaky ReLU]] or [[Parametric ReLU]]).
-
-
-
-
----
-
-- [x] Mathematical Definition
-- [x] Code Definition
-- [x] Range
-- [x] Derivative
-- [x] Smoothness, is it smooth everywhere?
-- [ ] Monotonicity
-- [ ] Computational Efficiency
-- [ ] Common Use Cases
-- [ ] Advantages / Disadvantages
-- [ ] Implementation in a Model vs Others
+- Non-differentiable at $0$ (though can be bypassed easily in code).
