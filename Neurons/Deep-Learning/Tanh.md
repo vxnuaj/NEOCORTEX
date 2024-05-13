@@ -18,6 +18,10 @@ $= \frac{(e^z + e^{-z})^2}{(e^z + e^{-z})^2} - \frac{(e^z - e^{-z})^2}{(e^z + e^
 
 $= 1 - tanh(z)^2$
 
+The function and it's derivative looks as such:
+
+![[Pasted image 20240512184920.png]]
+
 **Characteristics:**
 
 It's range is between, $-1$ and $1$ symmetric around the origin of $0,0$, which ends up yielding a steeper gradient than the [[sigmoid]] function[^2].
@@ -39,22 +43,15 @@ The computational efficiency of tanh is a burden, requiring the computation of m
 **Advantages**
 
 1. The larger range between $-1$ and $1$ yields steeper gradients than the [[sigmoid]] function allowing for faster learning and helps cope with the [[vanishing gradient]]
-2. It's zero-centered
+2. It's zero-centered meaning the sign value is balanced. Parameter updates are then more likely to point in the right direction rather than being biased to a specific value. This then also helps mitigate the vanishing gradient
 
 **Disadvantages:**
 
 1. Cannot represent a binary probability for binary classification.
+2. Is still prone to vanishing gradients at the edges of $-1$ and $1$
+3. Computationally more expensive
 
 ---
-
-- [x] Mathematical Definition
-- [x] Range
-- [x] Derivative
-- [x] Smoothness, is it smooth everywhere?
-- [x] Monotonicity
-- [x] Computational Efficiency
-- [ ] Common Use Cases
-- [ ] Advantages / Disadvantages
 
 [^1]: https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf
 
