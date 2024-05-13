@@ -13,13 +13,23 @@ def swish(z, beta = 1)
 	return z * (1/(1+np.exp(beta * -z)))
 ```
 
-It's range is from 
+Swish has as range with a lower bound at $0$ but goes up to $\infty$ at it's upper "bound". 
 
-- [ ] Mathematical Definition
-- [ ] Range
-- [ ] Smoothness, is it smooth everywhere?
-- [ ] Monotonicity
-- [ ] Computational Efficiency
-- [ ] Common Use Cases
-- [ ] Advantages / Disadvantages
-- [ ] Implementation in a Model vs Others
+Therefore, swish may potentially have an issue with dead neurons if high negative values become the input into swish.
+
+Swish might also be prone to the vanishing gradient at values a little less than $0$, given a flatter gradient.
+
+Being smooth, swish is differentiable across it's entire domain making numerical instability and the propagation of NaNs not an issue.
+
+It is non-monotonic which can be useful in capturing non-linear relationships but detrimental during [[gradient descent]] as it may accidentally converge to a local minima.
+
+It is less computationally efficient than [[sigmoid]] and the [[ReLU]] variants given the introduction of the [[sigmoid]] with a multiplication.
+
+**Advantages**:
+- The introduction of the parameter $\beta$ allows for it to be adaptable for different use-cases
+- It is completely differentiable mitigating the issue of NaN values propagating through a model.
+- Non-monotonicity can allow for swish to capture complex non-linear relationships in data.
+
+**Disadvantages**
+- Non-monotonicity may lead to the [[gradient descent]] getting stuck at a local minima rather than a global optima
+- Less computationally efficient.
