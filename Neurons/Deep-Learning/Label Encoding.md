@@ -1,0 +1,1 @@
+Label Encoding is the encoding of labels represented in numerical values to numerical values

@@ -30,7 +30,7 @@ Common use cases of softmax are primarily only multi-class classification proble
 
 **Difference Between Sigmoid:**
 
-While both sigmoid and softmax yield outputs between 0 and 1, the ability of Softmax to $\sum e^z$, allows for the computation of a probability as it's divided with $e^z$. Sigmoid on the other hand is defined as $\frac{1}{1 + e^-z}
+While both sigmoid and softmax yield outputs between 0 and 1, the ability of Softmax to $\sum e^z$, allows for the computation of a probability as it's divided with $e^z$. Sigmoid on the other hand is defined as $\frac{1}{1 + e^{-z}}$ which is only able to compute a probability over 2 classes, $0$ or $1$.
 
 **Advantages:**
 - Ability to compute a probability of exponentials for a final output
@@ -53,5 +53,5 @@ While both sigmoid and softmax yield outputs between 0 and 1, the ability of Sof
 - [x] Computational Efficiency
 - [x] Common Use Cases
 - [x] Advantages / Disadvantages
-- [ ] Difference between Sigmoid
+- [x] Difference between Sigmoid
 - [ ] Implementation in a Model vs Others
