@@ -27,17 +27,26 @@ while in code can be expressed as:
 elu_grad1 = np.where(z > 0, 1, (alpha * np.exp(z)))
 ```
 
-The range of ELU goes from $-\infty$ to $
+The range of ELU goes from $-\infty$ to $\infty$, it's lack of bounds mitigating the issue of dead neurons as [[ReLU]] given that it doesn't have as high level of sparsity when $z < 0$. 
+
+It's lack of bounds also mitigates the [[vanishing gradient]] that's faced when using [[sigmoid]] and [[tanh]]. 
+
+ELU, unlike [[ReLU]], is smooth, meaning it is differentiable over it's entire domain. Mathematically,  one doesn't face the issue of discontinuity faced with [[ReLU]] or [[Leaky ReLU]] where NaN values are propagated when an input, $z$, is $0$.
+
+It's continuity then allows for a smoother gradient descent, allowing a slight change in inputs to slightly change the outputs.
+
+Being a monotonically increasing function, the lack of sign change allows for easier interpretability of a model learning and decreases the risk of getting stuck in a local minima. Gradient descent can now optimize for the global minima easily.
+
+ELU is less computationally efficient than [[ReLU]] or [[Leaky ReLU]] given the addition of an exponential, $e$, but is more computationally efficient than [[sigmoid]] or [[softmax]] as it uses less exponentials, $e$, than those.
+
+ELU is commonly used in the hidden layers of deeper networks as it introduces non-linearity with no risk of NaN values propagating through the network during gradient descent.
+
+**Advantages:**
+- Differentiable everywhere, no NaN values
+- Lessens the probability of the [[vanishing gradient]]
+- No dead neurons at $z < 0$
+
+**Disadvantages:**
+- More computationally expensive than [[ReLU]] and [[Leaky ReLU]]
 
 ---
-
-- [x] Mathematical Definition
-- [x] Code Definition
-- [ ] Range
-- [x] Derivative
-- [ ] Smoothness, is it smooth everywhere?
-- [ ] Monotonicity
-- [ ] Computational Efficiency
-- [ ] Common Use Cases
-- [ ] Advantages / Disadvantages
-- [ ] Implementation in a Model vs Others
