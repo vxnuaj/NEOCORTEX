@@ -52,11 +52,4 @@ Just as the [[Mean Squared Error]], MAE is convex when used as a function of a m
 **Disadvantages**
 - Still prone to non-convexity with non-linear activations
 - It isn't smooth, not differentiable at 0
-
-
-
----
-- [x] Definition, Mathematical and Code
-- [x] Derivative, Mathematical and Code
-- [ ] Usage in regression, Concept and Implementation
-- [ ] Characteristics`
+- Doesn't punish as severely as MSE meaning slower convergence, but of course, the gain from this is it's more robust to outliers.
