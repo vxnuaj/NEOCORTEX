@@ -26,9 +26,11 @@ The MSE is typically used in linear regression models to calculate the squared r
 
 The MSE performs best when used with datasets generated from a gaussian / normal distribution, it doesn't perform well on large outliers given the 'square' as it becomes extremely sensitive to those large outliers
 
-Given it's non-convexity, it isn't suitable for use in neural networks as a model risks getting stuck in a local minima rather than optimizing for a global optima. 
+MSE is convex when it's a direct function of a model's parameters and inputs, but when it's a function of an activation output, the introduction of non-linearity can create a non-convex landscape for MSE, which is the case in neural networks.
 
-It classification, specifically binary classification, MSE tends to *not* punish a model enough for the incorrect prediction. If a true label is $1$ and the prediction is $0$, MSE would output a mere $1$ while other loss functions such as [[Binary Cross Entropy Loss]] would output $\infty$.
+Given it's non-convexity when used in neural networks, it isn't suitable for use in neural networks as a model risks getting stuck in a local minima rather than optimizing for a global optima. 
+
+As well, in classification, specifically binary classification, MSE tends to *not* punish a model enough for the incorrect prediction. If a true label is $1$ and the prediction is $0$, MSE would output a mere $1$ while other loss functions such as [[Binary Cross Entropy Loss]] would output $\infty$.
 
 **Advantages**
 - Can be derived and easily used in [[Gradient Descent]], in [[linear regression]]
