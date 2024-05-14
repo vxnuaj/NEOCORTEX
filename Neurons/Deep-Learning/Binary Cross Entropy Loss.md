@@ -6,7 +6,17 @@ Mathematically, it is defined as:
 
 $BCE = -\frac{1}{m} \sum Y * \log(\hat{Y}) + ( 1 - Y) * \log(1 - \hat{Y})$, $m = numsamples$
 
-which in code can be defined as:
+If $Y = 1$, the rightmost part of the equation, $(1-Y) * log(1 - \hat{Y})$ gets canceled out while the left most is used to calculate the loss.
+
+Then, $-\frac{1}{m} \sum BCE = Y * log(\hat{Y})$
+
+If $Y = 0$, the rightmost part of the equation, $Y * \log(\hat{Y})$ gets canceled out while the rightmost is used to calculate the loss.
+
+Then, $-\frac{1}{m} \sum BCE = (1-Y) * log(1-\hat{Y})$
+
+Adding both, and you get the average loss for your entire model.
+
+In code, this can be defined as:
 
 ```
 m = num_samples
@@ -14,9 +24,17 @@ m = num_samples
 BCE = -(1/m) * np.sum(y_train * np.log(y_pred) + (1 - y_train) * np.log(1 - y_pred))
 ```
 
+It's derivative can be defined as:
 
+$-\frac{Y}{\hat{Y}} + \frac{(1 - Y)}{(1 - \hat{Y})}$
 
-- [ ] Definition, Mathematical and Code
-- [ ] Derivative, Mathematical and Code
-- [ ] Usage in regression, Concept and Implementation
-- [ ] Characteristics
+BCE is a smooth loss function, unlike [[Mean Absolute Error]], making it mathematically suitable for [[Gradient Descent]] in a deep neural network. Also, unlike [[Mean Squared Error]] or [[Mean Absolute Error]], it's fully convex and doesn't have the higher risk of getting stuck at a local minima.
+
+Though, it's sensitive to class imbalance. If one class has more samples than another, a model might be biased towards the majority class.
+
+Given that it's made for a binary classification task, it expects all samples to be within either 1 or 0. Outliers are not tolerated (or else! {lol}).
+
+- [x] Definition, Mathematical and Code
+- [x] Derivative, Mathematical and Code
+- [ ] Usage, Concept and Implementation
+- [x] Characteristics
