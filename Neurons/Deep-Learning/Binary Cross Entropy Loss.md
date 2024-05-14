@@ -33,8 +33,3 @@ BCE is a smooth loss function, unlike [[Mean Absolute Error]], making it mathema
 Though, it's sensitive to class imbalance. If one class has more samples than another, a model might be biased towards the majority class.
 
 Given that it's made for a binary classification task, it expects all samples to be within either 1 or 0. Outliers are not tolerated (or else! {lol}).
-
-- [x] Definition, Mathematical and Code
-- [x] Derivative, Mathematical and Code
-- [ ] Usage, Concept and Implementation
-- [x] Characteristics
