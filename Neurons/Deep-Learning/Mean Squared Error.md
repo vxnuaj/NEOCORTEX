@@ -1,13 +1,36 @@
-The mean squared error is a type of [[loss function]] that measure the amount of error in statistical models, such as a [[linear regression]] model.
+The mean squared error is a [[loss function]], used to evaluate the error in a model. It does so by calculating the average squared difference between the observed and predicted values.
 
-The formula is given as such:
+When used in [[linear regression]], MSE is the average squared residual of the model.
 
-$MSE = \frac{1}{n} \sum_{i=1}^{n}(y_i - \hat{y}_i)^2$,
+Mathematically, the MSE can be defined as:
 
-where $n$ is the total number of samples in a dataset and $i$ is the index of the $ith$ sample in the range of $1 ≤ i ≤ n$.
+$MSE = \frac{1}{m} \sum{(Y - \hat{Y})^2}$, $m = num_samples$
 
-The MSE assesses the average *squared difference* between a predicted value and a true value.
+In code, this can be defined as
 
-When a model has no error or difference between the prediction and the true value, the value of the MSE is 0. As the error or difference increases, the MSE begins to increase proportionally.
+```
+MSE = np.sum((y_train - y_pred)**2) * (1 / samples)
+```
 
-Squaring the differences is less intuitive to interpret but makes sure to eliminate any negative values for difference and ensures that the MSE is always equal to or greater than 0. It also punishes larger errors allowing for improved convergence through [[gradient descent]].
+It's derivative, with respect to predicted values, $\hat{Y}$ can be defined as:
+
+$\frac{∂MSE}{∂\hat{Y}} = -2(Y - \hat{Y})$
+
+In code, this can be defined as:
+
+```
+
+```
+
+**Advantages**
+- Can be derived and easily used in [[Gradient Descent]]
+
+**Disadvantages**
+- Not robust to outliers. Given that it takes the squared difference, The MSE becomes extremely sensitive to outliers.
+
+---
+
+- [x] Definition, Mathematical and Code
+- [ ] Derivative, Mathematical and Code
+- [ ] Usage in regression, Concept and Implementation
+- [ ] Characteristics

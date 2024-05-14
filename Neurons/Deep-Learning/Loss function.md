@@ -10,4 +10,4 @@ This loss value is of important use during [[gradient descent]] as the [[update 
 Some types of loss functions include:
 - [[Sigmoid]]
 - [[Mean Squared Error]]
-- [[Log loss]]
+- [[Categorical Cross Entropy Loss]]

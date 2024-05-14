@@ -1,5 +1,5 @@
 
->*Assuming the typical use of [[categorical cross entropy]] and [[ReLU]]*
+>*Assuming the typical use of [[Categorical Cross Entropy Loss]] and [[ReLU]]*
 >
 >*This is the simplified derivation of the chain rule.*
 
