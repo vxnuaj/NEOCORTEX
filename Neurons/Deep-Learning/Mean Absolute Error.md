@@ -2,7 +2,7 @@ The Mean Absolute Error is a [[loss function]], similar to the [[Mean Squared Er
 
 Mathematically, it's defined as:
 
-$MAE = \frac{1}{m}\sum | - \hat{Y}|, m = numsamples$
+$MAE = \frac{1}{m}\sum | Y - \hat{Y}|, m = numsamples$
 
 While in code, this can be defined as
 
@@ -10,16 +10,26 @@ While in code, this can be defined as
 MAE = (1 / samples) * np.sum(np.abs(y_train - y_pred))
 ```
 
-It's derivative can be defined as:
+It's derivative wrt to $z$ and weight, $w$ can be defined as:
 
-$sgn(Y - \hat{Y})$
+$\frac{∂MAE}{∂ z} = sgn(Y - \hat{Y})(-1)$
+
+$\frac{∂MAE}{∂ z} = -sgn(Y - \hat{Y})$
+
+$\frac{∂MAE}{∂ w} = (\frac{∂MSE}{∂z})(\frac{∂z}{∂w})$
+
+$\frac{∂MAE}{∂w} = -sgn(Y - \hat{Y}) (x.T)$
+
+then all averaged out.
 
 >*[[sgn(x)]]*
 
 While in code this can be defined as:
 
 ```
-MAE_deriv = (1 / samples) * np.sum(np.sign(y_train - y_pred))
+MAE_dz = (1 / samples) * np.sum(-np.sign(y_train - y_pred))
+
+MAE_dw = (1/samples) * np.dot(MAE_dz, x.T)
 ```
 
 Just as the [[Mean Squared Error]], MAE is used in [[linear regression]] as a validation metric. It's output value is the average difference between a true value and a prediction.
