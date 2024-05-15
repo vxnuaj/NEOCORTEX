@@ -37,6 +37,3 @@ In well defined datasets with well defined & clear labels, such as MNIST, this m
 
 **Disadvantages**:
 - Increased computational complexity.
-
-- [ ] https://proceedings.neurips.cc/paper_files/paper/2019/file/f1748d6b0fd9d439f71450117eba2725-Paper.pdf
-- [x] Implementation

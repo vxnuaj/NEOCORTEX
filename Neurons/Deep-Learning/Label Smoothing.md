@@ -12,6 +12,8 @@ where $a$ is a tunable smoothing [[hyperparameter]], between range $(0, 1)$ that
 
 $\frac{\alpha}{K}$ then is the uniform distribution, a vector of equal probabilities for each label. The probabilities are defined by parameter $\alpha$.
 
+The probability of a correct class is assigned a probability determined by $1-\alpha$, while the remaining probability for the other classes distributed into the vector by the addition of $\frac{\alpha}{K}$.
+
 If $\alpha = 0$, the labels aren't smoothed and we get back the original [[One hot encoding]], but if $\alpha = 1$, we get the [[uniform distribution]] of the labels.
 
 In code, this is defined as:
