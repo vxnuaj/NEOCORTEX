@@ -4,7 +4,7 @@ Categorical Cross Entropy Loss, similar to [[Binary Cross Entropy Loss]], is los
 
 Mathematically, this is defined as:
 
-$CCE = - \frac{1}{m}\sum Y(\log(\hat{Y}))$, where $m = num_samples$ 
+$CCE = - \frac{1}{m}\sum Y_{train}(\log(\hat{Y}))$, where $m = num_samples$ 
 
 While in code, this can be defined as:
 
