@@ -4,12 +4,12 @@ Categorical Cross Entropy Loss, similar to [[Binary Cross Entropy Loss]], is los
 
 Mathematically, this is defined as:
 
-$CCE = -\sum Y(\log(\hat{Y}))$
+$CCE = - \frac{1}{m}\sum Y(\log(\hat{Y}))$, where $m = num_samples$ 
 
 While in code, this can be defined as:
 
 ```
-CCE = - np.sum(y_train_one_hot * np.log(y_pred))
+CCE = - np.sum(y_train_one_hot * np.log(y_pred)) / 
 ```
 
 It's derivative with respect to $z$, the weighted sum, can be defined as:
@@ -43,5 +43,5 @@ It's fully differentiable, making it fit for the use of [[Gradient Descent]].
 
 - [x] Definition, Mathematical and Code
 - [x] Derivative, Mathematical and Code
-- [ ] Usage, Concept and Implementation
+- [x] Usage, Concept and Implementation
 - [x] Characteristics
