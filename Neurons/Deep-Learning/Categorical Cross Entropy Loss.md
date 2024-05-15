@@ -9,7 +9,7 @@ $CCE = -\sum Y(\log(\hat{Y}))$
 While in code, this can be defined as:
 
 ```
-CCE = - np.sum(y_train * np.log(y_pred))
+CCE = - np.sum(y_train_one_hot * np.log(y_pred))
 ```
 
 It's derivative with respect to $z$, the weighted sum, can be defined as:
@@ -17,7 +17,7 @@ It's derivative with respect to $z$, the weighted sum, can be defined as:
 $CCE_{zderiv} = A - Y_{train}$
 
 ```
-CCE_zderiv = a - y
+CCE_zderiv = a - y_train_one_hot
 ```
 
 CCE comes into play when we begin to compute the probability of multiple classes. 
@@ -28,9 +28,20 @@ This essentially combines the multinomial logistic regression into a singular mo
 
 It's also non-linear allowing for the function to capture the non-linearities of a dataset effectively and learn from them.
 
-It's fully differentiable, making it fit for the use of [[Gradient Descent]]
+It's fully differentiable, making it fit for the use of [[Gradient Descent]].
+
+**Advantages**
+- Great for multi-class classification
+- Fully differentiable, useful for [[Gradient Descent]]
+- Robust to outliers, unlike [[Mean Squared Error]]
+
+**Disadvantages**
+- Weak for imbalanced datasets.
+- Not suitable for regression.
+
+
 
 - [x] Definition, Mathematical and Code
 - [x] Derivative, Mathematical and Code
 - [ ] Usage, Concept and Implementation
-- [ ] Characteristics
+- [x] Characteristics
