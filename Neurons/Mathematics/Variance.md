@@ -1,0 +1,1 @@
+Variance is a statistical measure that measures the 

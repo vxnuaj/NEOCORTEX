@@ -26,9 +26,8 @@ Initializing model weights using Xavier Initialization helps improve on [[Tanh]]
 
 Yet when introduced raw inputs of extremely high values, it can fail as the $\sqrt{\frac{1}{n_{in}}}$ might not be enough to reduce the weighted sum, $z$ as as viable input into $\sigma(x)$ or $tanh(x)$[^1]
 
----
-- [x] Motivation / Purpose
-- [x] Formula / Mathematical Rationale
-- [x] Code Implementation
-
 [^1]: See 'instance 1', [here](https://github.com/vxnuaj/LABS/blob/main/DEEPLEARNING/NeuralNetworks/WeightInitialization/weightinit.ipynb) or weightinit.ipynb (locally)
+
+
+---
+- [ ] Justify this, mathematically, how it aims to preserve variance once you learn the foundational math
