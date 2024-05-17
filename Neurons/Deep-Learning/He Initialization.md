@@ -1,5 +1,7 @@
 He initialization serves a similar purpose as [[Xavier Initialization]] initialization that deals with the issue of an activation function not being centered around $0$ which is the case with [[ReLU]].
 
+He initialization instead expects the inputs, activations, and weights to be centered between 0 and 1.
+
 Mathematically, it can be defined as:
 
 $W^{(l)} = W^{(l)} \cdot \sqrt{\frac{2}{m^{(l-1)}}}$, where $m$ is the number of input features to the current layer.
