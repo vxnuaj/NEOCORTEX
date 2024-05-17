@@ -27,7 +27,7 @@ then all averaged out.
 While in code this can be defined as:
 
 ```
-MAE_dz = (1 / samples) * np.sum(-np.sign(y_train - y_pred))
+MAE_dz = -np.sign(y_train - y_pred)
 
 MAE_dw = (1/samples) * np.dot(MAE_dz, x.T)
 ```
