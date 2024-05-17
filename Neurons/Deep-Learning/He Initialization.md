@@ -1,0 +1,1 @@
+He initialization serves a similar purpose as [[Xavier Initialization]] initialization that deals with the issue of an activation function not being centered around $0$ which is the case with [[ReLU]].
