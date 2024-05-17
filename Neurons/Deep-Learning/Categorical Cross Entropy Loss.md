@@ -9,7 +9,7 @@ $CCE = - \frac{1}{m}\sum Y_{train}(\log(\hat{Y}))$, where $m = num_samples$
 While in code, this can be defined as:
 
 ```
-CCE = - np.sum(y_train_one_hot * np.log(y_pred)) / 
+CCE = - np.sum(y_train_one_hot * np.log(y_pred)) / m
 ```
 
 It's derivative with respect to $z$, the weighted sum, can be defined as:

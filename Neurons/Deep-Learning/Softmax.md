@@ -28,6 +28,16 @@ or [[tanh]], but it's primarily used in the output layers of a model making this
 
 Common use cases of softmax are primarily only multi-class classification problem, being used in the final output layer. Going more complex, it can be used in attention mechanisms to compute the attention weights.
 
+**Benefit of $e$**
+
+The cool thing about using $e$ in softmax, is the exponential increase in output it has in relation to an increase to inputs. 
+
+Say we're aiming to optimize for the [[One hot encoding]], $[0, 1, 0, 0]$.
+
+If a model has a normalized logit of: $[.2222, .4444, .2222, .1111]$ as the final output, it's clear that the argmax, despite it being greater than the rest of the values, isn't very high compared to the rest as it should be. This might make it harder for a model to get accurate predictions consistently.
+
+But if we introduce the softmax, and we raise those values to $e$, the outputs end up being: $[0.1025,0.7573,0.1025,0.0377]$, where it's clear that the argmax is closer to the true class label, which then provides an increase in accuracy as a model is trained.
+
 **Difference Between Sigmoid:**
 
 While both sigmoid and softmax yield outputs between 0 and 1, the ability of Softmax to $\sum e^z$, allows for the computation of a probability as it's divided with $e^z$. Sigmoid on the other hand is defined as $\frac{1}{1 + e^{-z}}$ which is only able to compute a probability over 2 classes, $0$ or $1$.
