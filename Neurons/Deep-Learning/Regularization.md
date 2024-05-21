@@ -16,5 +16,6 @@ Common regularization techniques include [[L2 Regularization]] and [[L1 Regulari
 - [ ] manhattan norm
 - [ ] l2 reg
 - [ ] euclidean norm
+- [ ] implementation of each in a model (check [this](https://www.youtube.com/watch?v=_SlPBbxuqas) out)
 
 ![[Screenshot 2024-05-21 at 10.13.56 AM.png]]
