@@ -1,0 +1,16 @@
+Regularization is a technique that aims to mitigate variance and overfitting in a model by penalizing complexity.
+
+It involves adding a small term to a loss function which penalizes for large weights.
+
+This trades a decrease in training accuracy for an increase in generalizability.
+
+Common regularization techniques include [[L2 Regularization]] and [[L1 Regularization]]
+
+---
+
+- [ ] l1 reg
+- [ ] manhattan norm
+- [ ] l2 reg
+- [ ] euclidean norm
+
+![[Screenshot 2024-05-21 at 10.13.56 AM.png]]
