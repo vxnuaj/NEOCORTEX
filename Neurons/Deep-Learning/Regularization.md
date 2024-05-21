@@ -2,6 +2,10 @@ Regularization is a technique that aims to mitigate variance and overfitting in 
 
 It involves adding a small term to a loss function which penalizes for large weights.
 
+$J(w,b) = \sum L(\hat{y}, y) + \lambda \cdot Penalty$
+
+>*The penalty is typically the [[euclidean norm]] or the [[manhattan norm]]*
+
 This trades a decrease in training accuracy for an increase in generalizability.
 
 Common regularization techniques include [[L2 Regularization]] and [[L1 Regularization]]
