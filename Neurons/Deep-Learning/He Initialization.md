@@ -1,6 +1,8 @@
 He initialization serves a similar purpose as [[Xavier Initialization]] initialization that deals with the issue of an activation function not being centered around $0$ which is the case with [[ReLU]].
 
-He initialization instead expects the inputs, activations, and weights to be centered between 0 and 1.
+It assumes that all inputs, weights, and layers are independent and identically distributed at at initialization. 
+
+It also assumes the inputs are normalized with zero as the mean. Weights and biases are initialized from a symmetric distribution at zero. This might mean gaussian with mean 0 or uniform with mean 0.
 
 Mathematically, it can be defined as:
 
