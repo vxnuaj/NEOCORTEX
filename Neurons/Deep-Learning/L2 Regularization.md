@@ -12,4 +12,6 @@ $\frac{∂J_{regularized}}{∂w} = (\frac{∂J}{∂Z})(\frac{∂Z}{∂W}) + 2\la
 
 $\frac{∂J_{regularized}}{∂w} = (A - Y_{onehot})(X^T) + 2\lambda||w||$
 
-- [ ] understanding the weight update and write it.
+$w = w - \alpha * \frac{∂J_{regularized}}{∂w}$
+
+
