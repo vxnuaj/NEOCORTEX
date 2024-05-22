@@ -14,4 +14,10 @@ $\frac{∂J_{regularized}}{∂w} = (A - Y_{onehot})(X^T) + 2\lambda||w||$
 
 $w = w - \alpha * \frac{∂J_{regularized}}{∂w}$
 
+Essentially, [[overfitting]] requires a set of large weights. An L2 regularized back propagation adds the additional $2\lambda||w||$ term to increase a gradient.
 
+The larger $||w||$ is, the higher the gradient will be, therefore forcing a model to optimize for a narrower set of parameters.
+
+
+- [x] understand theory + mathematics.
+- [ ] implement onto model in numpy
