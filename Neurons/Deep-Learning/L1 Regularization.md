@@ -1,0 +1,1 @@
+L1 regularization serves the same purpose as [[L2 Regularization]] with the difference being that rather than basing it on the [[Euclidean Distance]], it's based on the [[Manhattan Distance]]
