@@ -26,7 +26,7 @@ The key aspect is that these models can learn these features on their own, with 
 > 
 > "...predicting the activity of potential drug molecules, analyzing particle accelerator data, reconstructing brain circuits, and predicting the effects of mutations in non-coding DNA on gene expression."*
 
-**Supervised Learning**
+#### **Supervised Learning**
 
 Supervised learning is the most common form of machine learning, where the data fed into a model is labeled with its category.
 
@@ -42,7 +42,47 @@ The objective function is then used as a guide to minimize the error of the mode
 
 >*This is [[Backward propagation]] where the gradient of the loss is computed with respect to a specific parameters $\theta$ and [[Gradient descent]], where we want to find the optimal parameters of a model that find the global minima of the [[Loss function]] with respect to a param θ*
 
-Traditional linear classifiers can be used to
+Traditional linear classifiers can be used to make predictions on a dataset but won't be able to detect subtle changes to, as an example, images very well without robust feature extraction.
+
+A deeper model on the other hand will be able to get more specific representations of an image and learn from it, in order to compute more precise predictions without feature extraction. 
+
+> *This form of representation learning is crucial for advanced applications.*
+
+#### **Neural Networks and [[Backward propagation]]**
+
+The training of a neural network involves a forward pass through multiple layers each involving the summation of linear combinations to get a weighted sum and an activation function applied to the weighted sum to introduce non-linearity.
+
+This type of non-linearity allows for a model to capture more complex features within a given sample.
+
+The forward pass, using matrix notation, is mathematically defined as:
+
+$Z_l = W_l \cdot X + B_l$
+$A_l = g(Z_l)$
+
+where $Z$ is the matrix multiplication of a weighted matrix $W$ with input vector $X$ and the element-wise addition of a bias matrix $B$.
+
+The activation function $g$, which may be Softmax, Tanh, ReLU, Sigmoid, or any other depending on the context, is applied to the weighted sum $Z$. In a traditional feed forward neural network, this process is repeated for all layers, $L$.
+
+Once the final activation, $A_L$, is computed, a loss function, as an example [[Categorical Cross Entropy Loss]], is used to get the total loss or cost between the prediction and the true labels.
+
+$CCE = \frac{1}{m} \sum Y \cdot \log{A_L}$, where $m$ is the total training samples per batch.
+
+Let's assume we have a 2-layer neural network, applied to a multiclass classification task, where the loss function is [[Categorical Cross Entropy Loss]] and the activation function for the output layer is [[Softmax]]. 
+
+The backpropagation takes the gradients as:
+
+**Output Layer:**
+
+$\frac{∂CCE}{∂Z_2} = (\frac{∂CCE}{∂A_2})(\frac{∂A_2}{∂Z_2}) = A_2 - Y$
+
+$\frac{∂CCE}{∂W_2} = (\frac{∂CCE}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂W_2}) = (\frac{∂CCE}{∂Z_2})(\frac{∂Z_2}{∂W_2}) = (\frac{∂CCE}{∂Z_2})(A_1^T)$
+
+$\frac{∂CCE}{∂B_2} = (\frac{∂CCE}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂B_2}) = \frac{∂CCE}{∂Z_2}$
+
+**Hidden Layer:**
+
+$\frac{∂CCE}{∂Z_1} = (\frac{∂CCE}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂$
+
 
 ---
 **Thoughts / Questions / Action Items.**
