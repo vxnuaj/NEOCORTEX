@@ -48,9 +48,9 @@ A deeper model on the other hand will be able to get more specific representatio
 
 > *This form of representation learning is crucial for advanced applications.*
 
-#### **Neural Networks and [[Backward propagation]]**
+#### **Neural Networks and [[Gradient Descent]]**
 
-The training of a neural network involves a forward pass through multiple layers each involving the summation of linear combinations to get a weighted sum and an activation function applied to the weighted sum to introduce non-linearity.
+The training of a neural network involves a forward pass through multiple layers each involving the summation of linear combinations to get a weighted sum and an activation function applied to the weighted sum to introduce non-linearity. Then, backpropagation is applied to get the gradients of 
 
 This type of non-linearity allows for a model to capture more complex features within a given sample.
 
@@ -67,7 +67,7 @@ Once the final activation, $A_L$, is computed, a loss function, as an example [[
 
 $CCE = \frac{1}{m} \sum Y \cdot \log{A_L}$, where $m$ is the total training samples per batch.
 
-Let's assume we have a 2-layer neural network, applied to a multiclass classification task, where the loss function is [[Categorical Cross Entropy Loss]] and the activation function for the output layer is [[Softmax]]. 
+Let's assume we have a 2-layer neural network, applied to a multiclass classification task, where the loss function is [[Categorical Cross Entropy Loss]], the activation function for the hidden layer is ReLU, and the activation function for the output layer is [[Softmax]].  
 
 The backpropagation takes the gradients as:
 
@@ -75,14 +75,33 @@ The backpropagation takes the gradients as:
 
 $\frac{∂CCE}{∂Z_2} = (\frac{∂CCE}{∂A_2})(\frac{∂A_2}{∂Z_2}) = A_2 - Y$
 
-$\frac{∂CCE}{∂W_2} = (\frac{∂CCE}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂W_2}) = (\frac{∂CCE}{∂Z_2})(\frac{∂Z_2}{∂W_2}) = (\frac{∂CCE}{∂Z_2})(A_1^T)$
+$\frac{∂CCE}{∂W_2} = (\frac{∂CCE}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂W_2}) = (\frac{∂CCE}{∂Z_2})(\frac{∂Z_2}{∂W_2}) = (\frac{∂CCE}{∂Z_2})(A_1^T) = (A_2 - Y)(A_1^T)$
 
-$\frac{∂CCE}{∂B_2} = (\frac{∂CCE}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂B_2}) = \frac{∂CCE}{∂Z_2}$
+$\frac{∂CCE}{∂B_2} = (\frac{∂CCE}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂B_2}) = \frac{∂CCE}{∂Z_2} = A_2 - Y$
 
 **Hidden Layer:**
 
-$\frac{∂CCE}{∂Z_1} = (\frac{∂CCE}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂$
+$\frac{∂CCE}{∂Z_1} = (\frac{∂CCE}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂A_1})(\frac{∂A_1}{∂Z_1}) = (\frac{∂CCE}{∂Z_2})(W_2^T)(ReLU_{deriv}(Z_1)) = (A_2 - Y)(W_2^T) * (ReLU_{deriv}(Z_1))$
 
+where $ReLU_{deriv}(Z_1) = \begin{cases} 1, Z_1 > 0 \\ 0, Z_1 < 0 \end{cases}$
+
+$\frac{∂CCE}{∂W_1} = (\frac{∂CCE}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂A_1})(\frac{∂A_1}{∂Z_1})(\frac{∂Z_1}{∂W_1}) = (\frac{∂CCE}{∂Z_1})(X^T) = (A_2 - Y)(W_2^T) * (ReLU_{deriv}(Z_1))(X^T)$
+
+$\frac{∂CCE}{∂B_1} = (\frac{∂CCE}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂A_1})(\frac{∂A_1}{∂Z_1})(\frac{∂Z_1}{∂B_1}) = \frac{∂CCE}{∂Z_1} = (A_2 - Y)(W_2^T) * (ReLU_{deriv}(Z_1))$ 
+
+Each single parameter has it's own gradient.
+
+Typically, for more efficient training, each gradient is averaged over the total amount of training samples in a given batch.
+
+$\frac{1}{m} \sum \frac{∂CCE}{∂\theta}$, where $\theta$ is a given parameter and $m$ is the total number of training samples.
+
+The averaged gradient is then used to update a given parameter, $W$ or $B$, denoted by $\theta$ in the opposite direction of the gradient.
+
+$\theta_{new} = \theta - \alpha * \frac{∂CCE}{∂\theta}$
+
+Here, $\alpha$ is a hyperparameter known as the learning rate, determining how fast a model will learn. The higher it is, the more prone a model will be to overshooting, while making it smaller makes a model slower and more computationally expensive to train.
+
+This entire process is called [[Gradient Descent]] which can be effectively applied to any amount of layers, at least until one faces a [[vanishing gradient]].
 
 ---
 **Thoughts / Questions / Action Items.**
