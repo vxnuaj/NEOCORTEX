@@ -1,6 +1,6 @@
 L2 regularization, as [[Regularization]], involves the addition of a penalty term to punish large weights.;
 
-The penalty term is based on the [[Euclidean Distance]] squared, multiplied by a hyperparameter, $\lambda$.
+The penalty term is based on the [[Euclidean Norm]] or [[Frobenius Norm]] squared, multiplied by a hyperparameter, $\lambda$.
 
 The regularized loss is then calculated as:
 
