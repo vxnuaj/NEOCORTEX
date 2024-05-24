@@ -40,7 +40,7 @@ An objective function ([[Loss function]]) is used to gauge the total error betwe
 
 The objective function is then used as a guide to minimize the error of the model. To do so, a gradient is computed that's then used to update the weights
 
->*This is [[Backward propagation]] where the gradient of the loss is computed with respect to a specific parameters $\theta$ and [[Gradient descent]], where we want to find the optimal parameters of a model that find the global minima of the [[Loss function]] with respect to a param θ*
+>*This is [[Backpropagation]] where the gradient of the loss is computed with respect to a specific parameters $\theta$ and [[Gradient descent]], where we want to find the optimal parameters of a model that find the global minima of the [[Loss function]] with respect to a param θ*
 
 Traditional linear classifiers can be used to make predictions on a dataset but won't be able to detect subtle changes to, as an example, images very well without robust feature extraction.
 
@@ -123,9 +123,34 @@ The architecture begins with a convolutional layer, where a [[convolution]] is a
 
 Each layer may use a different filter size depending on the intention
 
-After each convolutional layer, a pooling layer is introduced to reduce the dimensionality of the output feature maps of a given layer through a $max$ or $min$.
+After each convolutional layer, a pooling layer is introduced to reduce the dimensionality of the output feature maps of a given layer through a $max$. Another filter is applied to a corresponding feature map, choosing the $max$ feature within the filter group and dropping the rest, ultimately reducing the feature size.
+
+So just like a feedforward neural network, as a CNN gets deeper, it'll be able to capture more complex and specific features of a given sample given the opportunity to apply more convolution operations and pooling layers.
+
+And taking more inspiration from the human brain, the architecture of a CNN resembles neuronal structures in the visual cortex.
+
+CNNs are then use for various computer vision applications such as self-driving cars. Stacking a CNN alongside an RNN, then allows for a model to interpret an image and. then output a description to it.
+
+The success of CNNs first came due to the introduction of GPUs into deep learning, efficient ReLU activations, and the use of dropout regularization. The success has then moved top companies, i.e., Nvidia, Intel, Samsung, etc to build CNN chpis to enable real-time comptuer vision capability.
+
+#### Distributed Representations
+
+An advantage of deep networks over classical ML is that they use distributed representations of data, meaning calculating the probability of a sample belonging to a class label[^1].
+
+*"$2^n$ combinations are possible with $n$ binary features*
+
+If you were to hypothetically feed a neural network a samples of, $[0,0,1]$, $[1,0,0]$, and $[0,1,1]$, as a byproduct, it'd also be able to learn the unseen probabilities of the remaining 5 possible combinations of features.[^1]
+
+#### Recurrent Neural Nets
+
+When backpropagation was first introduced, it was clear that it was to be extremely suitable for training RNNs.
+
+Though a key issue that first appeard
+
 
 ---
 **Thoughts / Questions / Action Items.**
 - "*reconstructing brain circuits*", check out source 11 on the paper.
 - when using sparse cross entropy given that you take in integer encoded labels, you'd take the argmax of the softmax activation and then use that as the parameter for the loss alongside the true labels. otherwise, then you wouldn't be able to learn, given that softmax outputs are from 0 to 1 and labels are from 0 to 9. this might've been why I couldn't implement sparse ce, right? will try this out if i get time.
+
+[^1]: Confirm that it is right.

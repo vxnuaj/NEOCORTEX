@@ -30,9 +30,9 @@ It's range is between, $-1$ and $1$ symmetric around the origin of $0,0$, which 
 
 The Tanh function is smooth and continuous everywhere, making it differentiable amongst it's entire range.
 
-The smoothness enables [[backward propagation]] to effectively compute the gradients and update a model's parameters without issues of numerical instability while the continuity enables a smooth [[gradient descent]] mitigating sudden and abrupt changes in the model parameters.
+The smoothness enables [[Backpropagation]] to effectively compute the gradients and update a model's parameters without issues of numerical instability while the continuity enables a smooth [[gradient descent]] mitigating sudden and abrupt changes in the model parameters.
 
-Being a monotonically increasing function, there are no abrupt changes in it's sign making the learning during [[backward propagation]] smooth and interpretable.
+Being a monotonically increasing function, there are no abrupt changes in it's sign making the learning during [[Backpropagation]] smooth and interpretable.
 
 The computational efficiency of tanh is a burden, requiring the computation of multiple 
  `np.exp`'s, more than [[sigmoid]]. 

@@ -20,7 +20,7 @@ The range of SELU is from $- \infty$ to $\infty$, it's unbounded range having ef
 
 It then also copes better with the [[vanishing gradient]] problem when compared to [[Sigmoid]] or [[Tanh]] given an unbounded range.
 
-The function isn't completely smooth, not being differentiable at $z = 0$, similar to [[ReLU]] or [[Leaky ReLU]]. Mathematically, this means that it's use can bring about the propagation of NaN values in a model which can be detrimental during [[backward propagation]]. Though, in practical code, this activation functions is written in a manner that ignores and bypasses this discontinuity fixing the problem.
+The function isn't completely smooth, not being differentiable at $z = 0$, similar to [[ReLU]] or [[Leaky ReLU]]. Mathematically, this means that it's use can bring about the propagation of NaN values in a model which can be detrimental during [[Backpropagation]]. Though, in practical code, this activation functions is written in a manner that ignores and bypasses this discontinuity fixing the problem.
 
 Being monotonic, it allows for a smoother gradient descent, reducing the risk for a model to get stuck in a local minima and allows it to optimize for a global minima.
 

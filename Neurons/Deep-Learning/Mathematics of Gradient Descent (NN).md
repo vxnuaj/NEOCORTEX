@@ -30,7 +30,7 @@ $Z_2 = W_2A_1 + B_1$[^1]
 $A_2 = g(Z_2)$
 $\hat{y} = A_2$
 
-[[Backward propagation]]:
+[[Backpropagation]]:
 
 $\frac{∂J}{∂Z_2} = (\frac{∂J}{∂A_2})(\frac{∂A_2}{∂Z_2}) = A_2 - Y$
 

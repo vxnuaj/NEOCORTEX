@@ -1,6 +1,6 @@
 ******#mathematics 
 
-The vectorized mathematics for [[backward propagation]] in [[linear regression]] assuming a use of the [[mean squared error]] as the loss function can be defined as such:
+The vectorized mathematics for [[Backpropagation]] in [[linear regression]] assuming a use of the [[mean squared error]] as the loss function can be defined as such:
 
 $MSE = \frac{1}{n} \sum_{i=1}^{n}(Y_i - \hat{Y_i})^2$
 

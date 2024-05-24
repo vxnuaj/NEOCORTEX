@@ -16,7 +16,7 @@ Each activation function has a set of key features, that need to be considered w
 	
 	The output range of an activation function can be important to consider, for a variety of factors. 
 	
-	It's range can affect the scale of gradients during [[backward propagation]] leading to exploding or vanishing gradients, the numerical stability, and the interpretability of an activation function (some, such as [[softmax]], can be seen as a probability).
+	It's range can affect the scale of gradients during [[Backpropagation]] leading to exploding or vanishing gradients, the numerical stability, and the interpretability of an activation function (some, such as [[softmax]], can be seen as a probability).
 
 3. Monotonicity
 
@@ -28,11 +28,11 @@ Each activation function has a set of key features, that need to be considered w
 
 4. Continuity
 
-	Continuity in an activation function allows for smooth continuous changes. As the inputs change, the outputs change slightly. This becomes important for ensuring smooth gradient descent computations during [[backward propagation]].
+	Continuity in an activation function allows for smooth continuous changes. As the inputs change, the outputs change slightly. This becomes important for ensuring smooth gradient descent computations during [[Backpropagation]].
 
 5. Differentiability
 
-	Differentiability allows for gradient based optimization algorithms ([[backward propagation]]) to properly allow gradients to be computed for the weight updates. 
+	Differentiability allows for gradient based optimization algorithms ([[Backpropagation]]) to properly allow gradients to be computed for the weight updates. 
 
 	If differentiability wasn't the case within the domain of an activation function, it's possible that NaN values begin to propagate throughout a model.
 
