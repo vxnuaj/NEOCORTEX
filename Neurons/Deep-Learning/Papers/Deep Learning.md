@@ -103,6 +103,28 @@ Here, $\alpha$ is a hyperparameter known as the learning rate, determining how f
 
 This entire process is called [[Gradient Descent]] which can be effectively applied to any amount of layers, at least until one faces a [[vanishing gradient]].
 
+The application of these models were accelerated in 2009 with the innovation of faster GPUs, allowing deep learning researchers *"to train networks 10 or 20 times faster"*.
+
+After initial progress in 2009, where models were used for speech recognition, in 2012, many were already being deployed in phones. 
+
+Interestingly, it was found that prior to training a model on smaller datasets, unsupervised pre-training, would prevent the problem of overfitting on a limited dataset.
+
+> *Reminds of Transfer Learning or Fine tuning a model on a more niche dataset*
+
+#### Convolutional Neural Networks
+
+CNNs are used to learn from data that are in the form of arrays, such as RGB images. 
+
+*"There are four key ideas behind ConvNets that take advantage of the properties of natural signals: local connections, shared weights, pooling and the use of many layers."*
+
+And of course, the [[Convolution]]s themselves.
+
+The architecture begins with a convolutional layer, where a [[convolution]] is applied to an input array to compute a weighted sum, using a matrix of shared weights called a filter, to then be applied to a non-linear activation function, such as [[ReLU]].
+
+Each layer may use a different filter size depending on the intention
+
+After each convolutional layer, a pooling layer is introduced to reduce the dimensionality of the output feature maps of a given layer through a $max$ or $min$.
+
 ---
 **Thoughts / Questions / Action Items.**
 - "*reconstructing brain circuits*", check out source 11 on the paper.
