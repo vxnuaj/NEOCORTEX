@@ -86,9 +86,7 @@ $\frac{∂CCE}{∂Z_1} = (\frac{∂CCE}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{�
 where $ReLU_{deriv}(Z_1) = \begin{cases} 1, Z_1 > 0 \\ 0, Z_1 < 0 \end{cases}$
 
 $\frac{∂CCE}{∂W_1} = (\frac{∂CCE}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂A_1})(\frac{∂A_1}{∂Z_1})(\frac{∂Z_1}{∂W_1}) = (\frac{∂CCE}{∂Z_1})(X^T) = (A_2 - Y)(W_2^T) * (ReLU_{deriv}(Z_1))(X^T)$
-
 $\frac{∂CCE}{∂B_1} = (\frac{∂CCE}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2}{∂A_1})(\frac{∂A_1}{∂Z_1})(\frac{∂Z_1}{∂B_1}) = \frac{∂CCE}{∂Z_1} = (A_2 - Y)(W_2^T) * (ReLU_{deriv}(Z_1))$ 
-
 Each single parameter has it's own gradient.
 
 Typically, for more efficient training, each gradient is averaged over the total amount of training samples in a given batch.
@@ -143,10 +141,31 @@ If you were to hypothetically feed a neural network a samples of, $[0,0,1]$, $[1
 
 #### Recurrent Neural Nets
 
-When backpropagation was first introduced, it was clear that it was to be extremely suitable for training RNNs.
+When backpropagation was first introduced, it was clear that it was to be extremely suitable for training RNNs while the only issue remaining was a vanishing or exploding gradient, changes in architecture were able to resolve those issues.
 
-Though a key issue that first appeard
+> *LSTMs and GRUs*
 
+The advances in RNNs have then enabled the introduction of more complex tasks, such as translation from English to French.
+
+This involves an encoder, encoding the idea or thought expressed by an english phrase, which is then fed into a decoder that outputs a probability distribution for a full French translation.
+
+Another sick application is translating an image into a caption. This can be done through stacking a CNN as an encoder onto an RNN decoder.
+
+The encoded image vector is fed into an RNN which then, similar to translation tasks, provides a full caption for a given image.
+
+While an RNN is designed to learn temporal features, it's memory may not hold for prolonged periods of time. The idea to resolve this issue is an LSTM, that's essentially a type of hidden neuron which holds a memory cell that's able to store more long term information.
+
+Other proposals such as Neural Turing Machines, resembling Alan Turing's concept of a Turing machine, and memory networks have been proposed to improve the 'memory' of an RNN.
+
+#### The Future of Deep Learning
+
+Unsupervised learning is expected to begin to take a larger role, as human and animal learning is primarily unsupervised proving to be efficient for learning.
+
+Stacking different types of networks, such as CNNs and RNNs are promising for various vision and language applications. Introducing deep reinforcement learning has outperformed vision systems and classification tasks making them promising for a variety of applications.
+
+Understanding Natural Language is a promising area within deep learning over the next few years, with an expectation for RNNs to understand sentences or entire documents.
+
+> *This aged extremely well...*
 
 ---
 **Thoughts / Questions / Action Items.**
