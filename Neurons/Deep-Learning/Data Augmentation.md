@@ -1,4 +1,4 @@
-Data Augmentation is the modification of samples in order to increase the amount of unique training samples. 
+Data Augmentation is the modification of samples in order to increase the amount of unique training samples.
 
 It mitigates a limiting factor of a smaller collected dataset.
 
@@ -9,3 +9,5 @@ You can
 2. Crop Images
 3. Distort images 
 4. Rotate Images 
+
+	![[Screenshot 2024-06-04 at 2.46.42 PM.png | 600]]

@@ -18,6 +18,7 @@ Common regularization techniques include
 3. [[L1 Regularization]]
 4. [[Data Augmentation]]
 5. [[Early Stopping]]
+6. [[Label Smoothing]]
 
 
 ---
