@@ -6,15 +6,15 @@ L2 regularization can be often added to layers that are more prone to overfittin
 
 The regularized loss is then calculated as:
 
->*Using $||w||^2$ notation, the [[Euclidean Norm]] squared, not the [[Frobenius Norm]]*
+> *Using [[Frobenius Norm]] notation, $||W|| = \sum_i \sum_j w_{ij}^2$*
 
-$J(\hat{y}, y)_{regularized} = \frac{1}{n}\sum L(\hat{y}, y) + \frac{1}{n}\lambda||w||^2$
+$J(\hat{y}, y)_{regularized} = \frac{1}{n}\sum L(\hat{y}, y) + \frac{\lambda}{n}\sum_{l = 1}^L ||W||$
 
 This is also known as weight decay, as when doing [[Gradient Descent]], a subset of the parameters will decay to smaller values given the introduction of the small value of $\lambda$.
 
 Then, in [[Gradient Descent]], the implementation of regularized loss looks mathematically as (w.r.t to param $w$, assuming [[Categorical Cross Entropy Loss]]):
 
-$\frac{∂J_{regularized}}{∂w} = (\frac{∂J}{∂Z})(\frac{∂Z}{∂W}) + 2\lambda||w||$
+$\frac{∂J_{regularized}}{∂w} = (\frac{∂J}{∂Z})(\frac{∂Z}{∂W}) + 2\lambda||W||$
 
 $\frac{∂J_{regularized}}{∂w} = (A - Y_{onehot})(X^T) + 2\lambda||w||$
 
@@ -26,4 +26,7 @@ Essentially, [[overfitting]] requires a set of large weights. An L2 regularized 
 
 The larger $||w||$ is, the higher the gradient will be, therefore forcing a model to optimize for a narrower set of parameters.
 
+	![[Screenshot 2024-06-04 at 4.29.33 PM.png | 500]][^2]
+
 [^1]: Refer to `CCE` in `l2nn.py` in the Regularization folder.
+[^2]: The loss will only be optimize to the 'compromise'

@@ -7,6 +7,8 @@ It aims to reduce co-dependence / co-adaptation amongst neurons. Some neurons de
 When you dropout neurons randomly, the 'lazy' neurons must start learning and begin to reduce reliance on the 'hard working' neurons.
 
 In dropout regularization, dropping neurons out means making a set of neurons $0$, based on a probability $1- p$, and normalizing the rest of the neurons that aren't eliminated as $\frac{a}{p}$.
+	
+	![[Screenshot 2024-06-04 at 4.51.37 PM.png | 400]]
 
 This is typically implemented per layer, the probability $p$ generally being lower on layers with higher number of weights to reduce overfitting, and higher on layers with lower number of weights as we don't need to worry about overfitting as much there.
 
