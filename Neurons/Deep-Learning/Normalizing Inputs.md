@@ -1,8 +1,7 @@
 You typically want to normalize your inputs to improve model stability, decrease complexity of the problem, decrease biased weights, which can potentially increase accuracy and/or increase training speed. 
 
-There are multiple ways to normalize inputs.
+It's important to make sure you normalize your inputs the same way during training and testing.
 
-**Subtracting the Mean**
+Some methods of doing so are:
 
->*This enters the dataset around 0*
-
+1. [[Z-Score Normalization]]
