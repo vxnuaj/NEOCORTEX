@@ -1,4 +1,4 @@
-3Dropout is a [[Regularization]] technique that eliminates / ignores a specific set of neurons to optimize the network size to reduce overfitting and improve generalizability.
+Dropout is a [[Regularization]] technique that eliminates / ignores a specific set of neurons to optimize the network size to reduce overfitting and improve generalizability.
 
 It aims to reduce co-dependence / co-adaptation amongst neurons. Some neurons depend on others to do the 'hard work' while they sit by and not contribute to the overall output.
 
@@ -8,7 +8,11 @@ When you dropout neurons randomly, the 'lazy' neurons must start learning and be
 
 In dropout regularization, dropping neurons out means making a set of neurons $0$, based on a probability $1- p$, and normalizing the rest of the neurons that aren't eliminated as $\frac{a}{p}$.
 
+This is typically implemented per layer, the probability $p$ generally being lower on layers with higher number of weights to reduce overfitting, and higher on layers with lower number of weights as we don't need to worry about overfitting as much there.
+
 Mathematically, where the activation is $a$, dropout looks as:
+
+>*This is implemented in the inverted form, where we scale by $p$ during training rather than multiplying weights by $p$ during testing*
 
 $a' = \begin{cases} 0, \hspace{3mm} 1-p \\ \frac{a}{p}, \hspace{3mm} otherwise \end{cases}$
 
@@ -39,12 +43,12 @@ A1 = np.multiply(A1, D1)
 A1 = A1 / (p)
 ```
 
-Then the resulting network is a subset of the entire network.
+The resulting network is a subset of the entire network.
 
-Each neuron should have an approximately similar scaled impact on the model before and after dropout. If the neurons that weren't dropped weren't normalized, the stability and performance of a network would diminish given that dropout reduces the scale of the neuron activations. 
+Each neuron should have an approximately similar scaled impact on the model before and after dropout so we must apply a scaling factor which involves the division: $\frac{a_l}{p}$ where $a$ is the activation at the $lth$ layer.
 
-![[Screenshot 2024-06-04 at 8.23.21 AM.png | 400]]
+Otherwise the stability and performance of a network would diminish. Amongst the $2^n$ possible thinned networks, the scale of the output would vary making the combined model during testing prone to innaccuracy.
 
->Check out [[Dropout: A Simple]]
 
-Another common way to implement dropout is [[Inverted dropout]].
+---
+> *Checkout [[Dropout - A Way to Prevent Networks from Overfitting]]*

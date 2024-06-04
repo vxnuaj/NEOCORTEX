@@ -2,6 +2,8 @@ L2 regularization, as [[Regularization]], involves the addition of a penalty ter
 
 The penalty term is based on the [[Euclidean Norm]] or [[Frobenius Norm]] squared, multiplied by a hyperparameter, $\lambda$.
 
+L2 regularization can be often added to layers that are more prone to overfitting and may not need to be added to layers that aren't prone to it. This typically includes more dense layers with higher number of params.
+
 The regularized loss is then calculated as:
 
 $J(\hat{y}, y)_{regularized} = \sum L(\hat{y}, y) + \lambda||w||^2$
@@ -16,8 +18,10 @@ $\frac{∂J_{regularized}}{∂w} = (A - Y_{onehot})(X^T) + 2\lambda||w||$
 
 $w = w - \alpha * \frac{∂J_{regularized}}{∂w}$
 
->*When computing the loss, you must take the squared euclidean norm of **all** weight matrices, not just only the output layer.*
+>*When computing the loss, you must take the squared euclidean norm of **all** weight matrices, not just only the output layer.*[^1]
 
 Essentially, [[overfitting]] requires a set of large weights. An L2 regularized back propagation adds the additional $2\lambda||w||$ term to increase a gradient.
 
 The larger $||w||$ is, the higher the gradient will be, therefore forcing a model to optimize for a narrower set of parameters.
+
+[^1]: Refer to `CCE` in `l2nn.py` in the Regularization folder.

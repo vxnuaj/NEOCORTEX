@@ -29,7 +29,8 @@
 
 	This applies dropout to purely the inputs, $y$.
 
-- During testing, you then must multiply the weights by the probability $p$ to scale the weights in combination with the $2^n$ thinned networks. Or during training, you can scale the the activations through a division of $y$ (or $a$ depending on the layer) by $p$.
+- During testing, you then must multiply the weights by the probability $p$ to scale the weights in combination with the $2^n$ thinned networks. 
+- Or during training, you can scale the the activations through a division of $y$ (or $a$ depending on the layer) by $p$. This is called 'inverted dropout'
 
 	![[Screenshot 2024-06-04 at 9.57.58 AM.png]]
 
