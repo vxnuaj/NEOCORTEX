@@ -6,7 +6,9 @@ L2 regularization can be often added to layers that are more prone to overfittin
 
 The regularized loss is then calculated as:
 
-$J(\hat{y}, y)_{regularized} = \sum L(\hat{y}, y) + \lambda||w||^2$
+>*Using $||w||^2$ notation, the [[Euclidean Norm]] squared, not the [[Frobenius Norm]]*
+
+$J(\hat{y}, y)_{regularized} = \frac{1}{n}\sum L(\hat{y}, y) + \frac{1}{n}\lambda||w||^2$
 
 This is also known as weight decay, as when doing [[Gradient Descent]], a subset of the parameters will decay to smaller values given the introduction of the small value of $\lambda$.
 
