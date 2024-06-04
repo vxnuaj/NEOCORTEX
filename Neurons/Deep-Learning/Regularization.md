@@ -10,8 +10,11 @@ This trades a decrease in training accuracy for an increase in generalizability.
 
 In practice, implementing regularization on a bias term is omitted given it's low dimensionality and minimal impact when compared to the weights of a model.
 
-Common regularization techniques include [[Dropout]], [[L2 Regularization]] and [[L1 Regularization]]
+Common regularization techniques include
+1. [[Dropout]]
+2. [[L2 Regularization]]
+3. [[L1 Regularization]]
+4. [[Data Augmentation]]
+5. [[Early Stopping]]
 
 ---
-
-![[Screenshot 2024-05-21 at 10.13.56 AM.png]]

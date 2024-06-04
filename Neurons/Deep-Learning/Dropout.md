@@ -47,8 +47,11 @@ The resulting network is a subset of the entire network.
 
 Each neuron should have an approximately similar scaled impact on the model before and after dropout so we must apply a scaling factor which involves the division: $\frac{a_l}{p}$ where $a$ is the activation at the $lth$ layer.
 
-Otherwise the stability and performance of a network would diminish. Amongst the $2^n$ possible thinned networks, the scale of the output would vary making the combined model during testing prone to innaccuracy.
+Otherwise the stability and performance of a network would diminish. Amongst the $2^n$ possible thinned networks, the scale of the output would vary making the combined model during testing prone to inaccuracy.
 
+A downside of implementing dropout is the loss of being able to apply a loss function as a metric, given that it's surface is constantly varying based on probability $p$. 
+
+To mitigate this, after training epochs, you can test the entire network as a whole using the cost function to ensure that it's value is decreasing over time.
 
 ---
 > *Checkout [[Dropout - A Way to Prevent Networks from Overfitting]]*
