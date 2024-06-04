@@ -8,3 +8,4 @@ You can
 1. Flip images
 2. Crop Images
 3. Distort images 
+4. Rotate Images 
