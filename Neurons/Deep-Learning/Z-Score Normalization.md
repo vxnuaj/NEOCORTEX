@@ -1,5 +1,7 @@
 Essentially, subtract your data by the mean and divide over the standard deviation.
 
+The resulting features will have a mean of $0$ and a unit variance ($1$)
+
 
 Say there's a dataset of $X$, where $X$ is $\begin{pmatrix} x_1 \\.\\.\\.\\ x_{100} \end{pmatrix}$
 You can normalize the dataset by

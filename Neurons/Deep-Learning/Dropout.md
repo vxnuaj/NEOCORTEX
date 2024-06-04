@@ -3,7 +3,7 @@ Dropout is a [[Regularization]] technique that eliminates / ignores a specific s
 It aims to reduce co-dependence / co-adaptation amongst neurons. Some neurons depend on others to do the 'hard work' while they sit by and not contribute to the overall output.
 
 >*Dropout is more commonly used during training a model, and more commonly disabled during testing. Though, in research, some used dropout as a means of assessing the uncertainty in the predictions of a model to assess it's confidence and effectiveness.*
-
+ 
 When you dropout neurons randomly, the 'lazy' neurons must start learning and begin to reduce reliance on the 'hard working' neurons.
 
 In dropout regularization, dropping neurons out means making a set of neurons $0$, based on a probability $1- p$, and normalizing the rest of the neurons that aren't eliminated as $\frac{a}{p}$.
