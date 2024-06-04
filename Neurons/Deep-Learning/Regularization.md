@@ -4,13 +4,13 @@ It involves adding a small term to a loss function which penalizes for large wei
 
 $J(w,b) = \sum L(\hat{y}, y) + \lambda \cdot Penalty$
 
->*The penalty is typically the [[Euclidean Norm]] or the [[Manhattan Distance]]*
+>*The penalty is typically the [[Euclidean Norm]] squared or the [[Manhattan Distance]]*
 
 This trades a decrease in training accuracy for an increase in generalizability.
 
 In practice, implementing regularization on a bias term is omitted given it's low dimensionality and minimal impact when compared to the weights of a model.
 
-Common regularization techniques include [[L2 Regularization]] and [[L1 Regularization]]
+Common regularization techniques include [[Dropout]], [[L2 Regularization]] and [[L1 Regularization]]
 
 ---
 
