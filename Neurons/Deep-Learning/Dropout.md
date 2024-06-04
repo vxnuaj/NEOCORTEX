@@ -55,6 +55,8 @@ A downside of implementing dropout is the loss of being able to apply a loss fun
 
 To mitigate this, after training epochs, you can test the entire network as a whole using the cost function to ensure that it's value is decreasing over time.
 
+Dropout also takes more iterations to converge as you're eliminating a random set of neurons per iteration, thereby reducing the amount of learning steps some neurons are able to take during gradient descent.
+
 **Practical Tips:**
 - Don't use dropout if a model doesn't overfit
 - But if the above is true, increase the capacity of the model to make it overfit and then use dropout to build a larger capacity model.
