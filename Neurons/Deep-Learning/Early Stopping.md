@@ -4,7 +4,7 @@ While you want to optimize the cost function, you don't want your model to overf
 	
 	![[Screenshot 2024-06-04 at 4.11.55 PM.png | 400]]
 
->*While this method isn't as widely used, if L2 or L1 regularization or Dropout doesn't work, it's still a valid means to reduce overfitting.**l***
+>*While this method isn't as widely used, if L2 or L1 regularization or Dropout doesn't work, it's still a valid means to reduce overfitting.*
 
 First, you split your dataset into:
 
