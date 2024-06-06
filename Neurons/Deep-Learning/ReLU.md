@@ -44,12 +44,12 @@ ReLU is a strictly monotonically increasing function. As the inputs increase, th
 
 ReLU is also more computationally efficient than most activation functions such as [[sigmoid]] or [[tanh]]. It's simple use of the $max()$ function and absence of Euler's $e$, makes for computationally efficient operations.
 
-Given it's lack of suitability for output layers, with it's unbounded upper range, it's lowered computational complexity, and avoidance of the [[vanishing gradient]] problem, ReLU is commonly used in the hidden layers of a deep network, especially when [[sparsity]] is desired.
+Given it's lack of suitability for output layers, with it's unbounded upper range, it's lowered computational complexity, and avoidance of the [[Vanishing Gradient]] problem, ReLU is commonly used in the hidden layers of a deep network, especially when [[sparsity]] is desired.
 
 
 **Advantages**
 - Computationally efficient when compared to [[sigmoid]] or [[tanh]]
-- Avoidance of the [[vanishing gradient]]
+- Avoidance of the [[Vanishing Gradient]]
 - Sparse at $z<0$ (can be beneficial if used right)
 
 

@@ -99,7 +99,7 @@ $\theta_{new} = \theta - \alpha * \frac{∂CCE}{∂\theta}$
 
 Here, $\alpha$ is a hyperparameter known as the learning rate, determining how fast a model will learn. The higher it is, the more prone a model will be to overshooting, while making it smaller makes a model slower and more computationally expensive to train.
 
-This entire process is called [[Gradient Descent]] which can be effectively applied to any amount of layers, at least until one faces a [[vanishing gradient]].
+This entire process is called [[Gradient Descent]] which can be effectively applied to any amount of layers, at least until one faces a [[Vanishing Gradient]].
 
 The application of these models were accelerated in 2009 with the innovation of faster GPUs, allowing deep learning researchers *"to train networks 10 or 20 times faster"*.
 

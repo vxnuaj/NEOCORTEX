@@ -37,7 +37,7 @@ Common use cases of ReLU include activations at the hidden layers of deep networ
 **Advantages**
 - Mitigates 'dead neuron' issue
 - Near sparse activations when negative values are near $0$
-- Mitigates [[vanishing gradient]]s
+- Mitigates [[Vanishing Gradient]]s
 - More computationally efficient than [[Sigmoid]] and [[Tanh]]
 
 **Disadvantages**

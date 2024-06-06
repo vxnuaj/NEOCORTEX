@@ -18,7 +18,7 @@ $SELU'(z) = \begin{cases} \lambda, z > 0 \\ \lambda \alpha (e^z), z ≤ 0\end{ca
 
 The range of SELU is from $- \infty$ to $\infty$, it's unbounded range having effects of a lack of true [[sparsity]] which mitigates dead neurons.
 
-It then also copes better with the [[vanishing gradient]] problem when compared to [[Sigmoid]] or [[Tanh]] given an unbounded range.
+It then also copes better with the [[Vanishing Gradient]] problem when compared to [[Sigmoid]] or [[Tanh]] given an unbounded range.
 
 The function isn't completely smooth, not being differentiable at $z = 0$, similar to [[ReLU]] or [[Leaky ReLU]]. Mathematically, this means that it's use can bring about the propagation of NaN values in a model which can be detrimental during [[Backpropagation]]. Though, in practical code, this activation functions is written in a manner that ignores and bypasses this discontinuity fixing the problem.
 

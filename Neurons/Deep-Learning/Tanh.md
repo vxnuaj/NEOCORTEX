@@ -44,7 +44,7 @@ The computational efficiency of tanh is a burden, requiring the computation of m
 
 **Advantages**
 
-1. The larger range between $-1$ and $1$ yields steeper gradients than the [[sigmoid]] function allowing for faster learning and helps cope with the [[vanishing gradient]]
+1. The larger range between $-1$ and $1$ yields steeper gradients than the [[sigmoid]] function allowing for faster learning and helps cope with the [[Vanishing Gradient]]
 2. It's zero-centered meaning the sign value is balanced. Parameter updates are then more likely to point in the right direction rather than being biased to a specific value. This then also helps mitigate the vanishing gradient
 
 **Disadvantages:**

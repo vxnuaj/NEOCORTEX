@@ -29,7 +29,7 @@ elu_grad1 = np.where(z > 0, 1, (alpha * np.exp(z)))
 
 The range of ELU goes from $-\infty$ to $\infty$, it's lack of bounds mitigating the issue of dead neurons as [[ReLU]] given that it doesn't have as high level of sparsity when $z < 0$. 
 
-It's lack of bounds also mitigates the [[vanishing gradient]] that's faced when using [[sigmoid]] and [[tanh]]. 
+It's lack of bounds also mitigates the [[Vanishing Gradient]] that's faced when using [[sigmoid]] and [[tanh]]. 
 
 ELU, unlike [[ReLU]], is smooth, meaning it is differentiable over it's entire domain. Mathematically,  one doesn't face the issue of discontinuity faced with [[ReLU]] or [[Leaky ReLU]] where NaN values are propagated when an input, $z$, is $0$.
 
@@ -43,7 +43,7 @@ ELU is commonly used in the hidden layers of deeper networks as it introduces no
 
 **Advantages:**
 - Differentiable everywhere, no NaN values
-- Lessens the probability of the [[vanishing gradient]]
+- Lessens the probability of the [[Vanishing Gradient]]
 - No dead neurons at $z < 0$
 
 **Disadvantages:**
