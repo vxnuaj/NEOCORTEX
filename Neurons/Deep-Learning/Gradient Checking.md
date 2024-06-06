@@ -14,7 +14,8 @@ $f'(\theta) = \frac{f(\theta + h) - f(\theta)}{\epsilon}$
 
 This is as the error is $O(\epsilon ^2)$ in the secant line def. while the error is $O(\epsilon)$ making way for a more accurate approximation especially when it comes to computing the gradients of smaller values.
 
-To do so for a Neural Network, you can:
+To gradient check for a Neural Network, you can:
 
-1. Take all vectors of weights and biases $W$ and $B$ into a single vector, $d\theta$
-2. Take all vectors of the gradients of weights and biases $dW$ and $dB$
+1. Take all vectors of weights and biases $W$ and $B$ into a single vector, $\theta$
+2. Take all vectors of the gradients of weights and biases $dW$ and $dB$ into a single vector, $d\theta$
+3. Apply the centered difference definition of the derivative.
