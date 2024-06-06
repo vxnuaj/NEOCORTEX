@@ -20,3 +20,7 @@ $W_1 = 0.79990234375$
 A really small weight update.
 
 A similar thing can be said for [[Exploding Gradients]], when a gradient is significantly above 1 in a very deep network.
+
+This issue can be particularly significant in [[Sigmoid]] or [[Tanh]] activation functions given that their derivative becomes extremely small (or essentially $0$) once the input is less than $-4$ or exceeds $4$.[^1]
+
+[^1]: Especially in [[Sigmoid]] where the largest gradient can only be $.25$

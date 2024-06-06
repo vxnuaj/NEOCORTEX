@@ -24,7 +24,7 @@ w = np.random.randn(dim1, dim2) * np.sqrt(1 / m)
 
 This type of initialization is typically used alongside the [[Tanh]] activation function given that the function has a mean of 0 with a variance of 1.
 
-While [[Tanh]] is more robust against vanishing gradients when compared to [[Sigmoid]], it's still prone to vanishing gradients if the inputs are very large, positive or negative. 
+While [[Tanh]] is more robust against vanishing gradients, given a larger maximum gradient of $1$, when compared to [[Sigmoid]]'s $.25$, it's still prone to vanishing gradients (or dead neurons) if the inputs are very large, positive or negative. 
 
 Initializing model weights using Xavier Initialization helps improve on [[Tanh]] to mitigate the vanishing gradient problem.
 

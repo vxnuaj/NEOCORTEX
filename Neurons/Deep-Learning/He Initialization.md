@@ -14,7 +14,7 @@ In code, it can be defined as:
 w = np.random.randn(dim1, dim2) * np.sqrt(2/m)
 ```
 
-This aims to preserve the variance of the gradients during [[Backpropagation]] to avoid anishing or exploding gradients, for the [[ReLU]] activation.
+This aims to preserve the variance of the gradients during [[Backpropagation]] to avoid vanishing or exploding gradients, for the [[ReLU]] activation as He initialization initializes weights with a larger variance.
 
 
 ---
