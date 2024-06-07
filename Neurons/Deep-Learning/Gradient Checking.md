@@ -16,6 +16,8 @@ This is as the error is $O(\epsilon ^2)$ in the centered difference definition, 
 
 To gradient check for a Neural Network, you can:
 
-1. Take all vectors of weights and biases $W$ and $B$ into a single vector, $\theta$
-2. Take all vectors of the gradients of weights and biases $dW$ and $dB$ into a single vector, $d\theta$
-3. Apply the centered difference definition of the derivative.
+1. Compute the forward and backward pass for the original parameters
+2. Compute the forward pass for the parameters, within a small $\epsilon$ value added to a single parameter & compute the loss
+3. Compute the forward pass for the parameters, within a small $\epsilon$ value subtracted to a single parameter & compute the loss
+4. Find the numerical approximation of the gradient using the centered difference definition of a derivative $f'(\theta) = \frac{f(\theta+h) - f(\theta-h)}{2\epsilon}$
+5. Compare the difference by taking the $\frac{||grad - gradapprox||_2}{||grad||_2 - ||gradapprox||_2}$ or  $\frac{||grad - gradapprox||_2}{maximum(||grad||_2, ||gradapprox||_2)}$, if $grad$ is smaller than $gradapprox$ 
