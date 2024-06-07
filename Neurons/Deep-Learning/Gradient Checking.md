@@ -1,6 +1,6 @@
-To check the a gradient (if it was applied correctly), you can compute the slope of the secant line between the given $\theta$ and $\theta + \epsilon$. 
+To check the a gradient (if it was applied correctly), you can compute the slope of the secant line between the given $f(\theta)$ and $f\theta + \epsilon)$. 
 
-But a better means to do so is to compute the slope of the secant line between $\theta - \epsilon$ and $\theta + \epsilon$.
+But a better means to do so is to compute the slope of the secant line between $f(\theta - \epsilon)$ and $f(\theta + \epsilon)$.
 
 It provides a better approximation of the gradient of $\theta$ as it averages the slope from both sides.
 
@@ -12,7 +12,7 @@ is a better approximation of the true derivative of $\theta$ when compared to th
 
 $f'(\theta) = \frac{f(\theta + h) - f(\theta)}{\epsilon}$
 
-This is as the error is $O(\epsilon ^2)$ in the secant line def. while the error is $O(\epsilon)$ making way for a more accurate approximation especially when it comes to computing the gradients of smaller values.
+This is as the error is $O(\epsilon ^2)$ in the centered difference definition, while the error is $O(\epsilon)$ in the forward difference definition, making way for a more accurate approximation especially when it comes to computing the gradients of smaller values.
 
 To gradient check for a Neural Network, you can:
 
