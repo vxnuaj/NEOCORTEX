@@ -28,6 +28,8 @@ To avoid a type of bias when calculating the EWA, you can first compute the orig
 
 $v_{t} = \frac{v_t}{1-\beta}$
 
+>*Though in practice, most (within deep learning), don't bother to implement the bias correction as the EWA "warms-up" after just a couple of iterations.*
+
 To then feed the corrected $V_{t}$ into the original equation once more for the next datapoint:
 
 $V_t = \beta V_{t-1} + (1 - \beta) \theta_t$
