@@ -11,6 +11,4 @@ where $n$ is the total number of datapoints.
 
 A weighted moving average can be calculated by:
 
-$A_1W_1 + A_2W_2 + ... + A_nW_n$
-
-where a given $W$ is a weight assigned to a specific datapoint at $n$
+$\frac{A_1W_1 + A_2W_2 + ... + A_nW_n}{\sum W_n}$ where $W_n$ is assigned a higher weight to more recent datapoints, $n$.
