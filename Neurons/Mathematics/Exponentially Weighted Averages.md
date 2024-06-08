@@ -5,6 +5,12 @@ It's formula is computed as:
 $V_t = \beta V_{t-1} + (1 - \beta) \theta_t$
 
 The lower $\beta$ is, the more priority the EWA gives to more recent datapoints allowing for more accuracy with a downside of less smoothing and increasing amount of random noise.
+``
+The higher $\beta$ is, the more smoothness it has.
+
+This is as the number of points the smoothness factor is averaging over is determined by the the factor, $\frac{1}{1-\beta}$.
+
+If $\beta$ is equal to $.90$, then $\frac{1}{1 - \beta} = 10$, so we're averaging over approximately $10$ datapoints at a time over an entire datset.
 
 	![[Screenshot 2024-06-08 at 9.11.07 AM.png | 500]]
 
