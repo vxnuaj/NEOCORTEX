@@ -1,0 +1,1 @@
+Exponentially weighted averages is a type of [[moving average]]
