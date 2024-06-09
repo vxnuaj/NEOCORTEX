@@ -3,6 +3,7 @@ Gradient descent is an optimization algorithm commonly used in neural networks t
 
 	![[Screenshot 2024-06-08 at 8.36.16 AM.png | 400]]
 
+
 For the mathematics, check out the [[Mathematics of Gradient Descent (NN)]]
 
 

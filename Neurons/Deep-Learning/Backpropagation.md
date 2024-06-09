@@ -10,6 +10,10 @@ $θ = θ - ⍺ * gradient$
 
 The means of how we compute these gradients vary with the loss function and activation function we use.
 
+When taking the gradient of the loss w.r.t. to a given $\theta$, the size of the update step depends on how large and how aligned each of the gradients are.
+
+If the gradient vector has very large gradients that are aligned with each other in value, the step size will be large.
+
 Check the following out for more details:
 1. [[Mathematics of Backpropagation (MSE and Linear Regression)]]
 2. [[Mathematics of Backpropagation (Sigmoid and Log Loss)]]

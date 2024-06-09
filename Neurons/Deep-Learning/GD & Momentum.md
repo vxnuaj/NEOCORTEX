@@ -20,7 +20,11 @@ So you can implement what's called momentum, which is based on [[Exponentially W
 
 2. Compute the [[exponentially weighted average]]s 
 	$vdw = \beta vdw + (1 - \beta)dw \cdot \alpha$
+	$vdw = \frac{vdw}{1 - \beta}$
+	
 	$vdb = \beta vdb + (1 - \beta)db \cdot \alpha$
+	$vdb = \frac{vdb}{1 - \beta}$
+	
 
 	>*Making use of $vdw = \beta{vdw} + \alpha \cdot dw$ works just as fine, though tuning the $\beta$ and $\alpha$ can differ slightly.
 	>
