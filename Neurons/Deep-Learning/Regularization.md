@@ -10,7 +10,7 @@ This trades a decrease in training accuracy for an increase in generalizability.
 
 You don't want to regularize your model too much, as you'll end up with a type of model that has a high bias[^1].
 
-In practice, implementing regularization on a bias term is omitted given it's low dimensionality and minimal impact when compared to the weights of a model.
+In practice, implementing regularization on a bias term is omitted given it's low dimensionality and minimal impact when compared to the weights of a model, in terms of contributing to the curvature and fitting of a model to the data.
 
 Common regularization techniques include
 1. [[Dropout]]
