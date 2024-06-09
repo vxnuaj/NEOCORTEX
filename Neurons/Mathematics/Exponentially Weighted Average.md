@@ -2,7 +2,7 @@
 
 It's formula is computed as:
 
-$V_t = \beta V_{t-1} + (1 - \beta) \theta_t$
+$V_t = \beta V_{t-1} + (1 - \beta) d\theta_t$
 
 The lower $\beta$ is, the less averaging there is present and the more priority the EWA gives to more recent datapoints allowing for more accuracy with a downside of less smoothing and increasing amount of random noise.
 

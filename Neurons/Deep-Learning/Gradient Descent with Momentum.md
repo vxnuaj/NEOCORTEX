@@ -1,5 +1,5 @@
 Gradient Descent with Momentum involves computing an exponentially weighted average of our gradients and then use that average to update our weights.
-
+4
 It's used when dealing with high curvature (implying lots of local minima), small consistent gradients (implying slow learning), or noisy gradients (where values heavily oscillate)
 
 Say we had the surface of the loss function as such:
