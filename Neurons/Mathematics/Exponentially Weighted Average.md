@@ -4,11 +4,11 @@ It's formula is computed as:
 
 $V_t = \beta V_{t-1} + (1 - \beta) \theta_t$
 
-The lower $\beta$ is, the more priority the EWA gives to more recent datapoints allowing for more accuracy with a downside of less smoothing and increasing amount of random noise.
-``
+The lower $\beta$ is, the less averaging there is present and the more priority the EWA gives to more recent datapoints allowing for more accuracy with a downside of less smoothing and increasing amount of random noise.
+
 The higher $\beta$ is, the more smoothness it has
 
-> *In deep learning, this essentially means that the higher $\beta$ is, the more affected a current gradient is by previous gradients (see [[GD & Momentum]])*
+> *In deep learning, this essentially means that the higher $\beta$ is, the more affected a current gradient is by previous gradients (see [[Gradient Descent with Momentum]])*
 
 This is as the number of points the smoothness factor is averaging over is determined by the the factor, $\frac{1}{1-\beta}$.
 
