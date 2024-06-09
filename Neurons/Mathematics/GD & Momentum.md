@@ -1,6 +1,6 @@
 Gradient Descent with Momentum involves computing an exponentially weighted average of our gradients and then use that average to update our weights.
 
-It's used when dealing with high curvature (implying lots of local minima), 
+It's used when dealing with high curvature (implying lots of local minima), small consistent gradients (implying slow learning), or noisy gradients (where values heavily oscillate)
 
 Say we had the surface of the loss function as such:
 	
@@ -19,12 +19,14 @@ So you can implement what's called momentum, which is based on [[Exponentially W
 1. Compute the original gradients, $\frac{∂L}{∂W}$ ($dw$) and  $\frac{∂L}{∂Bm}$ ($db$)
 
 2. Compute the [[exponentially weighted average]]s 
-	$vdw = \alpha \cdot (\beta vdw + (1 - \beta)dw)$
-	$vdb = \alpha \cdot (\beta vdb + (1 - \beta)db)$
+	$vdw = \beta vdw + (1 - \beta)dw \cdot \alpha$
+	$vdb = \beta vdb + (1 - \beta)db \cdot \alpha$
 
-	>*Making use of $vdw = \beta{vdw} + dw$ works just as fine, though tuning the $\beta$ and $\alpha$ can differ slightly.
+	>*Making use of $vdw = \beta{vdw} + \alpha \cdot dw$ works just as fine, though tuning the $\beta$ and $\alpha$ can differ slightly.
 	>
-	>Also, a $vd\theta$ param is typically called the "velocity" term.
+	>You can also introduce the multiplication by $\alpha$ after the initial calculation of $vd\theta$ which can be more useful in explicitly separating the $\alpha$ from $\beta$. Again tuning $\beta$ and $\alpha$ differs when using either.
+	>
+	>Also, a $vd\theta$ param is typically called the "velocity" term.[^2]
 
 3. Update the weights per:
 	$w = w - vdw$
@@ -42,6 +44,9 @@ So, when implementing this, you now have 2 hyperparameters of
 - Learning rate $\alpha$
 - $\beta$ which manages the [[Exponentially Weighted Average]]
 
-[^1]: It slows down like this:
+[^1]: Momentum helps out as such (red with momentum):
 
-	![[Screenshot 2024-06-08 at 4.05.48 PM.png | 300]] 
+	 ![[Screenshot 2024-06-08 at 4.29.23 PM.png | 300]]
+
+[^2]: In physics, momentum, $p$, is the product of mass ($m$) times velocity ($v$). In GD with momentum, we assume unit mass where $m = 1$, therefore the momentum, $m$ is equal to velocity, $v$, as  $p = v$ so we can use the velocity vector as momentum.
+
