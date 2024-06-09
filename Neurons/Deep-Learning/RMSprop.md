@@ -1,11 +1,29 @@
-RMSprop, serving a similar purpose as [[Gradient Descent with Momentum]], computes the [[Exponentially Weighted Average]]s of gradients, with the difference that within the computation the $\theta$ value is squared:
+RMSprop, serving a similar purpose as [[Gradient Descent with Momentum]], computes the [[Exponentially Weighted Average]]s of gradients, with the difference that within the computation the $\theta$ value is squared and the division during the weight update.
 
-$V_{\theta} = \beta V_{\theta - 1} + (1 - \beta) d\theta_t^2$
+The equation is as:
 
-Then during the weight update, the gradient of $d\theta$ is divided by $V_{\theta}$ as:
+>_where $\beta$ is the smoothing parameter and $\theta$ is a given gradient.
 
-$\theta = \theta - \alpha (\frac{d\theta}{\sqrt{V_{\theta} + \epsilon}})$
+$S_{d\theta} = \beta S_{d\theta - 1} + (1 - \beta) d\theta_t^2$
+
+Then during the weight update, the gradient of $d\theta$ is divided by $S_{d\theta}$ as:
+
+$\theta = \theta - \alpha (\frac{d\theta}{\sqrt{S_{d\theta} + \epsilon}})$
 
 with an added $\epsilon$ to avoid a division by $0$.
 
 > _By the way, the bias correction, the division by $\frac{1}{1 - \beta}$, isn't needed_
+
+So, in the above equations, the larger $d\theta$ is, the larger $S_{d\theta}$ becomes
+
+> _per $S_{d\theta} = \beta S_{d\theta - 1} + (1 - \beta) d\theta_t^2$_
+
+therefore in the weight update, the smaller the adjusted gradient becomes due to the division by a large $S_{d\theta}$, ultimately changing the unneeded oscillations in the learning path, optimizing for faster and more direct learning.
+
+Keep note that RMSprop is more sensitive to the choice in learning rates, where higher learning rates tend to cause more instability in the training process.[^1]
+
+(red is the optimized learning path, while black is the unoptimized learning path)
+
+![[Screenshot 2024-06-08 at 4.29.23 PM.png | 300]]
+
+[^1]: Tested empirically and this appears to be true. Luckily, this also means we can learn faster if we optimize the learning rate to the right value.
