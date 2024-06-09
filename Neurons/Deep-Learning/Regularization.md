@@ -12,7 +12,7 @@ You don't want to regularize your model too much, as you'll end up with a type o
 
 In practice, implementing regularization on a bias term is omitted given it's low dimensionality and minimal impact when compared to the weights of a model, in terms of contributing to the curvature and fitting of a model to the data.
 
-Common regularization techniques include
+Other common regularization techniques include
 1. [[Dropout]]
 2. [[L2 Regularization]]
 3. [[L1 Regularization]]

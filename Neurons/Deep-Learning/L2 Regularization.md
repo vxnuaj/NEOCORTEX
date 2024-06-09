@@ -10,15 +10,13 @@ The regularized loss is then calculated as:
 
 $J(\hat{y}, y)_{regularized} = \frac{1}{n}\sum L(\hat{y}, y) + \frac{\lambda}{n}\sum_{l = 1}^L ||W||$
 
-
-
 This is also known as weight decay, as when doing [[Gradient Descent]], a subset of the parameters will decay to smaller values given the introduction of the small value of $\lambda$.
 
 Then, in [[Gradient Descent]], the implementation of regularized loss looks mathematically as (w.r.t to param $w$, assuming [[Categorical Cross Entropy Loss]]):
 
 $\frac{∂J_{regularized}}{∂w} = (\frac{∂J}{∂Z})(\frac{∂Z}{∂W}) + 2\lambda||W||$
 
-$\frac{∂J_{regularized}}{∂w} = (A - Y_{onehot})(X^T) + 2\lambda||w||$
+$\frac{∂J_{regularized}}{∂w} = (A - Y_{onehot})(X^T) + 2\lambda||W||$
 
 $w = w - \alpha * \frac{∂J_{regularized}}{∂w}$
 
@@ -26,7 +24,9 @@ $w = w - \alpha * \frac{∂J_{regularized}}{∂w}$
 
 Essentially, [[overfitting]] requires a set of large weights. An L2 regularized back propagation adds the additional $2\lambda||w||$ term to increase a gradient.
 
-The larger $||w||$ is, the higher the gradient will be, therefore forcing a model to optimize for a narrower set of parameters.
+The larger $||w||$ is, the higher the gradient will be, therefore forcing a model to optimize for a narrower set of parameters. 
+
+Yet, inadvertently, having a high $\lambda$ term, can lead to slower learning as the model isn't able to learn weights of high values that can map the data, given lack of opportunity to explore the weight space. 
 
 	![[Screenshot 2024-06-04 at 4.29.33 PM.png | 500]][^2]
 
