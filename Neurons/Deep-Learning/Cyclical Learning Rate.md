@@ -28,6 +28,12 @@ We can implement cyclical learning rate and grow it to a maximum over a period o
 
 Then at the point at which the accuracy begins to decrease, can serve as the maximum bound of the learning rate whilst the point at which the accuracy begins to increase can serve as the minimum bound for the learning rate.
 
-This cyclical learning rate can also be leveraged to allow "superconvergence" through a [[One-Cycle Learning Rate Policy]].
+> *This is known as the learning rate range test*
+
+This cyclical learning rate can also be leveraged to allow [[Superconvergence]] where a model reaches the optimum faster due to the fluctuating learning rate.
+
+- [ ] Implement Cyclical Learning Rate (Finding the minimum and maximum bounds, then applying it to the cycle)
+- [ ] Implement superconvergence
+
 
 [^1]: Where the floor(x) function rounds a given x value to the nearest integer less than or equal to the x value
