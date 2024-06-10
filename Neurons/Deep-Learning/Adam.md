@@ -26,7 +26,6 @@ Then, you have 3 hyperparameters to tune:
 
 - [x] Go over Andrew NGs Interpretation
 - [ ] Go over Sebastian Raschka's interpretation
-	- [ ] Learning rate Decay
 	- [ ] Adam
 - [ ] Go over Deep Learning Book / Understanding deep learning interpretation
 - [ ] Read the Paper
