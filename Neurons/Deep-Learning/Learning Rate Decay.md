@@ -12,7 +12,6 @@ These are common methods to decay the learning rate:
 4. [[Cyclical Learning Rate]]
 
 
-- [ ] Implement Cyclical Learning Rate by itself (Finding the minimum and maximum bounds, then applying it to the cycle)
-- [ ] Implement Cyclical Learning rate with exponential decay to narrow the bounds, but stop it prior to minimizing it to complete nil.
+- [x] Implement Cyclical Learning Rate by itself (Finding the minimum and maximum bounds, then applying it to the cycle)
 - [ ] Implement Cyclical Learning rate with cyclical momentum
-- [ ] Implement superconvergence
+- [ ] Implement Super convergence
