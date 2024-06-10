@@ -12,15 +12,20 @@ $\eta = \eta_{min} + (\eta_{max} - \eta_{min})(max(0 , 1-x))$
 
 where $x$ is:
 
-$x = |\frac{iterations}{\alpha} - 2(cycle) + 1|$
+$x = |\frac{epochCounter}{cycle_{size}} - 2(cycle) + 1|$
 
 used to modulate the learning rate with the given cycle of the cyclical learning rate schedule.
 
 This is where $\alpha$ is the original step size / learning rate and $cycle$ can be defined as:
 
-$cycle = floor(1 + \frac{iterations}{2(\alpha)})$[^1]
+$cycle = floor(1 + \frac{epochCounter}{2(cycle_{size})})$[^1]
 
 used to specify the number of iterations (or epochs) it takes for the learning rate to go from the minimum to maximum value.
+
+In essence:
+
+- $epochCounter$ is the current number of epochs
+- $cycle_{size}$ is the number of epochs prior to completing a single cycle (from $n_{min}$ to $\eta_{max}$ or vice versa)
 
 This cyclical learning rate can help a model escape local minima, explore different regions of the loss space, and may reduce the need for tuning the learning rate through exhaustive methods such [[grid search]].
 
