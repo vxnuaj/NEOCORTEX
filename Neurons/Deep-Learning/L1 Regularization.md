@@ -2,7 +2,7 @@ L1 regularization serves the same purpose as [[L2 Regularization]] with the diff
 
 The regularized loss is then calculated as:
 
-$J(\hat{y}, y)_{regularized} = \frac{1}{n} \sum L(\hat{y}, y) + \lambda|w|$
+$J(\hat{y}, y)_{regularized} = \frac{1}{n} \sum L(\hat{y}, y) + \lambda||w||_1$
 
 Just like [[L2 Regularization]], it's another form of decaying weights with high values down to parameters of lower values. 
 
