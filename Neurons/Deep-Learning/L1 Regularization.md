@@ -12,7 +12,7 @@ The regularized gradient descent (w.r.t to param $w$, assuming [[Categorical Cro
 
 $\frac{∂J(\hat{y}, y)_{regularized}}{∂w} = (\frac{∂J(\hat{y}, y)_{regularized}}{∂z})(\frac{∂z}{∂w})$
 
-$\frac{∂J(\hat{y}, y)_{regularized}}{∂w} = (A2 - Y)(X^T) + \lambda |w|$
+$\frac{∂J(\hat{y}, y)_{regularized}}{∂w} = (A2 - Y)(X^T) + \lambda sign(w)$
 
 $w = w - \alpha * \frac{∂J(\hat{y}, y)_{regularized}}{∂w}$
 
