@@ -16,5 +16,3 @@ $\frac{∂J(\hat{y}, y)_{regularized}}{∂w} = (A2 - Y)(X^T) + \lambda sign(w)$
 
 $w = w - \alpha * \frac{∂J(\hat{y}, y)_{regularized}}{∂w}$
 
-
-
