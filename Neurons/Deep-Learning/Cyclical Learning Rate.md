@@ -14,9 +14,13 @@ where $x$ is:
 
 $x = |\frac{iterations}{\alpha} - 2(cycle) + 1|$
 
-where $\alpha$ is the original step size / learning rate and $cycle$ can be defined as:
+used to modulate the learning rate with the given cycle of the cyclical learning rate schedule.
+
+This is where $\alpha$ is the original step size / learning rate and $cycle$ can be defined as:
 
 $cycle = floor(1 + \frac{iterations}{2(\alpha)})$[^1]
+
+used to specify the number of iterations (or epochs) it takes for the learning rate to go from the minimum to maximum value.
 
 This cyclical learning rate can help a model escape local minima, explore different regions of the loss space, and may reduce the need for tuning the learning rate through exhaustive methods such [[grid search]].
 
