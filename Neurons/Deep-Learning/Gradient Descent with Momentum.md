@@ -36,6 +36,8 @@ So you can implement what's called momentum, which is based on [[Exponentially W
 	$w = w - vdw$
 	$b = b - vdw$
 
+> *It's typically best to set $\beta$ to the highest value possible without damaging the learning process.*
+
 Essentially, just as is done in [[exponentially weighted average]]s, we're computing the exponential average of the gradients and using it as a means to update our weights, which then tends to mitigate the *vertical* oscillations in the learning path.
 
 You want to increase the $\beta$ value when your training loss or accuracy fluctuates wildly in an uncontrolled manner. Then the [[Exponentially Weighted Average]] smooths out your gradients.

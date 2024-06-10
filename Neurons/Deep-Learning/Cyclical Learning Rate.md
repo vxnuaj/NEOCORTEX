@@ -30,10 +30,15 @@ Then at the point at which the accuracy begins to decrease, can serve as the max
 
 > *This is known as the learning rate range test*
 
-This cyclical learning rate can also be leveraged to allow [[Superconvergence]] where a model reaches the optimum faster due to the fluctuating learning rate.
+This cyclical learning rate, if used in combination with a type of momentum from [[Gradient Descent with Momentum]], [[RMSprop]], or [[Adam]], can be paired with [[Cyclical Momentum]], to further allow for a more robust learning rate schedule to maintain training stability.
 
-- [ ] Implement Cyclical Learning Rate (Finding the minimum and maximum bounds, then applying it to the cycle)
-- [ ] Implement superconvergence
+![[Pasted image 20240610114326.png | 600]]
+
+> *An example of [[Cyclical Momentum]] and [[Cyclical Learning Rate]]s, particularly when leveraging [[Superconvergence]].
+> 
+> Learning rate on the left, Momentum on the right.*
+
+This cyclical learning rate can also be leveraged to allow [[Superconvergence]] where a model reaches the optimum faster due to the fluctuating learning rate.
 
 
 [^1]: Where the floor(x) function rounds a given x value to the nearest integer less than or equal to the x value

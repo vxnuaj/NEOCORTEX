@@ -19,7 +19,7 @@ These bounds of the learning rate, $n_{min}$ and $n_{max}$ are then used as boun
 The process behind the [[1cycle Learning Rate Policy]] is
 
 1. Begin with $\eta_{min}$ as the learning rate, typically set several orders of magnitude lower than $\eta_{max}$
-2. Linearly (or exponentially) increase the $\eta$ to $\eta_{max}$
+2. Linearly (or exponentially) increase the $\eta$ to $\eta_{max}$[^3]
 3. Linearly (or exponentially) decrease the $\eta$ to $\eta_{min}$
 4. Decrease the $\eta$ to several orders below $\eta_{min}$
 
@@ -27,7 +27,9 @@ The process behind the [[1cycle Learning Rate Policy]] is
 
 This process then allow for a model to train at a faster rate allowing for faster or [[Superconvergence]].
 
-[^1]: This is according to the paper, but it's important to adjust the initial $n_{min}$ and the new $n_{min}$ according to your specific use-case.
+
+[^1]: This is according to the paper, but it's important to adjust the initial $\eta_{min}$ and the new $\eta_{min}$ according to your specific use-case.
 
 [^2]: Making use of a larger learning rate, can also act as a means of regularization during the middle stages of the learning process allowing for a model to escape from local minima by avoid complex weights that overfit onto those local minima. In a sense, it's another form of introducing momentum.
 
+[^3]: Increasing your batch size can yield you faster training when using the [[1cycle Learning Rate Policy]] as you'll be able to set a higher $\eta_{max}$ to surpass local minima. (Though doesn't mean $\eta_{max}$ can be super high either)
