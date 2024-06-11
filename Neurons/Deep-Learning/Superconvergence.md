@@ -1,6 +1,6 @@
 > *[Paper](https://arxiv.org/pdf/1708.07120)*
 
-Super Convergence is essentially where we can train a neural network orders of magnitude faster than traditional training methods, due to the use of a [[Cyclical Learning Rate]] and a [[1cycle Learning Rate Policy]].
+Super Convergence is essentially a method. where we can train a neural network orders of magnitude faster than traditional training methods, due to the use of a [[Cyclical Learning Rate]] and a [[1cycle Learning Rate Policy]].
 
 Super Convergence begins with making use of the [[Learning Rate Range Test]], where a [[Cyclical Learning Rate]] is used in order to find the minimum and maximum values of your learning rate
 
