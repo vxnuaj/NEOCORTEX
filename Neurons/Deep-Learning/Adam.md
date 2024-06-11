@@ -1,4 +1,4 @@
-Adam, *Adaptive moment estimation*, is an extended version of [[Gradient Descent]], designed to improve training speeds in deep neural networks and converge quickly, making use of [[Gradient Descent with Momentum]] and [[RMSprop]], combined.
+Adam, *Adaptive moment estimation*, is an extended version of [[Gradient Descent]], designed to improve training speeds in deep neural networks and converge quickly, making use of [[Momentum]] and [[RMSprop]], combined.
 
 To compute Adam,
 

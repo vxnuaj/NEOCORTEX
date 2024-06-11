@@ -39,7 +39,7 @@ Then at the point at which the accuracy begins to decrease, can serve as the max
 
 > *This is known as the learning rate range test*
 
-This cyclical learning rate, if used in combination with a type of momentum from [[Gradient Descent with Momentum]], [[RMSprop]], or [[Adam]], can be paired with [[Cyclical Momentum]], to further allow for a more robust learning rate schedule to maintain training stability.
+This cyclical learning rate, if used in combination with a type of momentum from [[Momentum]], [[RMSprop]], or [[Adam]], can be paired with [[Cyclical Momentum]], to further allow for a more robust learning rate schedule to maintain training stability.
 
 ![[Pasted image 20240610114326.png | 600]]
 

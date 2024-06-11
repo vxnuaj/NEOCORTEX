@@ -1,4 +1,4 @@
-**RMSprop**, serving a similar purpose as [[Gradient Descent with Momentum]], computes the [[Exponentially Weighted Average]]s of gradients, with the difference that within the computation the $\theta$ value is squared and the division during the weight update.
+**RMSprop**, serving a similar purpose as [[Momentum]], computes the [[Exponentially Weighted Average]]s of gradients, with the difference that within the computation the $\theta$ value is squared and the division during the weight update.
 
 The equation is as:
 

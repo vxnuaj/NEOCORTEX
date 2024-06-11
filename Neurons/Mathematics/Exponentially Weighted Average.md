@@ -8,7 +8,7 @@ The lower $\beta$ is, the less averaging there is present and the more priority 
 
 The higher $\beta$ is, the more smoothness it has
 
-> *In deep learning, this essentially means that the higher $\beta$ is, the more affected a current gradient is by previous gradients (see [[Gradient Descent with Momentum]])*
+> *In deep learning, this essentially means that the higher $\beta$ is, the more affected a current gradient is by previous gradients (see [[Momentum]])*
 
 This is as the number of points the smoothness factor is averaging over is determined by the the factor, $\frac{1}{1-\beta}$.
 
