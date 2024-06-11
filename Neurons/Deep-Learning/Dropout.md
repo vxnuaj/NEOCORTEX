@@ -10,7 +10,7 @@ In dropout regularization, dropping neurons out means making a set of neurons $0
 	
 	![[Screenshot 2024-06-04 at 4.51.37 PM.png | 400]]
 
-This is typically implemented per layer, the probability $p$ generally being lower on layers with higher number of weights to reduce overfitting, and higher on layers with lower number of weights as we don't need to worry about overfitting as much there.
+Dropout is typically implemented per layer, with the probability $p$ of keeping a neuron's output during training. This probability is often lower for layers with a higher number of weights to reduce overfitting and higher for layers with a lower number of weights where overfitting is less of a concern.
 
 Mathematically, where the activation is $a$, dropout looks as:
 

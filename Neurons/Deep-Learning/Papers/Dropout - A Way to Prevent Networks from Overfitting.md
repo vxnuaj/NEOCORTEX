@@ -13,7 +13,7 @@
 
 - The result of applying dropout is then a thinner neural network, comprised of neurons *"that survived dropout"*
 - There are a collection of $2^n$ thinned networks (given the random probability and the binary choice of including a neuron) where $n$ is the total number of neurons in the overall network.
-- It isn't feasible to apply the averaged outputs $2^n$ thinned networks (given an exponential increase an lack of computation power) so you can multiply the weights by the scaling factor $p$ during testing or divide the weights during training by $p$.
+- It isn't feasible to apply the averaged outputs $2^n$ thinned networks (given an exponential increase an lack of computation power) so you can multiply the weights by the scaling factor $p$ during testing or divide the activations during training by $p$.
 - Then, you can more easily, in a sense, combine the the thinned networks during test time as a single model, given that combining multiple models [^1] can improve generalization.
 
 **Model Description**
