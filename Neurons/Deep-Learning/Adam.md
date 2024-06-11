@@ -4,11 +4,11 @@ To compute Adam,
 
 1. Compute the velocity term (1st moment) using the algorithm, $V_{d\theta }= (\beta_1 V_{d\theta - 1}) + (1 - \beta_1) d\theta$
 
-2. Implement a bias correction to the velocity term, $\frac{V_d\theta}{1 - \beta}$
+2. Implement a bias correction to the velocity term, $\frac{V_d\theta}{1 - \beta^t}$
 
 3. Compute the moving average of the accumulated squared gradients (2nd moment) using the algorithm, $S_{d\theta} = (\beta_2 S_{d\theta - 1}) + (1 - \beta_2)d\theta^2$
 
-4. Implement a bias correction term, $\frac{S_{d\theta}}{(1 - B_2)}$
+4. Implement a bias correction term, $\frac{S_{d\theta}}{(1 - B_2^t)}$
 
 5. Perform the weight update, $\theta = \theta - \alpha(\frac{V_{d\theta}}{\sqrt{S_dw + \epsilon}})$, with the small $\epsilon$ value to avoid division by $0$
 
