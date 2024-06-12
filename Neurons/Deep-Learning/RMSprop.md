@@ -1,4 +1,4 @@
-**RMSprop**, serving a similar purpose as [[Momentum]], computes the [[Exponentially Weighted Average]]s of gradients, with the difference that within the computation the $\theta$ value is squared and the division during the weight update.
+****RMSprop**, serving a similar purpose as [[Momentum]], computes the [[Exponentially Weighted Average]]s of gradients, with the difference that within the computation the $\theta$ value is squared and the division during the weight update.
 
 The equation is as:
 
@@ -20,9 +20,9 @@ So, in the above equations, the larger $d\theta$ is, the larger $S_{d\theta}$ be
 
 therefore in the weight update, the smaller the adjusted gradient becomes due to the division by a large $S_{d\theta}$, ultimately changing the unneeded oscillations in the learning path, optimizing for faster and more direct learning.
 
-In a sense, this is a form of adapting the learning rate in accordance to the size of the gradients. The denominator, $\sqrt{S_{d \theta} + \epsilon}$  acts as a type of scaling factor for the learning rate.
+In a sense, this is a form of adapting the learning rate in accordance to the size of the exponential weighted averages of the gradients. The denominator, $\sqrt{S_{d \theta} + \epsilon}$  acts as a type of scaling factor for the learning rate.
 
-This type of scaling factor increases as the gradient gets smaller
+This type of scaling factor increases as the ewa's of the gradient gets consistently smaller
 
 If the exponentially weighted average of the squared gradients for given $\theta$ is large, the learning rate for the given $\theta$ is reduced. The inverse is true for smaller values of $\theta$.
 
