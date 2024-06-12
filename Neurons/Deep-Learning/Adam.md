@@ -30,17 +30,5 @@ Then, you have 3 hyperparameters to tune:
 Adam is typically used in mini-batch gradient descent, given an increase in oscillations of the loss and accuracy during, which Adam can help in mitigating.
 
 ![[Screenshot 2024-06-12 at 9.01.31 AM.png | 700]]
-
----
-
-**Tentative Plan:**
-
-> *Definitely read the paper, take notes, and understand it.*
-
-- [x] Go over Andrew NGs Interpretation
-- [x] Go over Sebastian Raschka's interpretation
-	- [x] Adam
-- [x] Go over Deep Learning Book / Understanding deep learning interpretation
-- [ ] Read the Paper
-- [x] Implement it
+************
 

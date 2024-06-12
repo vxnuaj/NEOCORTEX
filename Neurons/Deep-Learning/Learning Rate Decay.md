@@ -10,8 +10,3 @@ These are common methods to decay the learning rate:
 2. [[Halving]]
 3. [[Inverse Decay]]
 4. [[Cyclical Learning Rate]]
-
-
-- [x] Implement Cyclical Learning Rate by itself (Finding the minimum and maximum bounds, then applying it to the cycle)
-- [ ] Implement Cyclical Learning rate with cyclical momentum
-- [ ] Implement Super convergence
