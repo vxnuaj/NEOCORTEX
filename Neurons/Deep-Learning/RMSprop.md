@@ -20,6 +20,12 @@ So, in the above equations, the larger $d\theta$ is, the larger $S_{d\theta}$ be
 
 therefore in the weight update, the smaller the adjusted gradient becomes due to the division by a large $S_{d\theta}$, ultimately changing the unneeded oscillations in the learning path, optimizing for faster and more direct learning.
 
+In a sense, this is a form of adapting the learning rate in accordance to the size of the gradients. The denominator, $\sqrt{S_{d \theta} + \epsilon}$  acts as a type of scaling factor for the learning rate.
+
+This type of scaling factor increases as the gradient gets smaller
+
+If the exponentially weighted average of the squared gradients for given $\theta$ is large, the learning rate for the given $\theta$ is reduced. The inverse is true for smaller values of $\theta$.
+
 Keep note that RMSprop is more sensitive to the choice in learning rates, where higher learning rates tend to cause more instability in the training process.[^1]
 
 (red is the optimized learning path, while black is the unoptimized learning path)

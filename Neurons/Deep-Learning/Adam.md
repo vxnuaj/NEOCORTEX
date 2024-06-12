@@ -29,5 +29,5 @@ Then, you have 3 hyperparameters to tune:
 	- [ ] Adam
 - [ ] Go over Deep Learning Book / Understanding deep learning interpretation
 - [ ] Read the Paper
-- [ ] Implement it
+- [x] Implement it
 
