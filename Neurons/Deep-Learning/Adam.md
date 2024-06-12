@@ -1,4 +1,12 @@
-Adam, *Adaptive moment estimation*, is an extended version of [[Gradient Descent]], designed to improve training speeds in deep neural networks and converge quickly, making use of [[Momentum]] and [[RMSprop]], combined.
+ Adam, *Adaptive moment estimation*, is an extended version of [[Gradient Descent]], designed to improve training speeds in deep neural networks and converge quickly, making use of [[Momentum]] and [[RMSprop]], combined.
+
+[[Gradient Descent]] with a fixed step size has the undesirable property in which it makes large changes to parameters with large gradients and small adjustments to parameters with small gradients.
+
+We might not always want large changes to parameters with large gradients, we might want to be cautious at that point.
+
+We might not always want small changes to parameters with small gradients, we might want to explore the space further and take slightly larger steps.
+
+>_It all depends on the surface of the loss function_
 
 To compute Adam,
 
@@ -25,8 +33,8 @@ Then, you have 3 hyperparameters to tune:
 > *Definitely read the paper, take notes, and understand it.*
 
 - [x] Go over Andrew NGs Interpretation
-- [ ] Go over Sebastian Raschka's interpretation
-	- [ ] Adam
+- [x] Go over Sebastian Raschka's interpretation
+	- [x] Adam
 - [ ] Go over Deep Learning Book / Understanding deep learning interpretation
 - [ ] Read the Paper
 - [x] Implement it

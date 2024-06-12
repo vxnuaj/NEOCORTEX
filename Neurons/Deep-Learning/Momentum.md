@@ -19,10 +19,10 @@ So you can implement what's called momentum, which is based on [[Exponentially W
 1. Compute the original gradients, $\frac{∂L}{∂W}$ ($dw$) and  $\frac{∂L}{∂Bm}$ ($db$)
 
 2. Compute the [[exponentially weighted average]]s 
-	$vdw = \beta vdw + (1 - \beta)dw \cdot \alpha$
+	$vdw = \beta vdw + (1 - \beta)dw$
 	$vdw = \frac{vdw}{1 - \beta^t}$
 	
-	$vdb = \beta vdb + (1 - \beta)db \cdot \alpha$
+	$vdb = \beta vdb + (1 - \beta)db$
 	$vdb = \frac{vdb}{1 - \beta^t}$
 	
 
@@ -33,8 +33,14 @@ So you can implement what's called momentum, which is based on [[Exponentially W
 	>Also, a $vd\theta$ param is typically called the "velocity" term.[^2]
 
 3. Update the weights per:
-	$w = w - vdw$
-	$b = b - vdw$
+	$w = w - alpha \cdot vdw$
+	$b = b - alpha \cdot vdw$
+
+There's an alternative means of computing, it as:
+
+$vdw = \beta vdw - \alpha dw$
+$w = w + vdw$
+
 
 > *It's typically best to set $\beta$ to the highest value possible without damaging the learning process.*
 
