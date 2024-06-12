@@ -40,6 +40,12 @@ When using BatchNorm in a neural network, it effectively cancels out the effect 
 
 So when you use Batch normalization, you can effectively remove $b^l$ or set it to 0.
 
+During training, the $\gamma$ values are typically initialized to a matrix of $1$'s and the $\beta$ values are typically initialized to a matrix of $0$s, with dimensions equivalent to the weighted sum $Z$ and layer $l$.
+
+Then during training, you compute the gradient of the loss with respect to $\gamma$ and $\beta$ and apply the parameter update as you would for any other parameter $W$ or $B$ within your model.
+
+
+
 ---
 
 - [ ] Andrew Ng
