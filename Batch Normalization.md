@@ -22,10 +22,17 @@ $Z_{lnorm} = \frac{Z_l}{\sqrt{\sigma^2 + \epsilon}}$
 
 The mean and variance of the $Z_{norm}$ can be trained through parameters $\gamma$ and $\beta$.
 
-$\tilde{Z_{norm}^i} = \gamma Z_{norm}^i + \beta$
+$\tilde{Z_{lnorm}^i} = \gamma Z_{lnorm}^i + \beta$
 
-$\gamma$ is known as the scale parameter, which can be used to scale the normalized value It can either amplify or dampen the scale of $Z_{norm}
+$\gamma$ is known as the scale parameter, which can be used to scale the normalized value It can either amplify or dampen the scale of $Z_{lorm}$ based on what's more beneficial for model performance
 
+$\beta$ is the parameter to shift the distribution of the normalized values, to better fit the desired output distribution to optimize model performance.
+
+> *These aren't [[Hyperparameters]], but instead learnable parameters during [[gradient descent]]*.
+
+Of course if $\gamma = \sqrt{\sigma^2 + \epsilon}$ and $\beta = \mu$, and we apply the equation, we'd be effectively undoing the batch normalization.[^1]
+
+Then, when computing the gradients, we'd use $Z_{lnorm}$ instead of the unnormalized $Z_l$.
 
 ---
 
@@ -35,3 +42,7 @@ $\gamma$ is known as the scale parameter, which can be used to scale the normali
 - [ ] Deep learning book
 - [ ] Paper
 - [ ] Implementation
+	- [ ] Regular BatchNorm
+	- [ ] BatchNorm in Adam + AdaMax
+
+[^1]: And essentially, we'd be computing an identity function 
