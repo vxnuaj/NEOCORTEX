@@ -14,4 +14,20 @@ though there are some general guidelines to do so:
 
 5. When the model is pre-trained you can gauge if you need to schedule your learning rate and by how much.
 
-You can search a hyperparameter space using [[Grid Search]] or [[Random Search]]
+You can search a hyperparameter space using [[Grid Search]] or [[Random Search]].
+
+It's important to consider the distribution / scale at which to search your hyperparameters, when using [[Grid Search]] or [[Random Search]].
+
+In some scenarios, choosing values randomly, uniformly, under a given range can be reasonable.
+
+But in other scenarios, this isn't a rational approach, as for example searching for an optimal learning rate.
+
+For example is you suspect your learning rate is between $.0001$ and $1$, it'd make more sense to search for your optimal $\alpha$ on the log scale.
+
+![[Screenshot 2024-06-12 at 2.31.03 PM.png]]
+
+(shown in the below image (2))
+
+otherwise, you'd primarily be sampling over values between $.1$ and $1$, missing more of the values between $.0001$ and $.1$.
+
+
