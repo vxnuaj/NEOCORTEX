@@ -36,14 +36,37 @@ This can be mitigated through a bias correction, which is a division of the firs
 Adam is defined as:
 
 - Computing the first moment (exponentially weighted average of gradients): 
-	- $m_t = \beta m_{t-1} + (1 - \beta) \frac{∂J(\theta)}{∂\theta}$
+	- $m_t = \beta_1 m_{t-1} + (1 - \beta_1) \frac{∂J(\theta)}{∂\theta}$
 - Bias correcting the first moment: 
-	- $\frac{m_t}{(1 - \beta^t)}$
+	- $\frac{m_t}{(1 - \beta_1^t)}$
 - Computing the second moment (exponentially weighted average of the squared gradients)
-	- $v_t = \ beta(v_{t-1} + (1 - \beta)(\frac{∂J(\theta)}{∂\theta})^2$
+	- $v_t = \beta_2(v_{t-1} + (1 - \beta_2)(\frac{∂J(\theta)}{∂\theta})^2$
 - Bias correcting the second moment:
-	- $\frac{v_t}{1 - \beta^t}$
+	- $\frac{v_t}{1 - \beta_2^t}$
 - Adam's update rule:
 	- $\theta = \theta - \alpha(\frac{m_t}{\sqrt{v_t + \epsilon}})$
 
-Within Adam's update rule, the effective step size, $\alpha(\frac{m_t}{\sqrt{v_t + \epsilon}})$, 
+Within Adam's update rule, the effective step size, $\alpha(\frac{m_t}{\sqrt{v_t + \epsilon}})$ (call it $\delta_t$, has 2 upper bounds:
+
+- $|\delta_t| ≤ \alpha \cdot \frac{(1 - \beta_1)}{\sqrt{1 - \beta_2}}$ if $(1 - \beta_1) > \sqrt{1 - \beta_2}$
+- $|\delta_t| ≤ \alpha$ otherwise
+
+Essentially, in the algorithm, the scaling factor $\sqrt{v_t}$ is inversely proportional to an $L^2$ norm of the current and past gradient.
+
+> *When we say that something is inversely proportional to another quantity, it means that as one quantity increases, the other decreases by a certain factor. In the context of the Adam optimizer:*
+> 
+> *The term $\sqrt{v_t}$​​ is inversely proportional to the $L^2$ norm of the gradients.*
+> *This means that as the $L^2$ norm of the gradients increases, the term $\sqrt{v_t}vt$ decreases.*
+> *Conversely, as the $L^2$ norm of the gradients decreases, the term $\sqrt{v_t}$ increases*
+
+The $L^2$ norm based update rule can be generalized to an $L^p$ norm based update rule (thereby increasing the scaling exponentially factor by $p$), though can become unstable for larges values of $p$.
+
+But when $p \rightarrow \infty$, a stable algorithm happens to emerge.
+
+So then the algorithm, to replace the second moment becomes:
+
+$v_t = \beta_2^p v_{t-1} + (1 - \beta_2^p)(|\frac{∂J(\theta)}{∂\theta}|)^p$
+$v_t = (1 - \beta_2^p)\sum_{i=1}^t \beta_2^{p(t - i) \cdot |\frac{∂J(\theta)}{∂\theta}|^p|}$
+
+> *The $\beta$ value being raised to $^p$ in order to scale in accordance to the $^p$ raised gradients.*
+
