@@ -30,4 +30,6 @@ For example is you suspect your learning rate is between $.0001$ and $1$, it'd m
 
 otherwise, you'd primarily be sampling over values between $.1$ and $1$, missing more of the values between $.0001$ and $.1$.
 
+There are also many ways to test hyperparameters, you can either do so in parallel by training multiple models with different hyperparameters or 'baby' your model to the loss surface while iteratively adjusting hyperparameters.
 
+This is more dependent on what type of model you have, your dataset size, and the corresponding computational power that is present.

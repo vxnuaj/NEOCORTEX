@@ -26,7 +26,7 @@ Being monotonic, it allows for a smoother gradient descent, reducing the risk fo
 
 Out of all the [[ReLU]] variants, SeLU is the least computationally efficient, as it requires the exponential, $e$, and an additional multiplication.
 
-Though the additional multiplication automatically normalizes a layer, reducing the need for a [[batch normalization]] layer which can be useful in certain contexts.
+Though the additional multiplication automatically normalizes a layer, reducing the need for a [[Batch Normalization]] layer which can be useful in certain contexts.
 
 SeLU isn't commonly used yet, though can be promising for the hidden layers of a network.[^1]
 
