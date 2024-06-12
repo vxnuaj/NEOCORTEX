@@ -66,7 +66,18 @@ But when $p \rightarrow \infty$, a stable algorithm happens to emerge.
 So then the algorithm, to replace the second moment becomes:
 
 $v_t = \beta_2^p v_{t-1} + (1 - \beta_2^p)(|\frac{∂J(\theta)}{∂\theta}|)^p$
-$v_t = (1 - \beta_2^p)\sum_{i=1}^t \beta_2^{p(t - i) \cdot |\frac{∂J(\theta)}{∂\theta}|^p|}$
+$v_t = (1 - \beta_2^p) \sum_{i=1}^t \beta_2^{p(t - i)} \cdot (|\frac{∂J(\theta)}{∂\theta}|)^p$
 
 > *The $\beta$ value being raised to $^p$ in order to scale in accordance to the $^p$ raised gradients.*
 
+and by taking the limit of $v_t$ to $\infty$,
+
+![[Screenshot 2024-06-12 at 10.31.16 AM.png]]
+
+the equation becomes:
+
+$v_t = max(\beta_2 \cdot u_{t - 1 }, |g_t|)$
+
+which can be used in the update step as:
+
+$\theta_{t+1} = \theta_{t} - \eta\frac{m_t}{v_{t}}$
