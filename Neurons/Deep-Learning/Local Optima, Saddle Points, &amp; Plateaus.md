@@ -12,4 +12,8 @@ These saddle points tend to slow down learning and make the accuracy / loss valu
 
 Another issue are plateaus which can slow down learning. In plateaus, weight updates might remain stuck on the plateau until a gradient, say for $\theta_1$, is minimized to $0$. Then the model might escape the plateau by updating based on the gradient of $\theta_{18}$.
 
-[[RMSprop]], [[Adam]], AdaMax, and other optimization techniques are then designed to help escape these saddle points by increasing the learning rate as gradients decrease over time (using exponentially weighted averages).
+> _This is more intuition and not truly representative of training, but serves are good intuition for how it works._
+
+![[Screenshot 2024-06-12 at 12.18.18 PM.png]]
+
+[[RMSprop]], [[Adam]], AdaMax, and other optimization techniques are then designed to help escape these saddle points or plateaus by increasing the learning rate as gradients decrease over time (using exponentially weighted averages).
