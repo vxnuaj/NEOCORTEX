@@ -10,7 +10,21 @@ We can normalize the linear transformation $(z_{l}$) to a scale that's more easi
 
 > *Typically, its seems that batch normalization is applied prior to the activation function, after the linear transformation, though doing after the activation can work as well.* 
 
+Batch Normalization can then be applied per layer to the weighted sum, $z_l$.
 
+$\mu = \frac{1}{m} \sum_{i=1}^m Z_l^i$, where $m$ is the number of input neurons to the following layer.
+	
+$Z_l^i = Z_l^i - \mu$
+
+$\sigma^2 = \frac{1}{m} \sum_{i = 1}^m (Z_l^i - \mu)^2$, where $m$ is the number of input neurons to the following layer.
+
+$Z_{lnorm} = \frac{Z_l}{\sqrt{\sigma^2 + \epsilon}}$
+
+The mean and variance of the $Z_{norm}$ can be trained through parameters $\gamma$ and $\beta$.
+
+$\tilde{Z_{norm}^i} = \gamma Z_{norm}^i + \beta$
+
+$\gamma$ is known as the scale parameter, which can be used to scale the normalized value It can either amplify or dampen the scale of $Z_{norm}
 
 
 ---
