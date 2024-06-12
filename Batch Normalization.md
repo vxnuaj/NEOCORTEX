@@ -28,11 +28,17 @@ $\gamma$ is known as the scale parameter, which can be used to scale the normali
 
 $\beta$ is the parameter to shift the distribution of the normalized values, to better fit the desired output distribution to optimize model performance.
 
+The $\gamma$ and $\beta$ parameters should be matrices of same dimensions as output $Z^l$.
+
 > *These aren't [[Hyperparameters]], but instead learnable parameters during [[gradient descent]]*.
 
 Of course if $\gamma = \sqrt{\sigma^2 + \epsilon}$ and $\beta = \mu$, and we apply the equation, we'd be effectively undoing the batch normalization.[^1]
 
 Then, when computing the gradients, we'd use $Z_{lnorm}$ instead of the unnormalized $Z_l$.
+
+When using BatchNorm in a neural network, it effectively cancels out the effect of a bias term, making the inclusion of the computation of the bias computationally inefficient.
+
+So when you use Batch normalization, you can effectively remove $b^l$ or set it to 0.
 
 ---
 
