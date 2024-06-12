@@ -1,5 +1,7 @@
 Dropout is a [[Regularization]] technique that eliminates / ignores a specific set of neurons to optimize the network size to reduce overfitting and improve generalizability.
 
+> *This in a sense adds noise to the surface of the loss function, making it more difficult to achieve a smooth learning path, but comes with some benefits (below)*
+
 It aims to reduce co-dependence / co-adaptation amongst neurons. Some neurons depend on others to do the 'hard work' while they sit by and not contribute to the overall output.
 
 >*Dropout is more commonly used during training a model, and more commonly disabled during testing. Though, in research, some used dropout as a means of assessing the uncertainty in the predictions of a model to assess it's confidence and effectiveness.*

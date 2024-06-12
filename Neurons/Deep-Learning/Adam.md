@@ -8,7 +8,7 @@ We might not always want small changes to parameters with small gradients, we mi
 
 >_It all depends on the surface of the loss function_
 
-To compute Adam,
+So to compute Adam,
 
 1. Compute the velocity term (1st moment) using the algorithm, $V_{d\theta }= (\beta_1 V_{d\theta - 1}) + (1 - \beta_1) d\theta$
 
@@ -18,7 +18,7 @@ To compute Adam,
 
 4. Implement a bias correction term, $\frac{S_{d\theta}}{(1 - B_2^t)}$
 
-5. Perform the weight update, $\theta = \theta - \alpha(\frac{V_{d\theta}}{\sqrt{S_dw + \epsilon}})$, with the small $\epsilon$ value to avoid division by $0$
+5. Perform the weight update, $\theta = \theta - \alpha(\frac{V_{d\theta}}{\sqrt{S_{d\theta} + \epsilon}})$, with the small $\epsilon$ value to avoid division by $0$
 
 Then, you have 3 hyperparameters to tune:
 
@@ -26,8 +26,12 @@ Then, you have 3 hyperparameters to tune:
 2. Momentum Term: $B_1$, typically initialized to $.9$
 3. RMSprop Term: $B_2$, authors of the paper recommend to initialize to $.99$
 
+Adam is typically used in mini-batch gradient descent, given an increase in oscillations of the loss and accuracy during, which Adam can help in mitigating.
+
+![[Screenshot 2024-06-12 at 9.01.31 AM.png | 700]]
 
 ---
+
 **Tentative Plan:**
 
 > *Definitely read the paper, take notes, and understand it.*
@@ -35,7 +39,7 @@ Then, you have 3 hyperparameters to tune:
 - [x] Go over Andrew NGs Interpretation
 - [x] Go over Sebastian Raschka's interpretation
 	- [x] Adam
-- [ ] Go over Deep Learning Book / Understanding deep learning interpretation
+- [x] Go over Deep Learning Book / Understanding deep learning interpretation
 - [ ] Read the Paper
 - [x] Implement it
 
