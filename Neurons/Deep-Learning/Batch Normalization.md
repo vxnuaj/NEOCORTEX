@@ -22,9 +22,9 @@ Afterward, the mean and variance of the $Z_{norm}$ can be adjusted through param
 
 $\tilde{Z_{lnorm}^i} = \gamma Z_{lnorm}^i + \beta$
 
-$\gamma$ is known as the scale parameter, which can be used to scale the normalized value It can either amplify or dampen the scale of $Z_{lorm}$ based on what's more beneficial for model performance
+$\gamma$ is known as the scale parameter, which can be used to scale the normalized value It can either amplify or dampen the scale of $Z_{lorm}$ based on what's more beneficial for model performance. It's essentially the *variance* that each input, $Z_l$, to the activation function will take.
 
-$\beta$ is the parameter to shift the distribution of the normalized values, to better fit the desired output distribution to optimize model performance.
+$\beta$ is the parameter to shift the distribution of the normalized values, to better fit the desired output distribution to optimize model performance. This is essentially the *mean* of input, $Z_l$, into the activation function will take.
 
 The $\gamma$ and $\beta$ parameters should be matrices of same dimensions as output $Z^l$.
 
@@ -120,10 +120,11 @@ This then also reduces the need for extensive amounts of data (*in our example, 
 ---
 
 - [x] Andrew Ng
-- [ ] Sebastian Raschka
+- [x] Sebastian Raschka
 - [ ] Understanidng Deep LEarning
 - [ ] Deep learning book
 - [ ] Paper
-- [ ] - [ ] Implementations
+- [ ] Implementations
+- [ ] Why does BatchNorm work. Paper.
 
 [^1]: And essentially, we'd be computing an identity function. Funnily enough, a neural network can learn to undo the effect of BatchNorm.
