@@ -83,6 +83,8 @@ $\frac{∂L}{∂W_1} = (\frac{∂L}{∂Z_{1}})(\frac{∂Z_1}{∂W_1}) = (\frac{�
 
 ---end-multi-column
 
+During the forward pass, $\alpha$, can be assigned a higher value and still yield good learning.
+
 **Why BatchNorm works**:
 
 BatchNorm helps mitigate what's called [[covariate shift]], or when the distribution of the data changes amongst layer of a model.
@@ -115,14 +117,14 @@ BatchNorm also, in certain scenarios, allows for us to center the inputs fed int
 
 This then also reduces the need for extensive amounts of data (*in our example, we'd only need data for black cats, while still generalizing to colored cats*)
 
+**Relevant Papers:**
 
 
 ---
 
 - [x] Andrew Ng
 - [x] Sebastian Raschka
-- [ ] Understanidng Deep LEarning
-- [ ] Deep learning book
+- [x] Understanidng Deep Learning
 - [ ] Paper
 - [ ] Implementations
 - [ ] Why does BatchNorm work. Paper.
