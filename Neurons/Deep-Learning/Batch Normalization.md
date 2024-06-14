@@ -56,17 +56,18 @@ The [[gradient descent]] for a 2 layer neural network with batch normalization i
 number of columns: 2
 border: off
 border-shadow:off
+largest column: right
 ```
 
 #### *Forward Pass*
 $Z_1 = W_1 • X$
 $Z_{1norm} = batchnorm(Z_1)$
-$\tilde{Z_{1norm}}= \gamma_1 • Z_{1norm} - \beta_1$
+$\tilde{Z_{1norm}}= \gamma_1 \cdot Z_{1norm} - \beta_1$
 $A_1 = ReLU(\tilde{Z_{1norm}})$
 
-$Z_2 = W_2 • A_1$
+$Z_2 = W_2 \cdot A_1$
 $Z_{2norm} = batchnorm(Z_2)$
-$\tilde{Z_{2norm}}= \gamma_2 • Z_{2norm} - \beta_2$
+$\tilde{Z_{2norm}}= \gamma_2 \cdot Z_{2norm} - \beta_2$
 $A_2 = Softmax(\tilde{Z_{2norm}})$
 
 $Loss = CCE(A_2, Y_{onehot})$
@@ -78,8 +79,13 @@ $Loss = CCE(A_2, Y_{onehot})$
 $\frac{∂L}{\tilde{∂Z_{2norm}}} = (\frac{∂L}{∂A_2})(\frac{∂A_2}{\tilde{∂Z_{2norm}}}) = A_2 - Y_{onehot}$
 $\frac{∂L}{∂\gamma_2} = (\frac{∂L}{\tilde{∂Z_{2norm}}})(\frac{∂\tilde{Z_{2norm}}}{∂\gamma_2}) = \frac{∂L}{\tilde{∂Z_{2norm}}} * Z_{2norm}$
 $\frac{∂L}{∂\beta_2} = (\frac{∂L}{\tilde{∂Z_{2norm}}})(\frac{\tilde{∂Z_{2norm}}}{∂\beta_2}) = \sum \frac{∂L}{\tilde{Z_{2norm}}}$, *summed over number of samples in the batch*
-$\frac{∂L}{∂Z_2} = \frac{∂L}{\tilde{∂Z_{2norm}{$
-
+$\frac{∂L}{∂Z_2} = (\frac{∂L}{\tilde{∂Z_{2norm}}}) (\frac{\tilde{∂Z_{2norm}}}{∂Z_{2norm}})(\frac{∂Z_{2norm}}{∂Z_2}) = \frac{∂L}{\tilde{∂Z_{2norm}}} * \gamma_2 * \frac{1}{|{\sigma_2}|}$
+$\frac{∂L}{∂W_2} = (\frac{∂L}{∂Z_2})(\frac{∂Z_2}{∂W_2}) = (\frac{∂L}{∂Z_2}) \cdot A_1^T$
+$\frac{∂L}{\tilde{∂Z_{1norm}}} = (\frac{∂L}{∂Z_2})(\frac{∂Z_2}{A_1})(\frac{∂A_1}{∂Z_{1norm}}) = W_2^T \cdot \frac{∂L}{∂Z_2} * ReLU_{deriv}(\tilde{Z_{1norm}})$
+$\frac{∂L}{\gamma_1} = (\frac{∂L}{\tilde{∂Z_{1norm}}})(\frac{\tilde{∂Z_{1norm}}}{∂\gamma_1}) = (\frac{∂L}{\tilde{Z_{1norm}}}) * Z_{1norm}$
+$\frac{∂L}{∂\beta_1} = (\frac{∂L}{\tilde{∂Z_{1norm}}})(\frac{\tilde{∂Z_{1norm}}}{∂\beta_1})$
+$\frac{∂L}{∂Z_1} = (\frac{∂L}{\tilde{∂Z_{1norm}}}) (\frac{\tilde{∂Z_{1norm}}}{∂Z_{1norm}})(\frac{∂Z_{1norm}}{∂Z_1}) = \frac{∂L}{\tilde{∂Z_{1norm}}} * \gamma_1 * \frac{1}{|{\sigma_1}|}$
+$\frac{∂L}{∂W_1} = (\frac{∂L}{∂Z_{1}})(\frac{∂Z_1}{∂W_1}) = (\frac{∂L}{∂Z_1}) \cdot X^T$
 
 ---end-multi-column
 
