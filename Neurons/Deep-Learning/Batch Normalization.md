@@ -20,7 +20,9 @@ $\sigma^2 = \frac{1}{m} \sum_{i = 1}^m (Z_l^i - \mu)^2$, where $m$ is the number
 
 $Z_{lnorm} = \frac{Z_l}{\sqrt{\sigma^2 + \epsilon}}$
 
-The mean and variance of the $Z_{norm}$ can be trained through parameters $\gamma$ and $\beta$.
+This defines a batch normalization layer.
+
+Afterward, the mean and variance of the $Z_{norm}$ can be adjusted through parameters $\gamma$ and $\beta$.
 
 $\tilde{Z_{lnorm}^i} = \gamma Z_{lnorm}^i + \beta$
 
@@ -30,7 +32,7 @@ $\beta$ is the parameter to shift the distribution of the normalized values, to 
 
 The $\gamma$ and $\beta$ parameters should be matrices of same dimensions as output $Z^l$.
 
-> *These aren't [[Hyperparameters]], but instead learnable parameters during [[gradient descent]]*.
+*These aren't [[Hyperparameters]], but instead learnable parameters during [[gradient descent]]*.
 
 Of course if $\gamma = \sqrt{\sigma^2 + \epsilon}$ and $\beta = \mu$, and we apply the equation, we'd be effectively undoing the batch normalization.[^1]
 
@@ -42,19 +44,54 @@ So when you use Batch normalization, you can effectively remove $b^l$ or set it 
 
 During training, the $\gamma$ values are typically initialized to a matrix of $1$'s and the $\beta$ values are typically initialized to a matrix of $0$s, with dimensions equivalent to the weighted sum $Z$ and layer $l$.
 
-Then during training, you compute the gradient of the loss with respect to $\gamma$ and $\beta$ and apply the parameter update as you would for any other parameter $W$ or $B$ within your model.
+Then during training, after the forward pass, during the backward pass you compute the gradient of the loss with respect to $\gamma$ and $\beta$ and apply the parameter update as you would for any other parameter $W$ or $B$ within your model, yet with a slightly different derivation in regards to the backpropagation.
+
+The [[gradient descent]] for a 2 layer neural network with batch normalization is mathematically defined as:
+
+> *We'll be using $ReLU$ and $Softmax$ as they are the most common in multi-class classification but they can be replaceable with any other activation function, given a slight change to the derivation of the gradients. 
+
+
+--- start-multi-column: ExampleRegion1\
+```column-settings
+number of columns: 2
+border: off
+border-shadow:off
+```
+
+#### *Forward Pass*
+$Z_1 = W_1 • X$
+$Z_{1norm} = batchnorm(Z_1)$
+$\tilde{Z_{1norm}}= \gamma_1 • Z_{1norm} - \beta_1$
+$A_1 = ReLU(\tilde{Z_{1norm}})$
+
+$Z_2 = W_2 • A_1$
+$Z_{2norm} = batchnorm(Z_2)$
+$\tilde{Z_{2norm}}= \gamma_2 • Z_{2norm} - \beta_2$
+$A_2 = Softmax(\tilde{Z_{2norm}})$
+
+$Loss = CCE(A_2, Y_{onehot})$
+
+---break-column---
+
+#### *Backward Pass*
+
+$\frac{∂L}{\tilde{∂Z_{2norm}}} = (\frac{∂L}{∂A_2})(\frac{∂A_2}{\tilde{∂Z_{2norm}}}) = A_2 - Y_{onehot}$
+$\frac{∂L}{∂\gamma_2} = (\frac{∂L}{\tilde{∂Z_{2norm}}})(\frac{∂\tilde{Z_{2norm}}}{∂\gamma_2}) = \frac{∂L}{\tilde{∂Z_{2norm}}} * Z_{2norm}$
+$\frac{∂L}{∂\beta_2} = (\frac{∂L}{\tilde{∂Z_{2norm}}})(\frac{\tilde{∂Z_{2norm}}}{∂\beta_2}) = \sum \frac{∂L}{\tilde{Z_{2norm}}}$, *summed over number of samples in the batch*
+$\frac{∂L}{∂Z_2} = \frac{∂L}{\tilde{∂Z_{2norm}{$
+
+
+---end-multi-column
 
 
 
 ---
 
+- [ ] Implementations
 - [ ] Andrew Ng
 - [ ] Sebastian Raschka
 - [ ] Understanidng Deep LEarning
 - [ ] Deep learning book
 - [ ] Paper
-- [ ] Implementation
-	- [ ] Regular BatchNorm
-	- [ ] BatchNorm in Adam + AdaMax
 
 [^1]: And essentially, we'd be computing an identity function 
