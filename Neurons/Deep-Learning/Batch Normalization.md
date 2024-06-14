@@ -1,8 +1,4 @@
-You can typically normalize the inputs to a neural network by applying [[Z-Score Normalization]] or another means of a simply division by $255$ for pixel values.
-
-This works well for input features.
-
-But, in deeper networks, you might also want to normalize the input features into each layer.
+In deeper networks, you might want to normalize the input features into each layer to mitigate [[Covariate Shift]] and allow for faster learning.
 
 This is what [[Batch Normalization]] does.
 
@@ -50,7 +46,6 @@ The [[gradient descent]] for a 2 layer neural network with batch normalization i
 
 > *We'll be using $ReLU$ and $Softmax$ as they are the most common in multi-class classification but they can be replaceable with any other activation function, given a slight change to the derivation of the gradients. 
 
-
 --- start-multi-column: ExampleRegion1\
 ```column-settings
 number of columns: 2
@@ -58,7 +53,6 @@ border: off
 border-shadow:off
 largest column: right
 ```
-
 #### *Forward Pass*
 $Z_1 = W_1 • X$
 $Z_{1norm} = batchnorm(Z_1)$
@@ -89,15 +83,33 @@ $\frac{∂L}{∂W_1} = (\frac{∂L}{∂Z_{1}})(\frac{∂Z_1}{∂W_1}) = (\frac{�
 
 ---end-multi-column
 
+**Why BatchNorm works**:
+
+BatchNorm essentially allows for us to center the inputs fed into each activation function, allowing for the model to ultimately generalize on more data.
+
+> *This is the case in RGB images, where a model is trained on identifying black cats. If you introduce BatchNorm and then input normalization during testing, the model would be able to identify the colored cats as well.
+> 
+> BatchNorm would help the model learn more robust features without being sensitive to color intensities, though of course, you'd have to normalize the input of colored cats during testing*
+
+This helps mitigate what's called [[covariate shift]], or when the distribution of the data changes amongst layer of a model.
+
+In essence, the inputs to each layer can be seen as features. But as parameters and activations from previous layers change, the distribution of the input features to later layers changes, introducing again [[covariate shift]]
+
+This type of *[[covariate shift]]* makes a model learn slower as it continuously has to adjust it's parameters to an ever changing distribution of gradients, which gets worse as a neural network gets deeper.
+
+
+
+This then also reduces the need for extensive amounts of data (*in our example, we'd only need data for black cats, while still generalizing to colored cats*)
+
 
 
 ---
 
-- [ ] Implementations
 - [ ] Andrew Ng
 - [ ] Sebastian Raschka
 - [ ] Understanidng Deep LEarning
 - [ ] Deep learning book
 - [ ] Paper
+- [ ] - [ ] Implementations
 
 [^1]: And essentially, we'd be computing an identity function 
