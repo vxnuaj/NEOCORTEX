@@ -54,7 +54,7 @@ border-shadow:off
 largest column: right
 ```
 #### *Forward Pass*
-$Z_1 = W_1 • X$
+$Z_1 = W_1 \cdot X$
 $Z_{1norm} = batchnorm(Z_1)$
 $\tilde{Z_{1norm}}= \gamma_1 \cdot Z_{1norm} - \beta_1$
 $A_1 = ReLU(\tilde{Z_{1norm}})$
