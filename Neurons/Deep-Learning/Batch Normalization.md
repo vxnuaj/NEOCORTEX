@@ -85,19 +85,33 @@ $\frac{∂L}{∂W_1} = (\frac{∂L}{∂Z_{1}})(\frac{∂Z_1}{∂W_1}) = (\frac{�
 
 **Why BatchNorm works**:
 
-BatchNorm essentially allows for us to center the inputs fed into each activation function, allowing for the model to ultimately generalize on more data.
+BatchNorm helps mitigate what's called [[covariate shift]], or when the distribution of the data changes amongst layer of a model.
+
+In essence, the inputs to each layer can be seen as features. But as parameters and activations from previous layers change, the distribution of the input features to later layers changes, introducing again [[covariate shift]]
+
+![[Screenshot 2024-06-14 at 3.06.36 PM.png]]
+
+> *Here, layers 3 and 4 are dependent on the changing distribution of $A_2$ which then is dependent on the first 2 layers.*
+
+This type of *[[covariate shift]]* makes a model learn slower as it continuously has to adjust it's parameters to an ever changing distribution of gradients, which gets worse as a neural network gets deeper.
+
+The [[Z-Score Normalization]], mitigates this issue.
+
+Batch Normalization also has a type of regularization effect, if it's computed per mini-batch as the $\mu$ and $var$ can vary per mini-batch given a different set of samples per forward pass. 
+
+This then forces a network to adjust it's weights in a more 'active' manner, slightly mitigating the risk of overfitting.
+
+>*Similar to [[dropout]]'s regularization effect, but of course, no pruned weights*
+>
+>*Though, it's weak when compared to [[dropout]].*
+
+This depends on the size of the mini-batch, if the mini-batch is higher, the regularization effect diminishes.
+
+BatchNorm also, in certain scenarios, allows for us to center the inputs fed into each activation function, allowing for the model to ultimately generalize on more data.
 
 > *This is the case in RGB images, where a model is trained on identifying black cats. If you introduce BatchNorm and then input normalization during testing, the model would be able to identify the colored cats as well.
 > 
 > BatchNorm would help the model learn more robust features without being sensitive to color intensities, though of course, you'd have to normalize the input of colored cats during testing*
-
-This helps mitigate what's called [[covariate shift]], or when the distribution of the data changes amongst layer of a model.
-
-In essence, the inputs to each layer can be seen as features. But as parameters and activations from previous layers change, the distribution of the input features to later layers changes, introducing again [[covariate shift]]
-
-This type of *[[covariate shift]]* makes a model learn slower as it continuously has to adjust it's parameters to an ever changing distribution of gradients, which gets worse as a neural network gets deeper.
-
-
 
 This then also reduces the need for extensive amounts of data (*in our example, we'd only need data for black cats, while still generalizing to colored cats*)
 
@@ -105,11 +119,11 @@ This then also reduces the need for extensive amounts of data (*in our example, 
 
 ---
 
-- [ ] Andrew Ng
+- [x] Andrew Ng
 - [ ] Sebastian Raschka
 - [ ] Understanidng Deep LEarning
 - [ ] Deep learning book
 - [ ] Paper
 - [ ] - [ ] Implementations
 
-[^1]: And essentially, we'd be computing an identity function 
+[^1]: And essentially, we'd be computing an identity function. Funnily enough, a neural network can learn to undo the effect of BatchNorm.
