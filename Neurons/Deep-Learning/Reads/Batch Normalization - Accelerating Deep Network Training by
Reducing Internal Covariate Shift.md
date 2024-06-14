@@ -20,4 +20,16 @@
 - Then, normalizing these distributions mitigate the [[covariate shift]], [[vanishing gradient]]s, and increase training times + learning rates ($\alpha$).
 - It allows for a model to use activation functions that are prone to saturation ([[sigmoid]], [[Tanh]]) without getting stuck in the saturating regions (meaning extremely large or small values).
 
-****
+**Towards Reducing Internal Covariate Shift**
+
+- It's been known that whitening ($\mu := 0$, $var := 1$) the inputs of a model can increase training speed (by decorrelating the activations to their inputs, given the normalization)
+- The same can be done for each layer, to remove the effects of [[Covariate Shift]].
+- Considering a model, say $f$, that's composed of inputs $u$, a bias $b$, and a shift in the mean by $x$, to get an output $\hat{x}$. Shifting the affine transformation by $b$, and then subtracting the mean, $x$, would lead to a cancelling effect where $b$ eliminates the effect of subtracting the mean, $x$.
+- Then the gradient of the loss function with respect to $b$ will not change in value whilst undergoing the update step, $b = b - \alpha \cdot \frac{∂L}{∂b}$, while the paramter $b$ will still iteratively update thereby causing an exploding or vanishing of the parameter $b$ in terms of it's value.
+- So to mitigate this, again, introducing a narrowed distribution for the inputs to each layer would be ideal as it would allow for the gradient of the loss with respect to model parameters to account for the normalized distributions and scales.
+- This can be done through [[Z-Score Normalization]], where it is:
+
+	$\hat{x} = \frac{x - E[x]}{\sqrt{Var[x]}}$
+
+- Though, then normalizing the input of a layer might change what the original layer can represent and in the case of using [[sigmoid]], $\frac{1}{1 - e^{-x}}$, might make inputs $\hat{x}$ remain centered in the linear zone of the [[sigmoid]]. 
+- So to mitigate this, you can introduce a 
