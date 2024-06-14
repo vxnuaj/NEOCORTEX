@@ -28,7 +28,7 @@ $\beta$ is the parameter to shift the distribution of the normalized values, to 
 
 The $\gamma$ and $\beta$ parameters should be matrices of same dimensions as output $Z^l$.
 
-*These aren't [[Hyperparameters]], but instead learnable parameters during [[gradient descent]]*.
+*These aren't [[Hyperparameters]], but instead learnable parameters during [[gradient descent]]*[^2].
 
 Of course if $\gamma = \sqrt{\sigma^2 + \epsilon}$ and $\beta = \mu$, and we apply the equation, we'd be effectively undoing the batch normalization.[^1]
 
@@ -130,3 +130,4 @@ This then also reduces the need for extensive amounts of data (*in our example, 
 - [ ] Why does BatchNorm work. Paper.
 
 [^1]: And essentially, we'd be computing an identity function. Funnily enough, a neural network can learn to undo the effect of BatchNorm.
+[^2]: When making use of [[RMSprop]], you should also make sure to scale the learning rate accordingly for $\gamma$ and $\beta$. But for [[Momentum]], you typically don't need to unless you're training models in certain areas that need them. *Occam's Razor* for [[Momentum]] and BatchNorm.

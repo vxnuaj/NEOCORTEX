@@ -79,4 +79,4 @@
 ##### Batch Normalization regularizes the model
 
 - Similar to dropout, when computing on mini-batches, the mean $\mu$ and variance $\sigma^2$, are computed per mini-batch.
-- Given that the $\mu$ and $\sigma^2$ can vary depending on the mini-batch, these variations add a type of noise per forward pass iteration of each mini batch, thereby allowing for each parameter to update 
+- Given that the $\mu$ and $\sigma^2$ can vary depending on the mini-batch, these variations add a type of noise per forward pass iteration of each mini batch, thereby allowing for each parameter to update in a more "active" manner that generalizes the parameters $\beta$ and $\gamma$ more effectively, slightly mitigating the risk of overfitting
