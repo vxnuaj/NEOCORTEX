@@ -114,5 +114,20 @@ The idea of a digital computer is very old and it need not rely on electricity (
 
 Computers then may be classified as discrete. Then it seems that the initial state of the computer can be used to describe all possible future states, (i.e., Laplace's View), just as the complete state of the universe described by the fundamental particles can be used to predict all future states.
 
+Then initial conditions matter most, where small changes, very small, on the order of fundamental particles can essentially change everything.
+
+> *Interesting, seems more of a deterministic viewpoint*
+
+Given the table (or book of instructions given to the discrete machine), it's possible that one could predict exactly what the computer will do over a period of time (given the prior deterministic viewpoint of computers).
+
+Then there's no reason why prior prediction shouldn't be able to be computed by the means of a digital computer, given that the computer could quickly enough carry about the given behavior.
+
+Then, during the imitation game [[turing test]], the interrogator wouldn't be able to distinguish from the digital computer nor discrete machine
+
+"*This special property of digital computers, that they can mimic any discrete-state machine, is described by saying that they are universal machines*"
+
+> *Or then more commonly, universal computers*
+
+Thereby, the consequence of having machines with this property (disregarding speed), is that a single computer is able to compute any computable process that exists.
 
 [^1]: As of course, that seems to be the only bounds to knowledge
