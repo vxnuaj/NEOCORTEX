@@ -117,17 +117,15 @@ BatchNorm also, in certain scenarios, allows for us to center the inputs fed int
 
 This then also reduces the need for extensive amounts of data (*in our example, we'd only need data for black cats, while still generalizing to colored cats*)
 
-**Relevant Papers:**
+**Testing BatchNorm**
 
+Training BatchNorm makes use of $\mu$ and $\sigma^2$ of specific mini batches of data. The parameters are then trained to predict based on the normalized inputs to each layer of each mini batch.
+
+The issue with this. is that during inference, a model must be able to make predictions on samples and layer inputs of similar scale, but the presented samples might not allow a model to make the computations of the same scale, then bringing inaccuracy.
+
+So you have to come up. with a separate estimate of $\mu$ and $\sigma^2$. This can be done by computing the [[exponentially weighted averages]] of both $\mu$ and $\sigma^2$ during the forward pass of each mini batch (per iteration) which will then be used during test time in the batch normalization layer.
 
 ---
-
-- [x] Andrew Ng
-- [x] Sebastian Raschka
-- [x] Understanidng Deep Learning
-- [x] Paper
-- [ ] Implementations
-- [ ] Why does BatchNorm work. [Paper](https://arxiv.org/pdf/1805.11604).
 
 [^1]: And essentially, we'd be computing an identity function. Funnily enough, a neural network can learn to undo the effect of BatchNorm.
 [^2]: When making use of [[RMSprop]], you should also make sure to scale the learning rate accordingly for $\gamma$ and $\beta$. But for [[Momentum]], you typically don't need to unless you're training models in certain areas that need them. *Occam's Razor* for [[Momentum]] and BatchNorm.
