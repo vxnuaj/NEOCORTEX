@@ -112,7 +112,7 @@ The idea of a digital computer is very old and it need not rely on electricity (
 
 > *The thought experiment is about imagining a computer that has an infinite amount of time and an infinite amount of resources (paper). This type of computer can compute any operation that it is given and that exists per the laws of physics.[^1]*
 
-Computers then may be classified as discrete. Then it seems that the initial state of the computer can be used to describe all possible future states, (i.e., Laplace's View)
+Computers then may be classified as discrete. Then it seems that the initial state of the computer can be used to describe all possible future states, (i.e., Laplace's View), just as the complete state of the universe described by the fundamental particles can be used to predict all future states.
 
 
 [^1]: As of course, that seems to be the only bounds to knowledge
