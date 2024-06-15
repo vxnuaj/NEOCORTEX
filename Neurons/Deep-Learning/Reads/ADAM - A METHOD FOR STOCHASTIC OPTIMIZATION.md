@@ -52,7 +52,7 @@ Within Adam's update rule, the effective step size, $\alpha(\frac{m_t}{\sqrt{v_t
 - $|\delta_t| ≤ \alpha \cdot \frac{(1 - \beta_1)}{\sqrt{1 - \beta_2}}$ if $(1 - \beta_1) > \sqrt{1 - \beta_2}$
 - $|\delta_t| ≤ \alpha$ otherwise
 
-Essentially, in the algorithm, the scaling factor $\sqrt{v_t}$ is inversely proportional to an $L^2$ norm of the current and past gradient.
+Essentially, in the algorithm, the scaling factor $\sqrt{v_t}$ can be thought of as inversely proportional to an $L^2$ norm of the current and past gradient.[^1]
 
 > *When we say that something is inversely proportional to another quantity, it means that as one quantity increases, the other decreases by a certain factor. In the context of the Adam optimizer:*
 > 
@@ -82,3 +82,5 @@ $v_t = max(\beta_2 \cdot u_{t - 1 }, |g_t|)$
 which can be used in the update step as:
 
 $\theta_{t+1} = \theta_{t} - \eta\frac{m_t}{v_{t}}$
+
+[^1]: woudl need to clarify this i got no idea what they meant now, i got confused.
