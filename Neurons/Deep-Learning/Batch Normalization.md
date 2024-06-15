@@ -125,9 +125,9 @@ This then also reduces the need for extensive amounts of data (*in our example, 
 - [x] Andrew Ng
 - [x] Sebastian Raschka
 - [x] Understanidng Deep Learning
-- [ ] Paper
+- [x] Paper
 - [ ] Implementations
-- [ ] Why does BatchNorm work. Paper.
+- [ ] Why does BatchNorm work. [Paper](https://arxiv.org/pdf/1805.11604).
 
 [^1]: And essentially, we'd be computing an identity function. Funnily enough, a neural network can learn to undo the effect of BatchNorm.
 [^2]: When making use of [[RMSprop]], you should also make sure to scale the learning rate accordingly for $\gamma$ and $\beta$. But for [[Momentum]], you typically don't need to unless you're training models in certain areas that need them. *Occam's Razor* for [[Momentum]] and BatchNorm.
