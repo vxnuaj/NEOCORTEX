@@ -93,6 +93,26 @@ This allows for computers to repeat operations until a condition is met
 
 > _And logic_
 
-This process can be scaled up to mimic the actions of a human very closely, to perform complex calculations and tasks that resemble human thought processes.
+This process can be scaled up to mimic the actions of a human very closely, to perform complex calculations and tasks that resemble human thought processes.[^1]
 
-The *book of instructions* is fictional for a human as we remember what we have to do, but for a computer, they need this *book of instructions* 
+The *book of instructions* is fictional for a human as we remember what we have to do, but for a computer, they need this *book of instructions* to program the machine to do an operation.
+
+> *Interesting, if all computation can be built on this type of foundational logic, including intelligence, creativity, etc, the case would then be that those mental qualities are purely physical and deterministic in a sense.*
+
+A variant of this computer is a computer with a random element, where instructions involve a random number. This type of machine is commonly described as having "free will", given the seemingly randomness in human decision making. 
+
+But it is typically difficult to distinguish one from the other as it can be produced with deterministic devices, such as making choices depend on digits of a decimal.
+
+> *What if we're like this at the fundamental level but we don't know it. 
+> What if our behavior is ultimately deterministic and our free will is an illusion? 
+> 
+> But then of course there may be emergent properties, there might be a type of radical locality within individual neurons and even on a lower level that give rise to different levels consciousness and intelligence at higher scales.*
+
+The idea of a digital computer is very old and it need not rely on electricity (i.e., [Charles Babbage Analytical Engine](https://www.youtube.com/watch?v=BlbQsKpq3Ak)), the electricity is just a means for faster computation but a computer can be entirely constructed out of cards and wheels while still performing the same computation but of course at an extremely slow rate.
+
+> *The thought experiment is about imagining a computer that has an infinite amount of time and an infinite amount of resources (paper). This type of computer can compute any operation that it is given and that exists per the laws of physics.[^1]*
+
+Computers then may be classified as discrete. Then it seems that the initial state of the computer can be used to describe all possible future states, (i.e., Laplace's View)
+
+
+[^1]: As of course, that seems to be the only bounds to knowledge
