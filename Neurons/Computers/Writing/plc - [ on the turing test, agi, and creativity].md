@@ -10,6 +10,11 @@ if human's are purely algorithmic at the quantum level (which i'm biased to beli
 
 creativity and novel ideas are a type of disobedience to the status quo, going based of the general consensus isn't how we built new ideas. agi needs to disobey.
 
+**on the imitation game / turing test:**
+> *But that's mimesis. Humans & intelligence aren't a byproduct of mimesis, they are a byproduct of understanding through creativity (disobedience) and error correction. If a computer is mimetic, it can't disobey and then it can't be creative and then it can't error-correct for itself to create it's own knowledge and intelligence through understanding. 
+> 
+> If a machines "thought processes" aren't able to understand the underlying concepts and are just mimetic, I don't believe that's intelligence.
+
 [^1]: and creativity is essential for progress. no creativity, no new ideas or conjectures to solve unique problems, no failure, then no error-correction, then stagnation. creativity is the reason human's thrived, it's the reason agi might thrive as well someday.
 
 [^2]: scaling laws aren't the way, unless emergent properties are true, continuing to predict the next token at scale won't do jack shit.
