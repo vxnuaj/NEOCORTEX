@@ -56,7 +56,8 @@ Essentially, in the algorithm, the scaling factor $\sqrt{v_t}$ is inversely prop
 
 > *When we say that something is inversely proportional to another quantity, it means that as one quantity increases, the other decreases by a certain factor. In the context of the Adam optimizer:*
 > 
-> *The term $\sqrt{v_t}$​​ is inversely proportional to the $L^2$ norm of the gradients.*
+> *The term $\sqrt{v_t}$​​ is inversely proportional to the $L^2$ norm of the smoothed (exponentially moving averaged) gradients.*
+> 
 > *This means that as the $L^2$ norm of the gradients increases, the term $\sqrt{v_t}vt$ decreases.*
 > *Conversely, as the $L^2$ norm of the gradients decreases, the term $\sqrt{v_t}$ increases*
 
