@@ -130,4 +130,13 @@ Then, during the imitation game [[turing test]], the interrogator wouldn't be ab
 
 Thereby, the consequence of having machines with this property (disregarding speed), is that a single computer is able to compute any computable process that exists.
 
+then
+
+*"Let us fix our attention on one particular digital computer C. Is it true that by modifying this computer to have an adequate storage, suitably increasing its speed of action, and providing it with an appropriate programme, C can be made to play satisfactorily the part of A in the imitation game, the part of B being taken by a man?"*
+
+**Objections**
+
+- Theological objections play to game, explanatory knowledge serves as a better explanation
+- 
+
 [^1]: As of course, that seems to be the only bounds to knowledge
