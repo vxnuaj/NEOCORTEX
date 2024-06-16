@@ -7,7 +7,6 @@ https://x.com/ToKTeacher/status/1800349959054840122
 
 despite computers being able to do surgeries ((neuralink)), steer spaceships ((saturn-v, gemini guidance computer)), fold proteins ((alpha fold)), beat elite go players ((alphago / alphazero)), yet they struggle to accurately process natural language. the gap might be in creativity, intuition, and understanding. the former can be based on more discrete unambiguous steps while the latter requires depth and understanding to be fully (reliable).
 
-imo, we wont reach true human level intelligence without having llms have a type of creativity, disobedience, etc, rn they're purely estimating the next token based on bayesian priors, they aren't capable of creating new ideas besides the ones previously presented to them.
 
 in a sense, whenever we query an llm about a question, it's giving us the consensus of the data it was trained upon, not novel ideas or conjectures backed by creativity[^1]
 
