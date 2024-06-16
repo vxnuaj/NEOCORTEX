@@ -1,7 +1,7 @@
 
 
 
-
+https://x.com/ToKTeacher/status/1800349959054840122
 
 *should not scared of a computer that passes the Turing test (that's mimesis, not true human intelligence with creativity.), should be scared of one that intentionally fails it*
 
