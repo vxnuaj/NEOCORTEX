@@ -1,3 +1,8 @@
+
+
+
+
+
 *should not scared of a computer that passes the Turing test (that's mimesis, not true human intelligence with creativity.), should be scared of one that intentionally fails it*
 
 despite computers being able to do surgeries ((neuralink)), steer spaceships ((saturn-v, gemini guidance computer)), fold proteins ((alpha fold)), beat elite go players ((alphago / alphazero)), yet they struggle to accurately process natural language. the gap might be in creativity, intuition, and understanding. the former can be based on more discrete unambiguous steps while the latter requires depth and understanding to be fully (reliable).
@@ -14,6 +19,9 @@ creativity and novel ideas are a type of disobedience to the status quo, going b
 > *But that's mimesis. Humans & intelligence aren't a byproduct of mimesis, they are a byproduct of understanding through creativity (disobedience) and error correction. If a computer is mimetic, it can't disobey and then it can't be creative and then it can't error-correct for itself to create it's own knowledge and intelligence through understanding. 
 > 
 > If a machines "thought processes" aren't able to understand the underlying concepts and are just mimetic, I don't believe that's intelligence.
+
+
+Ray Kurzweil believes that in 2029, the Turing test will be passed by AI.
 
 [^1]: and creativity is essential for progress. no creativity, no new ideas or conjectures to solve unique problems, no failure, then no error-correction, then stagnation. creativity is the reason human's thrived, it's the reason agi might thrive as well someday.
 

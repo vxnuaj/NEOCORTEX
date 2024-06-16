@@ -137,6 +137,14 @@ then
 **Objections**
 
 - Theological objections play to game, explanatory knowledge serves as a better explanation
-- 
+- Consciousness required for intelligence.
+	- Turing: Human's only appear to be conscious. Machines can too
+	>*Mimesis isn't the way out....*
+- Machines can't love, joke, create art, eat, etc
+	- Turing: No reasoning behind this, just an opinion based on the world today and the lack that the world won't change
+- The brain is analog (continuous)
+		- A big enough computer can simulate it
+- Deterministic rules mean predictable behavior, but humans don't seem as such
+	- Humans could be a complex collection set of rules at the particle level
 
 [^1]: As of course, that seems to be the only bounds to knowledge
