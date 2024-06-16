@@ -19,17 +19,24 @@ feeding each $X^{t}$ in once and taking a training step in between, then restart
 
 The trend of the loss function will be less smooth due to the fact that within each forward pass, your model is operating on new unseen samples, but it should still trend downward.
 
-To choose the mini-batch size, it will be in between [[Stochastic Gradient Descent]], where each sample is a 'mini-batch', and batch [[gradient descent]] size, where you get a faster rate of learning whilst maintaining the speed-up effects from vectorization.
+Choosing a mini-batch size considers computational cost and the quality of training.
 
->*The former wouldn't allow for a model to converge while the latter provides easier convergence and larger steps without the speed benefit of mini-batch*
+- The mini batch size should fit into the memory ([[RAM ]]or [[VRAM]])
+- GPUs and TPUs are optimized for parallel computation, larger batch sizes can better use these capabilities.[^2]
 
+- Smaller Batch Sizes make way for more oscillations and a noisier gradient computations which helps for escaping local minima, especially in non-convex loss functions
+- Smaller batch sizes might lead to better generalization as the noisiness can act as a form of regularization
+
+Principles
 - If you have a small training set, make use of batch [[gradient descent]]
 	- where $m ≤ ~2000$
 - Typical mini-batch sizes are 
 	- 64 $\rightarrow$ 1024, on the powers of $2$ given how modern computer hardware runs[^1]
 - Make sure your mini-batch fits in your CPU / GPU nmemory
+- If you're using BatchNorm, very small batches can lead to poor estimates of batch statistics ($\mu$ and $\beta$)
 
 
 ---
 
 [^1]: Many computer systems have architectures that are optimized for accessing data on powers of 2.
+[^2]: See [here](https://cloud.google.com/tpu/docs/troubleshooting/trouble-tf#:~:text=As%20a%20general%20rule%2C%20using,in%20terms%20of%20samples%2Fsecond.&text=The%20batch%20size%20of%20any,the%20tensors%20to%20this%20size.) for Google's explanation on TPU and larger batch sizes
