@@ -10,7 +10,7 @@ Given that we're using
 - Bias vector $b$
 - Target vector $Y$
 
-> We'll be using matrices, not individual values to make things simpler (economists, smh).
+> *We'll be using matrices, not individual values to make things simpler.*
 
 Linear Regression: $z = W^TX + b$, where $z$ is the prediction/output of the linear regression (commonly referred to as the weighted sum within neural networks).
 
