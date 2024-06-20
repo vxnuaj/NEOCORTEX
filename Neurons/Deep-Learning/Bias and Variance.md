@@ -13,4 +13,4 @@ In an ideal model, it has a low bias and low variability, improving generalizabi
 
 To find the the sweet spot, one can use [[regularization]], [[boosting]], or [[bagging]]
 
-[^1]: [[Bayes Error]]
+[^1]: [[Bayes Error]] - wtf is this and the equation?? TODO.
