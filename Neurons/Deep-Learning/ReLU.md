@@ -32,7 +32,7 @@ ReLU_deriv = z > 0
 
 The range of ReLU is from $0$ to $\infty$, providing a stable output of $0$ if the input $z$ is less than $0$ and a linear output of $z$ is the input $z$ is greater than $0$. 
 
-Given that it isn't bound to a specific range such as [[sigmoid]] or [[tanh]], it's use case will not be for normalizing data between afixend can be inefficient when calculating final outputs given a lack of interpretability. Like [[sigmoid]] can be used to calculate probabilities, ReLU can't be interpreted as such.
+Given that it isn't bound to a specific range such as [[sigmoid]] or [[tanh]], it's use case will not be for normalizing data between fixed range, which can be inefficient when calculating final outputs given a lack of interpretability. Like [[sigmoid]] can be used to calculate probabilities, ReLU can't be interpreted as such.
 
 Given that it only outputs positive values which can be very large, it might not be suitable for certain use-cases. But it doesn't suffer from the vanishing gradient problem. Rather it's sparse when $z < 0$ and has a consistent output when $z > 0$.
 

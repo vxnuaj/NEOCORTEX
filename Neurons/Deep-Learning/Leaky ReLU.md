@@ -1,4 +1,4 @@
-Leaky ReLU is an activation function based on [[ReLU]] with e difference being that when $z < 0$, it has a small gradient rather than having a $0$ gradient.
+Leaky ReLU is an activation function based on [[ReLU]] with the difference being that when $z < 0$, it has a small gradient rather than having a $0$ gradient.
 
 Mathematically, it is defined as:
 
