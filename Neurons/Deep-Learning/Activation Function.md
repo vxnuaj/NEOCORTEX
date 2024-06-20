@@ -12,7 +12,7 @@ Each activation function has a set of key features, that need to be considered w
 
 2. Range
 
-	Activation functions have different ranges, some ranging from $0$ to $1$, others from $0$ to $infinity$, and others from $-1$ to $1$. 
+	Activation functions have different ranges, some ranging from $0$ to $1$, others from $0$ to $\infty$, and others from $-1$ to $1$. 
 	
 	The output range of an activation function can be important to consider, for a variety of factors. 
 	

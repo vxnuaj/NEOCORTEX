@@ -1,4 +1,4 @@
-Scaled Exponential Linear Unit or SELU for short is an activation function, a remix of the [[ELU]] function, yet instead with $\lambda$ and $\alpha$ being fixed constants of approximately $1.0505$ and $1.6732$ respectively.
+**Scaled** Exponential Linear Unit or SELU for short is an activation function, a remix of the [[ELU]] function, yet instead with $\lambda$ and $\alpha$ being fixed constants of approximately $1.0505$ and $1.6732$ respectively.
 
 It is mathematically defined as:
 
