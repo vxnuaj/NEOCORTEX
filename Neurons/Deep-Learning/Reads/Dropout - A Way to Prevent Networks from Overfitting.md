@@ -23,7 +23,7 @@
 	1. $z = wy + b$
 	2. $y = f(z)$
 - The dropout operation becomes
-	1. $r$ ~ $Bernoulli(p)$, where $r$ is a vector of binary values (0 or 1), drawn from a uniform distribution, with a probability $p$ of being $1$[^3]
+	1. $r$ ~ $Bernoulli(p)$, where $r$ is a vector of binary values (0 or 1), drawn from a bernoulli distribution, with a probability $p$ of being $1$[^3]
 	2. $\tilde{y} = r * y$, where $\tilde{y}$ are the inputs without drop out.
 	3. $z = w \tilde{y} + b$
 	4. $y = f(z)$
