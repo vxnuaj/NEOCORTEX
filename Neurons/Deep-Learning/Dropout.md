@@ -24,7 +24,7 @@ where $a'$ is the 'dropped out' activations, $a$ are the original activations, a
 
 In code, this looks as:
 
-```
+```python
 # Assuming 'A1' is the activation matrix for a particular layer 
 # and 'p' is the keep probability (the probability of keeping a neuron). 
 
@@ -64,4 +64,5 @@ Dropout also takes more iterations to converge as you're eliminating a random se
 - But if the above is true, increase the capacity of the model to make it overfit and then use dropout to build a larger capacity model.
 
 ---
+
 > *Checkout [[Dropout - A Way to Prevent Networks from Overfitting]]*
