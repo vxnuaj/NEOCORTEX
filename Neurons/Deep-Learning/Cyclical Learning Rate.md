@@ -1,4 +1,4 @@
-> *[Paper](https://arxiv.org/pdf/1506.01186)*
+*****> [Paper](https://arxiv.org/pdf/1506.01186)*
 
 A cyclical learning rate is a learning rate schedule that varies between minimum and maximum bounds.
 
@@ -24,12 +24,12 @@ used to specify the number of iterations (or epochs) it takes for the learning r
 
 In essence:
 
-- $epochCounter$ is the current number of epochs
+- $epochCounter$ is the current number of iterations (not purely epochs, unless you're doing full batch descent)
 - $cycle_{size}$ is the number of epochs prior to completing a single cycle (from $n_{min}$ to $\eta_{max}$ or vice versa)
 
 This cyclical learning rate can help a model escape local minima, explore different regions of the loss space, and may reduce the need for tuning the learning rate through exhaustive methods such [[grid search]].
 
-This method can be combined with applying [[Exponential Decay]] to the general minimum and maximum bounds, to allow the model shrink it's learning rate while still using a cyclical method.
+This method can be combined with applying [[Exponential Decay]] to the general minimum and maximum bounds, to allow the model to grow or shrink it's learning rate in an exponential manner while still using a cyclical method.
 
 We can implement cyclical learning rate and grow it to a maximum over a period of time, to then gauge what the maximum possible learning rate can be for a given model. 
 
