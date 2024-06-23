@@ -4,7 +4,7 @@ A cyclical learning rate is a learning rate schedule that varies between minimum
 
 These minimum and maximum bounds are set based on a conjecture of what the optimal learning could be.
 
-The idea is that while the learning rate cycles between the minimum and maximum bounds, it'll spend some time and the optimum learning rate, and a good amount of time right around the optimum learning rate.
+The idea is that while the learning rate cycles between the minimum and maximum bounds, it'll spend some time above and below the optimum learning rate, and a good amount of time right around the optimum learning rate.
 
 The general learning rate schedule, for a triangular learning rate policy, can be defined as:
 

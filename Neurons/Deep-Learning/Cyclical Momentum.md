@@ -2,6 +2,8 @@ Cyclical momentum is a means of cycling the momentum hyperparameter during train
 
 Typically, the larger the learning rate gets, the more the momentum should decrease in accordance to it to maintain stability in the learning process.
 
+The reason that is done so, is to allow for larger bounds of the learning rate. If momentum wasn't decreased overtime, the maximum bounds for the learning rate would have to be lower to allow for stable training.
+
 ![[Pasted image 20240610114326.png]]
 
 > *Learning rate on the left, Momentum on the right.*
