@@ -1,5 +1,5 @@
 
-
+> *Check it out on substack*
 
 https://x.com/ToKTeacher/status/1800349959054840122
 
