@@ -28,7 +28,7 @@ each $V_n$ having it's own EWA calculation, with the $\beta$ value exponentially
 
 To avoid a type of bias when calculating the EWA, you can first compute the original EWA and then take $V_t$ and apply the following equation:
 
-$v_{t} = \frac{v_t}{1-\beta}$
+$v_{t} = \frac{v_t}{1-\beta^t}$
 
 >*Though in practice, most (within deep learning), don't bother to implement the bias correction as the EWA "warms-up" after just a couple of iterations.*
 
