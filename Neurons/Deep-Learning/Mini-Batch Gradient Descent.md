@@ -31,7 +31,7 @@ Principles
 - If you have a small training set, make use of batch [[gradient descent]]
 	- where $m ≤ ~2000$
 - Typical mini-batch sizes are 
-	- 64 $\rightarrow$ 1024, on the powers of $2$ given how modern computer hardware runs[^1]
+	- 32 $\rightarrow$ 1024, on the powers of $2$ given how modern computer hardware runs[^1]
 - Make sure your mini-batch fits in your CPU / GPU nmemory
 - If you're using BatchNorm, very small batches can lead to poor estimates of batch statistics ($\mu$ and $\beta$)
 
