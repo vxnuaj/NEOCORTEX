@@ -26,6 +26,7 @@ Choosing a mini-batch size considers computational cost and the quality of train
 
 - Smaller Batch Sizes make way for more oscillations and a noisier gradient computations which helps for escaping local minima, especially in non-convex loss functions
 - Smaller batch sizes might lead to better generalization as the noisiness can act as a form of regularization
+- Smaller batches can be more effective with a smaller learning rate. Tuning your learning rate (and optimizer if RMSprop) to a lower value, when your batches are smaller can help a model converge sooner.
 
 Principles
 - If you have a small training set, make use of batch [[gradient descent]]
