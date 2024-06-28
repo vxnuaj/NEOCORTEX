@@ -36,7 +36,7 @@ D1 = np.random.rand(A1.shape[0], A1.shape[1])
 
 # Set entries in 'D1' to 0 where the value is less than the probability of keeping a neuron (p), and to 1 where the value is greater than or equal to the probability of keeping a neuron. 
 
-D1 = D1 <= p
+D1 = D1 <=keep_p
 
 # Element-wise multiplication of the activation matrix 'A1' and the dropout mask 'D1' to apply dropout. Neurons corresponding to 0 in 'D1' are dropped out. 
 
@@ -44,7 +44,7 @@ A1 = np.multiply(A1, D1)
 
 # Scale the activations of the neurons that have not been dropped out by p) to maintain the expected value. 
 
-A1 = A1 / (p)
+A1 = A1 / (keep_p)
 ```
 
 The resulting network is a subset of the entire network.
