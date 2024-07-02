@@ -2,7 +2,7 @@ Gradient Clipping can be a means to mitigate the risk of exploding gradients, th
 
 This can be done through **value clipping** and **norm clipping**.
 
-**Value clipping** involves ridding of any value which is larger than $k$, from the original gradient vector / matrix.
+**Value clipping** involves ridding of any value which is larger than $k$, from the original gradient vector / matrix, and then setting it equal to $k$.
 
 $clip(\frac{∂L∂\theta}{∂\theta}, k)$
 
