@@ -20,4 +20,4 @@ This form of regularization, encourages the parameters of a model to become spar
 
 This is as the gradient of the $J(\hat{y}, y)_{regularized}$ with respect to a parameter $\theta$ is undefined when a $\theta$ is equal to $0$.
 
-Therefore, the update rule then becomes: $w = w - alpha$, ultimately driving $w$ to $0$ overtime.
+Therefore, the update rule then becomes: $w = w - alpha$, ultimately driving $w$ to $0$ overtime.t
