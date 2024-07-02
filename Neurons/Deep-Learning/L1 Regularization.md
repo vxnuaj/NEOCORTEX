@@ -16,3 +16,8 @@ $\frac{∂J(\hat{y}, y)_{regularized}}{∂w} = (A2 - Y)(X^T) + \lambda sign(w)$
 
 $w = w - \alpha * \frac{∂J(\hat{y}, y)_{regularized}}{∂w}$
 
+This form of regularization, encourages the parameters of a model to become sparse, optimizing for 0. 
+
+This is as the gradient of the $J(\hat{y}, y)_{regularized}$ with respect to a parameter $\theta$ is undefined when a $\theta$ is equal to $0$.
+
+Therefore, the update rule then becomes: $w = w - alpha$, ultimately driving $w$ to $0$ overtime.
