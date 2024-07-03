@@ -15,7 +15,7 @@ So to compute Adam,
 - Bias correcting the first moment: 
 	- $\frac{m_t}{(1 - \beta^t)}$
 - Computing the second moment (exponentially weighted average of the squared gradients)
-	- $v_t = \ beta(v_{t-1} + (1 - \beta)(\frac{∂J(\theta)}{∂\theta})^2$
+	- $v_t = \ beta(v_{t-1}) + (1 - \beta)(\frac{∂J(\theta)}{∂\theta})^2$
 - Bias correcting the second moment:
 	- $\frac{v_t}{1 - \beta^t}$
 - Adam's update rule:
