@@ -16,7 +16,7 @@ What you want is a means to be able to learn *horizontally* towards the optima f
 
 So you can implement what's called momentum, which is based on [[Exponentially Weighted Average]]s
 
-1. Compute the original gradients, $\frac{∂L}{∂W}$ ($dw$) and  $\frac{∂L}{∂Bm}$ ($db$)
+	1. Compute the original gradients, $\frac{∂L}{∂W}$ ($dw$) and  $\frac{∂L}{∂Bm}$ ($db$)
 
 2. Compute the [[exponentially weighted average]]s 
 	$vdw = \beta vdw + (1 - \beta)dw$
