@@ -31,3 +31,11 @@ If rewritten, it can be broken down to:
 $\theta = \theta + \beta * v\theta_{t-1} - \alpha * ∂\theta_t$
 
 where $\beta * v\theta_{t-1}$ is taking a portion of the past gradient and adding it to $\theta$ and then $\alpha * ∂\theta_t$ is subtracted from $\theta$.
+
+Given that $v\theta_{t-1}$ at the first step is $0$, the $-$ term in the definition of momentum scales $\theta$ in the direction of the local minima, whether $∂\theta_t$ is positive or negative.
+
+If the gradient was positive, we'd want to decrease the size of $\theta$, so the $-$ does that so.
+
+Inversely if the gradient was negative, we'd want to increase the size of $\theta$, so the $-$ inverts the sign and does that so.
+
+> *This is more as intuition, in a 2 dimensional space. In real scenarios, things get more complex.*
