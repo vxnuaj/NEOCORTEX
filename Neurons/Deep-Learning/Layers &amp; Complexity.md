@@ -1,4 +1,4 @@
-Typically, having deeper layers in a neural network allows for the computation of more complex data while lowering the computational cost. Here, the depth of the network will be on the order of $O(logn)$, where the layers increase logarithmically to the number of input features $n$.
+Typically, having deeper layers in a neural network allows for the training of a model with more complex data while lowering the computational cost. Here, the depth of the network will be on the order of $O(logn)$, where the layers increase logarithmically to the number of input features $n$.
 
 The inverse, having a shallow network, say $1$ layer, whilst inputting complex data into the model will require a model and it's computations to be increasingly complex with the weights increasing on the order of $O(2^n)$ as the input features increase.
 
