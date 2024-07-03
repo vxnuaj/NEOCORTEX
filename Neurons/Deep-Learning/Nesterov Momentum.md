@@ -22,6 +22,12 @@ $\theta = \theta - \alpha * v\theta_t$
 
 This then allows for the model to conjecture where the optimal jump might be and then correct after making that jump.
 
-While in regular [[momentum]], the big jump would be made without any additional correction prior to the next iteration.
+Essentially, the $∂J(\theta_{lookahead})$ is added onto the $\beta * v\theta_{t-1}$, as a means of 'correcting' the error that would've been made from purely relying on the past accumulated gradients.
+
+While in regular [[momentum]], the big jump would be made without any additional correction prior to the next iteration. The jump or weight update, would've just been made based on the current gradient and the accumulated past gradients without any intermediate error-correction.
 
 ![[Pasted image 20240703105719.png | 500]]
+
+Note, that when implementing this in practice, you'd need to compute an additional forward pass using the 'lookahead' parameters to get the variables you need to compute the gradients.[^1]
+
+[^1]: At least as was my means of doing so in my implementation from scratch.
