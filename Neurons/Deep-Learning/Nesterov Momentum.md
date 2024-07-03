@@ -20,6 +20,8 @@ $v\theta_t = \beta * v\theta_{t-1} + ( 1 - \beta ) * ∂J(\theta_{lookahead})$
 
 $\theta = \theta - \alpha * v\theta_t$
 
+> *This can also be done without the scaling by $(1 - \beta)$ as previous in [[momentum]]*
+
 This then allows for the model to conjecture where the optimal jump might be and then correct after making that jump.
 
 Essentially, the $∂J(\theta_{lookahead})$ is added onto the $\beta * v\theta_{t-1}$, as a means of 'correcting' the error that would've been made from purely relying on the past accumulated gradients.
