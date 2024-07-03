@@ -19,7 +19,7 @@ So to compute Adam,
 - Bias correcting the second moment:
 	- $\frac{v_t}{1 - \beta^t}$
 - Adam's update rule:
-	- $\theta = \theta - \alpha(\frac{m_t}{\sqrt{v_t + \epsilon}})$
+	- $\theta = \theta - \frac{\alpha}{\sqrt{v_t + \epsilon}}(m_t)$
 
 Then, you have 3 hyperparameters to tune:
 

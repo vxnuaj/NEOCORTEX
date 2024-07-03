@@ -12,7 +12,7 @@ Then this process is repeated for all time steps / iterations.
 
 This can be defined as:
 
-$\theta_{lookahead} = \theta - \beta* v\theta_t$ 
+$\theta_{lookahead} = \theta_t - \beta* v\theta_{t-1}$ 
 
 Compute: $∂J(\theta_{lookahead})$
 
@@ -20,7 +20,7 @@ $v\theta_t = \beta * v\theta_{t-1} + ( 1 - \beta ) * ∂J(\theta_{lookahead})$
 
 $\theta = \theta - \alpha * v\theta_t$
 
-> *This can also be done without the scaling by $(1 - \beta)$ as previous in [[momentum]]*
+> *This can also done without the scaling by $(1 - \beta)$ or done as $\beta * v\theta_{t-1} - \alpha * ∂\theta_t$ as previous in [[momentum]], see [[Interpretations of Momentum]].*
 
 This then allows for the model to conjecture where the optimal jump might be and then correct after making that jump.
 
