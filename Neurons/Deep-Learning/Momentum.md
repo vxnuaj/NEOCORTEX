@@ -26,7 +26,7 @@ So you can implement what's called momentum, which is based on [[Exponentially W
 	$vdb = \frac{vdb}{1 - \beta^t}$
 	
 
-	>*Making use of $vdw = \beta{vdw} + \alpha \cdot dw$ works just as fine, though tuning the $\beta$ and $\alpha$ can differ slightly.
+	>*Making use of $vdw = \beta{vdw} + \alpha \cdot dw$ works just as fine, though tuning the $\beta$ and $\alpha$ can differ slightly[^3].
 	>
 	>You can also introduce the multiplication by $\alpha$ after the initial calculation of $vd\theta$ which can be more useful in explicitly separating the $\alpha$ from $\beta$. Again tuning $\beta$ and $\alpha$ differs when using either.
 	>
@@ -65,4 +65,4 @@ So, when implementing this, you now have 2 hyperparameters of
 	 ![[Screenshot 2024-06-08 at 4.29.23 PM.png | 300]]
 
 [^2]: In physics, momentum, $p$, is the product of mass ($m$) times velocity ($v$). In GD with momentum, we assume unit mass where $m = 1$, therefore the momentum, $m$ is equal to velocity, $v$, as  $p = v$ so we can use the velocity vector as momentum.
-
+[^3]: See here -> [[Interpretations of Momentum]]]
