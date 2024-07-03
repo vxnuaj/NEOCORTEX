@@ -37,3 +37,27 @@ This paper introduces another means to do so, by introducing [[Nadam]].
 - [[Adam]], then combines the norm-based algorithms and the momentum-based algorithms to leverage the benefits of a more direct gradient update with an adaptive learning rate.
 	- In the same paper, AdaMax is introduced which generalizes the [[Adam]] from a simple $L_2$ norm based update to an $L_{\infty}$ based update of the learning rate.
 		- The same can be done to [[RMSprop]], generalizing the scaling factor to an $L_{\infty}$ based update, as is called MaxProp
+
+## Applying NAG to Adam
+
+- Ultimately, NAG can replace the first moment of [[Adam]], as:
+
+	$\theta_{lookahead} = \theta - \beta *  v\theta_{t-1}$
+	$a1, a2, z1, z2 = forward()$
+	$∂J(\theta_{lookahead}) = backward(a1, a2, z1, z2)$
+
+	$v\theta_t = \beta * v\theta_{t-1} + ( 1 - \beta) * ∂J(\theta_{lookahead})$
+	$s\theta_t = \beta * v\theta_{t-1} + (1 - \beta) * ∂J(\theta_{lookahead})^2$
+
+	$\theta_{t+1} = \theta_t - \frac{\alpha}{\sqrt{s\theta_t}} * v\theta_t$
+
+- The same trick can be used in AdaMax, as:
+	
+	$\theta_{lookahead} = \theta - \beta *  v\theta_{t-1}$
+	$a1, a2, z1, z2 = forward()$
+	$∂J(\theta_{lookahead}) = backward(a1, a2, z1, z2)$
+
+	$v\theta_t = \beta * v\theta_{t-1} + ( 1 - \beta) * ∂J(\theta_{lookahead})$
+	$s\theta_t = max(\beta_2 \cdot s\theta_{t - 1 }, |∂\theta_t|)$
+	
+	$\theta_{t+1} = \theta_t - \frac{\alpha}{\sqrt{s\theta_t}} * v\theta_t$

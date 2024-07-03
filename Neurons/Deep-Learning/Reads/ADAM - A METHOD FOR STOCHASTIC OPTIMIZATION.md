@@ -77,7 +77,7 @@ and by taking the limit of $v_t$ to $\infty$,
 
 the equation becomes:
 
-$v_t = max(\beta_2 \cdot u_{t - 1 }, |g_t|)$
+$v_t = max(\beta_2 \cdot v_{t - 1 }, |g_t|)$
 
 which can be used in the update step as:
 
