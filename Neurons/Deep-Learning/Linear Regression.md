@@ -34,7 +34,6 @@ or you can collect all the features into single vector $x$ and params into vecto
 
 $\hat{y} = w^Tx + b$ 
 
-
 In a linear regression model, the error (also known as the residual) for a specific prediction is the vertical distance between the predicted value on a regression line / line-of-best-fit, and the real/true observed value on an x,y plane.
 
 
