@@ -10,3 +10,13 @@ Common applications are:
 	- Audio -> Transcripts
 - Translation
 	- English -> Spanish
+
+Such can include *classification* whether it be multi-class or binary and *regression*.
+
+Challenges that stem from supervised learning, are situations in which the desired output might me ambiguous to what one truly wants.
+
+Examples may include translation, where there is no singular 'correct' translation or in image captioning where interpretation to a video can vary and be ambiguous.
+
+In these situation a model must learn to find structure within data without a set of $Y$, to discover underlying patterns and structures, to help generate more coherent outputs.
+
+This can be done through [[Unsupervised Learning]]
