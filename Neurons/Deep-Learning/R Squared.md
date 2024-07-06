@@ -6,7 +6,7 @@ $1 - \frac{SSE}{TSS}$
 
 $SSE$ can be defined as the sum of squared residuals while $TSS$ can be defined as the summed variance between dependent $Y$ and the prediction $\hat{Y}$.
 
-Their division gives us the percent of unexplained variation to the total variation.
+Their division gives us the percent of unexplained variation of the model to the total variation in the dataset.
 
 We're essentially computing, how well our model explains the variation from the mean, how well the model was able to reduce the overall variance.
 
