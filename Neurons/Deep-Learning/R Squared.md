@@ -1,4 +1,4 @@
-#stats #questions
+****#stats #questions
 
 Also known as the coefficient of determination, $R^2$ explains the total variance in a dependent variable $Y$, yielded by the independent variables $\theta$, used to predict the dependent $Y$.
 

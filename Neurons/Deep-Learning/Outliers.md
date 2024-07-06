@@ -10,6 +10,6 @@ Of course, some outliers do represent valuable information and can provide insig
 
 Outliers and can be visualized and found through a variety of means.
 
-- Plots - [[Histogram]], [[density plot]], [[box plots]]
-- Statistis - Interquartile Range, Standard Deviation
+- Plots - [[Histogram]], [[density plot]], box plots
+- Statistics - [[Interquartile Range]], Standard Deviation
 - Residuals - Standardized, Deleted, Studentized

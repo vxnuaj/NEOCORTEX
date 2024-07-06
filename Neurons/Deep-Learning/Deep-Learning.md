@@ -6,5 +6,7 @@ _sort:
   field: size
   asc: false
   group: false
+_template: ""
+_templateName: ""
 ---
 The Future of Humanity
