@@ -2,6 +2,13 @@ Supervised learning are algorithms that learn based on an input set of labels. W
 
 It's supervised, in the sense that the model is told what the correct $Y$ is post prediction, to allow it to learn from it.
 
+The ultimate goal is to learn the best $\theta$ values, that effectively maps $X$ to $Y$.
+
+$\theta$ is ideally also explanatory to be interpreted to generate relationships or insights between $X$ and $Y$, which can be possible in traditional machine learning models but more difficult in deep learning.
+
+The focus, when training a model, to ensure it's effectiveness is on **performance metrics** that measure the quality of the model's predictions[^1]
+
+
 Common applications are:
 
 - Spam Filtering 
@@ -20,3 +27,5 @@ Examples may include translation, where there is no singular 'correct' translati
 In these situation a model must learn to find structure within data without a set of $Y$, to discover underlying patterns and structures, to help generate more coherent outputs.
 
 This can be done through [[Unsupervised Learning]]
+
+[^1]:   This is typically a loss function or accuracy score, but can take other means as well (f1-score, recall, etc )
