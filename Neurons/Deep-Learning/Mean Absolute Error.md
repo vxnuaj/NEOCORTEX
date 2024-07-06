@@ -34,7 +34,7 @@ MAE_dw = (1/samples) * np.dot(MAE_dz, x.T)
 
 Just as the [[Mean Squared Error]], MAE is used in [[linear regression]] as a validation metric. It's output value is the average difference between a true value and a prediction.
 
-Think of it as the average absolute [[residual]] of a model.
+Think of it as the average absolute [[Residuals]] of a model.
 
 MAE is robust to outliers, giving that it computes the error on the real difference rather than the squared difference, as [[Mean Squared Error]] does.
 
