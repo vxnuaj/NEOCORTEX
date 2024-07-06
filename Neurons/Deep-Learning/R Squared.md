@@ -14,7 +14,9 @@ Then this division value, $\frac{SSE}{RSS}$ is subtracted for $1$ to get the tot
 
 > $\theta_i$ where $i ∈ ℝ^2$
 
-A high value of $R^2$ indicates that our model is capturing the majority of the variance in the dataset, indicating that the e
+A high value of $R^2$ indicates that our model is capturing the majority of the variance in the dataset, indicating that it's able to properly model the dataset.[^1]
+
+A low $R^2$ indicates that the model isn't capturing much of the variance in the data, meaning that it has a high bias.
 
 If $R^2$ is $.85$, that indicates that 85% of the variation in $Y$ can be explained by $\theta_i$.
 
@@ -22,4 +24,8 @@ The remaining $.15$ or $15$ of the variation is due to factors not included in t
 
 ---
 
-- [ ] So then is $R^2$ a metric of how much our model, even if trained to the max, can fit a set of datapoints? Then if $R^2$ is high despite our model already being maximally trained, our model won't be able to fit a datapoint?
+**So then is $R^2$ a metric of how much our model, even if trained to the max, can fit a set of datapoints? Then if $R^2$ is high despite our model already being maximally trained, our model won't be able to fit a datapoint?**
+
+So ultimately, yes, if the $R^2$ is very low despite training a linear regression model, it indicates that the variability in the dataset cannot be modeled by a linear regression and therefore might not be well suited for the task.
+
+[^1]: Besides overfitting which is another topic.
