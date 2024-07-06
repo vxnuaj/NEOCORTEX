@@ -28,7 +28,7 @@ Just like [[ReLU]], Leaky ReLU isn't smooth everywhere as it isn't differentiabl
 
 In code, this can also be easily bypassed with `np.where(z > 0, z, (.01 * z))`, where the discontinuity isn't factored in.
 
-The function is strictly monotonically increasing with no abrupt changes in it's sign value. This then prevents the gradient descent from converging onto a local minima rather than a global one, allowing for effective learning over time.
+The function is strictly monotonically increasing with no abrupt changes in it's sign value. This then prevents the gradient descent from converging onto a local minima **rather** than a global one, allowing for effective learning over time.
 
 Leaky ReLU is more computationally complex than [[ReLU]] given the addition of a multiplication but still way more computationally efficient than [[sigmoid]] and [[tanh]] given the absence of Euler's number, $e$.
 
