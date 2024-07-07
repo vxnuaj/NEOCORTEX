@@ -41,7 +41,6 @@ There's an alternative means of computing, it as:
 $vdw = \beta vdw - \alpha dw$
 $w = w + vdw$
 
-
 > *It's typically best to set $\beta$ to the highest value possible without damaging the learning process.*
 
 Essentially, just as is done in [[exponentially weighted average]]s, we're computing the exponential average of the gradients and using it as a means to update our weights, which then tends to mitigate the *vertical* oscillations in the learning path.
