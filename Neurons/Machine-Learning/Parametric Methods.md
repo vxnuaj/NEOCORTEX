@@ -1,4 +1,4 @@
-The means to estimate $f$ by iteratively selecting a set of parameters, $\theta$. 
+The means to estimate $f$ by iteratively selecting a set of parameters, $\theta$, and a structural basis for the function $f$ ( an assumption at first ). 
 
 Involve 2-steps,
 
