@@ -16,7 +16,7 @@ Outliers and can be visualized and found through a variety of means.
 **Policies:**
 - **Remove**
 - **Assign** to the mean or median value
-- **Transform** the value -- perhaps using a [[log transformation]]
+- **Transform** the value -- perhaps using a [[Log Transformation]]
 - **Predict** what the value should be
 	- By similar values
 	- Using regression

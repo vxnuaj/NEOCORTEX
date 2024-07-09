@@ -18,7 +18,7 @@ So you can implement what's called momentum, which is based on [[Exponentially W
 
 	1. Compute the original gradients, $\frac{∂L}{∂W}$ ($dw$) and  $\frac{∂L}{∂Bm}$ ($db$)
 
-2. Compute the [[exponentially weighted average]]s 
+2. Compute the [[Exponentially Weighted Average]]s 
 	$vdw = \beta vdw + (1 - \beta)dw$
 	$vdw = \frac{vdw}{1 - \beta^t}$
 	
@@ -43,7 +43,7 @@ $w = w + vdw$
 
 > *It's typically best to set $\beta$ to the highest value possible without damaging the learning process.*
 
-Essentially, just as is done in [[exponentially weighted average]]s, we're computing the exponential average of the gradients and using it as a means to update our weights, which then tends to mitigate the *vertical* oscillations in the learning path.
+Essentially, just as is done in [[Exponentially Weighted Average]]s, we're computing the exponential average of the gradients and using it as a means to update our weights, which then tends to mitigate the *vertical* oscillations in the learning path.
 
 You want to increase the $\beta$ value when your training loss or accuracy fluctuates wildly in an uncontrolled manner. Then the [[Exponentially Weighted Average]] smooths out your gradients.
 
@@ -51,7 +51,7 @@ You'd want decrease your $\beta$ value when your model accuracy or loss stagnate
 
 	![[Screenshot 2024-06-08 at 3.48.45 PM.png | 400]]
 
-As can be noticed there, the `ewa` (blue) or the [[exponentially weighted average]]d values have less vertical oscillations than the original `data` (orange).
+As can be noticed there, the `ewa` (blue) or the [[Exponentially Weighted Average]]d values have less vertical oscillations than the original `data` (orange).
 
 So we're not updating our weights based on the gradients, but on the [[Exponentially Weighted Average]]d gradients.
 

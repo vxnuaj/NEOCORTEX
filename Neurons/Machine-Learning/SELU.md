@@ -16,7 +16,7 @@ The derivative can be mathematically defined as:
 
 $SELU'(z) = \begin{cases} \lambda, z > 0 \\ \lambda \alpha (e^z), z ≤ 0\end{cases}$
 
-The range of SELU is from $- \infty$ to $\infty$, it's unbounded range having effects of a lack of true [[sparsity]] which mitigates dead neurons.
+The range of SELU is from $- \infty$ to $\infty$, it's unbounded range having effects of a lack of true [[Sparsity]] which mitigates dead neurons.
 
 It then also copes better with the [[Vanishing Gradient]] problem when compared to [[Sigmoid]] or [[Tanh]] given an unbounded range.
 

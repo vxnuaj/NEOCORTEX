@@ -38,7 +38,7 @@ Each activation function has a set of key features, that need to be considered w
 
 6. Sparsity
 
-	The [[sparsity]] of activation functions can be beneficial when looking for more efficient computations. The more sparse an activation function is, the less computations it might have to compute in order to reach it's output, then also leading to better memory efficiency.
+	The [[Sparsity]] of activation functions can be beneficial when looking for more efficient computations. The more sparse an activation function is, the less computations it might have to compute in order to reach it's output, then also leading to better memory efficiency.
 
 	[[Sparsity]] can also improve regularization. By encouraging neurons to be inactive at $0$, it reduces complexity which in certain contexts can mitigate overfitting and improve generalization.
 

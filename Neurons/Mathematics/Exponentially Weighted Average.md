@@ -1,4 +1,4 @@
- Exponentially weighted averages is a type of [[moving average]] with the weights, $W$, exponentially decreasing as datapoints get older rather than linearly decreasing or being arbitrarily assigned. 
+ Exponentially weighted averages is a type of [[Moving Average]] with the weights, $W$, exponentially decreasing as datapoints get older rather than linearly decreasing or being arbitrarily assigned. 
 
 It's formula is computed as:
 
