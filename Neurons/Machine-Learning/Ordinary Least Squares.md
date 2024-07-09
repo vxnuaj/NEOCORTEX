@@ -6,9 +6,8 @@ $\hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x}$
 
 where any variable denoted by $\bar \theta$ is it's mean.
 
-If the datapoints $x$ or $y$ are already 0 centered as 0 being the mean, you don't need to take the mean of them prior to computing the equation and can just go ahead without as:
+It's important to note that when computing multiple variables of $\hat{\beta_1}$, when summing over an axis, you must then normalize the coefficients over a division by the total number of features in the dataset or sample.
 
-$\hat{\beta}_1 = \frac{\sum_{i=1}^n x_i y_i}{\sum_{i=1}^n x_i^2}$
+Thereby the final $\hat{\beta_1}$ is equivalent to:
 
-$\hat{\beta_0} = 0$
-
+$\frac{\hat{\beta_1}}{n}$ where $n$ is the total number of features:

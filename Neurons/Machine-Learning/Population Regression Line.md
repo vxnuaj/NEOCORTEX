@@ -1,0 +1,1 @@
+The perfect regression line to a given population or set of samples.
