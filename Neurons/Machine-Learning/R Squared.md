@@ -10,6 +10,10 @@ Their division gives us the percent of unexplained variation of the model to the
 
 We're essentially computing, how well our model explains the variation from the mean, how well the model was able to reduce the overall variance.
 
+> *If $\frac{SSE}{TSS}$ is equivalent to $1$, then that means that the total error ($SSE$) is equivalent to the total variance of the model ($TSS$), indicating that our model is poorly fitting to the dataset.*
+>
+> *Inversely, if the ratio is low, near $0$, it means most of the variance of the model is explained by the irreducible error or [[Bayes Error]]* 
+
 Then this division value, $\frac{SSE}{RSS}$ is subtracted for $1$ to get the total variation that is accounted for and can be explained by $\theta_i$ and which can't.
 
 > $\theta_i$ where $i ∈ ℝ^2$
