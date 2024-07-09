@@ -1,7 +1,3 @@
-A singular matrix is a square matrix ($m, m$) that doesn't have an inverse, for it to be singular it must
+A singular matrix is a square matrix where it has a [[determinant]] of $0$.
 
-
-1. Have a $det()$ ([[Determinant]]) of $0$
-2. It must not have an inverse.[^1]
-
-[^1]: ?
+If the [[determinant]] is non-zero, then it is non-singular, thereby having no-inverse.
