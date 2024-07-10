@@ -6,4 +6,6 @@ If I had a linear combination of $Ax$ where $A$ is $(m, n)$ the set of basis vec
 
 Then, within a system of linear equations, a set of basis vectors are the vectors that yield any output $b$ for a unique $x$ within $Col(A)$ or $\mathbb{R}^m$. 
 
-The colums of $A$ are the basis vectors of $Col(A)$. 
+The columns of $A$ are the basis vectors of $Col(A)$. 
+
+$\begin{bmatrix} 2, 1, 3, 0 \\ 3, 4, 7, 0 \\ 1, 2, 3, -1 \end{pmatrix}$
