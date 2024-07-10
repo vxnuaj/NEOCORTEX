@@ -1,3 +1,5 @@
+#LinearAlgebra 
+
 A matrix multiplication is a multiplication by 2 matrices, where each row of the first matrix corresponds to the [[Dot Product]] of each column in the second matrix.
 
 **Example 1**

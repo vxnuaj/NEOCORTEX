@@ -1,3 +1,5 @@
+#LinearAlgebra 
+
 The column picture is another way to visualize a system of linear equations, as a linear combination of a set of variables and coefficients (represented a column vectors).
 
 $\begin{equation} x_1 \begin{pmatrix} a_{11} \\ a_{21} \end{pmatrix} + x_2 \begin{pmatrix} a_{12} \\ a_{22} \end{pmatrix} = \begin{pmatrix} b_1 \\ b_2 \end{pmatrix} \end{equation}$
