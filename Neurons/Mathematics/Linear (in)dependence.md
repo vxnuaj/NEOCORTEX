@@ -4,4 +4,8 @@ If we have a vector $\vec{c}$ where it is equal to the linear combination of $\v
 
 A vector is then linearly independent if it can't be expressed as a linear combination of a given set of vectors.
 
-It is not possible for a vector to be linearly independent amongst all possible vectors in a vector space.
+It is not possible for a vector to be linearly independent amongst all possible vectors in a vector space
+
+In terms of [[Linear Combination]]s, as long as all columns $A$ are linearly independent, we can map any vector within $Col(A)$[^1] that's $\in \mathbb{R}^m$, if $A$ is dimensions $m, n$.
+
+[^1]: [[Col()]]
