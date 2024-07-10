@@ -1,4 +1,7 @@
+A determinant is the scalar value of a matrix $A$ denoting the scale that matrix $A$ will transform the space of $B$, or $Col(B)$ when applied onto a matrix multiplication.
 
+
+If a given vector within
 
 To find the determinant of a $2, 2$ matrix you subtract the product of the top left and lower right with the product of the top right and lower left.
 
@@ -16,4 +19,3 @@ $\det\begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix} = a \cdot
 
 $\det\begin{pmatrix} 1 & 2 & 3 \\ 0 & 1 & 4 \\ 5 & 6 & 0 \end{pmatrix} = 1 \cdot (1 \cdot 0 - 4 \cdot 6) - 2 \cdot (0 \cdot 0 - 4 \cdot 5) + 3 \cdot (0 \cdot 6 - 1 \cdot 5) = 1$
 
-This determinant can define multiple things, one of them being the invertibility of a matrix.
