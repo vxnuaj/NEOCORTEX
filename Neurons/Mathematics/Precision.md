@@ -1,6 +1,6 @@
 An metric, computed the same as accuracy, but denoting the accuracy for a specific class or label, purely based on the amount of computed positives whether they be false or true.
 
-In summary, how accurate was the model  ***when*** it actually made a pre
+In summary, how accurate was the model ***when*** ***it actually made a prediction?***
 
 
 It answers, *how good did you guess the given label?*
