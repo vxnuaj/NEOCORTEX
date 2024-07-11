@@ -8,7 +8,7 @@ The regularized loss is then calculated as:
 
 > *Using [[Frobenius Norm]] notation, $||W|| = \sum_i \sum_j w_{ij}^2$*
 
-$J(\hat{y}, y)_{regularized} = \frac{1}{n}\sum L(\hat{y}, y) + \frac{\lambda}{n}\sum_{l = 1}^L ||W||$
+$J(\hat{y}, y)_{regularized} = \frac{1}{n}\sum L(\hat{y}, y) + \frac{\lambda}{n}\sum_{l = 1}^L ||W||_2$
 
 This is also known as weight decay, as when doing [[Gradient Descent]], a subset of the parameters will decay to smaller values given the introduction of the small value of $\lambda$.
 
