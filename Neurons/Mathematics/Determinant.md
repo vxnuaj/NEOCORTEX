@@ -1,5 +1,4 @@
-A determinant is the scalar value of a matrix $A$ denoting the scale that matrix $A$ will transform the space of $B$, or $Col(B)$ when applied onto a matrix multiplication.
-
+A determinant is the scalar value of a square matrix $A$ denoting the scale that matrix $A$ will transform the space spanned of $B$, or $Col(B)$ when applied onto a matrix multiplication.
 
 If a given vector within
 
