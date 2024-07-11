@@ -2,5 +2,5 @@ In K-fold cross validation, the dataset is split into different folds of trainin
 
 A unique model is trained across different folds and the loss and accuracy metrics are averaged to get a true error metric.
 
-
+This can eliminate the risk of overfitting and gives a more broader view of what true model error is on a generalized dataset.
 
