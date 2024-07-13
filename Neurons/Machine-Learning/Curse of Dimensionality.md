@@ -6,4 +6,8 @@ Thereby, the distance between each datapoint $i$, tends to grow exponentially as
 
 To fulfill the space $n$, proportionally to say an original 1D space, you'd need $i^n$ datapoints.
 
-For example, if we had a set of data points in a $1
+For example, if we had a set of data points $i$ in a $1$-dimensional space, and we moved to a $3$-dimensional space, we'd need $i^3$ datapoints to fill-up the $\mathbb{R}^3$ space equivalently.
+
+Otherwise, the space becomes sparse.
+
+![[Screenshot 2024-07-13 at 12.07.38 PM.png]]
