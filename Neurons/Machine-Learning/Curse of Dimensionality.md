@@ -10,4 +10,6 @@ For example, if we had a set of data points $i$ in a $1$-dimensional space, and 
 
 Otherwise, the space becomes sparse.
 
-![[Screenshot 2024-07-13 at 12.07.38 PM.png]]
+![[Screenshot 2024-07-13 at 12.07.38 PM.png][^1]]
+
+[^1]: https://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/lecturenote02_kNN.html
