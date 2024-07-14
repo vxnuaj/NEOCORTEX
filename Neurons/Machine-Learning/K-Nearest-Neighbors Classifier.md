@@ -17,3 +17,7 @@ When $K$ is a small value, the KNN is less rigid and more flexible, thereby bein
 When $K$ is a large value, the KNN is more rigid and less flexible, thereby having a higher bias. 
 
 When dealing with datasets of large sizes, implementing a K-Nearest-Neighbors classifier can be difficult due to long inference times.
+
+This "default" manner is the brute force manner of computing a KNN.
+
+There are other means such as [[KD-Tree]] and [[Ball-Tree]].
