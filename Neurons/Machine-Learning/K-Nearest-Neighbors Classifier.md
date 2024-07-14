@@ -20,4 +20,4 @@ When dealing with datasets of large sizes, implementing a K-Nearest-Neighbors cl
 
 This "default" manner is the brute force manner of computing a KNN.
 
-There are other means such as [[KD-Tree KNN]] and [[Ball-Tree]].
+There are other means such as [[KD-Tree KNN]] and [[Ball-Tree KNN]].
