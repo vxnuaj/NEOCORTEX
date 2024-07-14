@@ -2,4 +2,4 @@ The $Rank()$ is a matrix is the number of linearly independent rows or linearly 
 
 The row rank and the column rank of a matrix are always equal, and a $Rank()$ is never $0$ if it isn't a zero matrix.
 
-To find the $Rank()$ of a matrix, $A$, you can put it in [[Row Echelon Form]] through [[Gaussian Elimination]], which tells us the number of linearly independent rows $A$ through it's number of non-zero rows in it's form.
+To find the $Rank()$ of a matrix, $A$, you can put it in [[Row Echelon Form]] through [[Gaussian Elimination]], which tells us the number of linearly independent rows $A$ through it's number of non-zero rows it has.
