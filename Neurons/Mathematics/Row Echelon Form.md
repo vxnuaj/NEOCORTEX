@@ -10,5 +10,7 @@ $\begin{pmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & 0 \end{p
 
 Row Echelon Form is not unique and can be attained using different sequences of row operations.
 
+The number of non-zero rows in the [[Row Echelon Form]] determine it's $Rank()$.
+
 [[Reduced Row Echelon Form]]
 [[Solving System of Lin Eq. Via Row Echelon]]
