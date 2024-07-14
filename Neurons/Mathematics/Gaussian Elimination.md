@@ -8,7 +8,7 @@ Choose the leftmost column that doesn't consist of all $0$s.
 
 The topmost row must not have a $0$ as it's first entry. Swap any row to ensure this if needed.
 
-Then, multiply each element of the matrix by a scalar defined by $\frac{1}{a}$, where $a$ is the first element in the first row.
+Then, multiply each element of the first row by a scalar defined by $\frac{1}{a}$, where $a$ is the first element in the first row.
 
 $\begin{pmatrix} 1 & \frac{1}{2} & -\frac{1}{2} \\ -3 & -1 & 2 \\ -2 & 1 & 2 \end{pmatrix}$
 
