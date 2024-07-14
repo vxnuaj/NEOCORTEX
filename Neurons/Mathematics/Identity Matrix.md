@@ -8,3 +8,4 @@ $I = \begin{bmatrix} 1, 0 \\ 0, 1 \end{bmatrix}$
 
 An identity matrix can be computed by taking a matrix $A$ and doing a [[Matrix Multiplication]] with $A^{-1}$.
 
+Multiplying another matrix with the identity matrix yields the original matrix itself, hence it computes the identity function.
