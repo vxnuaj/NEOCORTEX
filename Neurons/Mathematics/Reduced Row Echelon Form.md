@@ -1,0 +1,1 @@
+For a matrix to be in reduced echelon form, it must have the properties defined by the [[Row Echelon Form]] and 
