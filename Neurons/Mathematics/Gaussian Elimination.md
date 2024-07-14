@@ -1,4 +1,4 @@
-#todo 
+#LinearAlgebra  
 
 Given a matrix $A$, of:
 
@@ -16,4 +16,4 @@ Then, add suitable multiples of the first row to the rows below so that all entr
 
 $\begin{pmatrix} 1 & \frac{1}{2} & -\frac{1}{2} \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 2 & 1 \end{pmatrix}$
 
-This is repeated for the sub matrices of $A$, until $A$ is in row [[row echelon form]].
+This is repeated for the sub matrices of $A$, until $A$ is in [[row echelon form]].
