@@ -15,3 +15,5 @@ The choice of $K$ can determine if the model overfits the training set or not.
 When $K$ is a small value, the KNN is less rigid and more flexible, thereby being unable to generalize to real data, as it has more variance.
 
 When $K$ is a large value, the KNN is more rigid and less flexible, thereby having a higher bias. 
+
+When dealing with datasets of large sizes, implementing a K-Nearest-Neighbors classifier can be difficult due to long inference times.
