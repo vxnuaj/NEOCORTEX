@@ -6,4 +6,5 @@ $A\vec{x}$
 
 Thereby $A\vec{x} = \vec{0}$ must be true for any vector $\vec{x}$ to be the the $Nul(A)$
 
+Note that this only applies to matrices, not vectors.
 
