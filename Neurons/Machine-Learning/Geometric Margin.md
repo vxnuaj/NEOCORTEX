@@ -2,7 +2,7 @@ Given a dataset of binary classes, that have wide gap with between datapoints be
 
 What a [[Support Vector Machine]] does is find the optimal line or decision boundary that separates datapoints between each class.
 
-The margin between the optimal line or decision boundary and a given datapoint is called the geometric margin, computed as the [[Euclidean Distance]] defined as:
+The margin between the optimal line or decision boundary and a given datapoint is called the **geometric** **margin**, computed as the [[Euclidean Distance]] defined as:
 
 $\gamma = \frac{y_i(w^Tx_i + b)}{||w||}$
 
