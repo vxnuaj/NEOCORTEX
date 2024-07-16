@@ -1,0 +1,1 @@
+The separating hyperplane between distinct data points or sets of data points that is furthest from the data points.

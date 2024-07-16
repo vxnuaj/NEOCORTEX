@@ -14,3 +14,7 @@ Note that if the [[hinge loss]] is smaller, the penalty term will be higher. Inv
 This is as the smaller the [[hinge loss]] is, the more complex the coefficients $\beta_i$ are, thereby indicating that they might hold a higher value. 
 
 Therefore, the calculation of the magnitude of $\beta_i$, as $||\beta||$, will be higher the lower the [[hinge loss]] is.
+
+When this regularization term is introduced, the higher a parameter $C$ is, the greater the loss will be. 
+
+Therefore, given that an extra penalty is introduced, the model weights are updated in a manner that allows for some error, by increasing the margin between the decision boundary and the [[support vectors]].
