@@ -1,8 +1,12 @@
 A linear support vector machine is a linear classifier that aims to draw a boundary between a set of datapoints, based on a linear decision boundary and "[[Support Vectors]]".
 
-The goal of a support vector machine is to find the decision boundary that best separates the classes.
+> *Note that support vector machines can be extended to [[Non-Linear Support Vector Machine]]s via the [[Kernel Trick]].*
 
-We want to find the [[Support Vectors]] which correspond to the largest gap between the decision boundary and the datapoints by minimizing the [[Hinge Loss]].
+The goal of a support vector machine is to find the line or hyper plane of a decision boundary that best separates the classes.
+
+> *In a 2-dimensional space, a line is suitable. In $n$ dimensional spaces, where $n > 2$, a hyperplane is needed.*
+
+We want to find the [[Support Vectors]] which correspond to the largest gap[^1] between the decision boundary and the datapoints by minimizing the [[Hinge Loss]].
 
 The decision boundary is defined as $w \cdot x + b = 0$.
 
@@ -33,5 +37,4 @@ A support vector machine can be sensitive to outliers, where if a single datapoi
 
 Thereby, we can rely on [[Regularization for SVMs]], similar to [[L2 Regularization]] where we add an additional loss penalty to the [[hinge loss]].
 
-
-
+[^1]: Winston terminology -- the 'street' 
