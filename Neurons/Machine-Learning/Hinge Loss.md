@@ -12,8 +12,11 @@ Thereby, if the classifier is uncertain about the classification where $f(x) = 0
 
 $max(0, 1 - y \cdot 0) \rightarrow max(0, 1 - 0) \rightarrow 1$
 
-Note that the hinge loss does not punish correct classifications, 
+If a given label is $1$ and the predicted class is $2$, the $loss$ value will be:
 
-- Does not punish correct classifications
-- As soon as a datapoint enters the margins defined by the set of [[support vector]]s,  the loss value begins to rise.
-- For the loss value corresponding to a decision boundary, the loss hits exactly 1, if the margin between .
+$max(0, 1 - 1 \cdot 2) \rightarrow max(0, 1-2), \rightarrow 0$
+
+Note that 
+- The hinge loss does not punish correct classifications.
+- The as soon as a datapoint enters the margins defined by the [[support vectors]] the loss value begins to rise.
+- For the loss value corresponding to a decision boundary, the loss hits exactly 1.
