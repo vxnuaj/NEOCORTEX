@@ -1,0 +1,1 @@
+NP represents the breadth of problems that are solvable within polynomial time by a [[non-deterministic turing machine]] and whose solutions are verifiable by a [[Deterministic Turing Machine]] in polynomial time.
