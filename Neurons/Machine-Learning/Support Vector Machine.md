@@ -48,3 +48,11 @@ A support vector machine can be sensitive to outliers, where if a single datapoi
 Thereby, we can rely on [[Regularization for SVMs]], similar to [[L2 Regularization]] where we add an additional loss penalty to the [[hinge loss]].
 
 [^1]: Winston terminology -- the 'street' 
+
+
+___
+
+
+- [ ] Hard Margin SVMs
+- [ ] Soft Margin SVMs
+- [ ] Non-Linear SVMs.
