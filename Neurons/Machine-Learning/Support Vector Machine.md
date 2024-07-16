@@ -8,7 +8,9 @@ The SVM then, aims to classify datapoints based on how they deviate from the lin
 
 > *In a 2-dimensional space, a line is suitable. In $n$ dimensional spaces, where $n > 2$, a hyperplane is needed.*
 
-We want to find the [[Support Vectors]] which correspond to the largest gap[^1] between the decision boundary and the datapoints by minimizing the [[Hinge Loss]].
+We want to find the [[Support Vectors]] which correspond to the largest gap, in the case of SVMs with [[soft margins]], [^1] between the decision boundary and the datapoints by minimizing the [[Hinge Loss]]. Here, this margin would be defined by regularization [^2].
+
+In the case of SVMs with [[hard margins]] we find the datapoints that would lie as close to the support vectors as possible, with a default margin of $1$.
 
 The decision boundary is defined as $w \cdot x + b = 0$.
 
@@ -48,7 +50,7 @@ A support vector machine can be sensitive to outliers, where if a single datapoi
 Thereby, we can rely on [[Regularization for SVMs]], similar to [[L2 Regularization]] where we add an additional loss penalty to the [[hinge loss]].
 
 [^1]: Winston terminology -- the 'street' 
-
+[^2]: [[Regularization for SVMs]]
 
 ___
 
