@@ -11,6 +11,6 @@ $\theta_{t+1} = \theta_{t} - \frac{\alpha}{\sqrt{v\theta_t}} * ∂\theta$
 
 The scaling term, $\sqrt{v\theta_t}$, can essentially be seen as an $L_2$ norm of the gradients up until the given time step.
 
-> *See [[Euclidean Norm]]*
+> *See [[Euclidean Distance]]*
 
 [[RMSprop]] is a better alternative to AdaGrad, as it can adaptively scale the learning rate through an [[Exponentially Weighted Average]], rather than increasing it's magnitude overtime without stop.

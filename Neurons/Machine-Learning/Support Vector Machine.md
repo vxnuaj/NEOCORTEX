@@ -33,6 +33,14 @@ then within the equation of an SVM as $w \cdot x + b$, the dot product of $w$ an
 
 Assuming that $b$ is $0$, the prediction of the SVM is $18$. Thereby, given that the prediction is positive, the class predicted is $+1$.
 
+The margin between the optimal line or decision boundary and a given datapoint is called the geometric margin, computed as the [[Euclidean Distance]] defined as:
+
+$\gamma = \frac{y_i(w^Tx_i + b)}{||w||}$
+
+where the numerator represents the predicted vector derived from the boundary $w$, inputs $x$, and bias $b$.
+
+The denominator scales the input down based on the euclidean norm of $w$ or the distance from the decision boundary to the [[Support Vectors]]. This makes sure that when computing the geometric mean, the input $x$ is independent to scaling by $w$.
+
 A support vector machine can be sensitive to outliers, where if a single datapoint of a different class is grouped near to datapoints of different classes, then the decision boundary and [[support vectors]] will skew, indicating a level of overfitting.
 
 Thereby, we can rely on [[Regularization for SVMs]], similar to [[L2 Regularization]] where we add an additional loss penalty to the [[hinge loss]].

@@ -1,4 +1,4 @@
-The euclidean norm is a measure of the shortest length (magnitude) of a vector from the origin in a euclidean space. 
+The euclidean distance is a measure of the magnitude of a vector from the origin in a euclidean space. 
 
 It's defined as $|| \vec{x}|| = \sqrt{\sum_i x_i^2} = \sqrt{x_1^2 + x_1^2 + ... x_n^2 }$ 
 

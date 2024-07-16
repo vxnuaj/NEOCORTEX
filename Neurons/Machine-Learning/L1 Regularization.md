@@ -1,4 +1,4 @@
-L1 regularization serves the same purpose as [[L2 Regularization]] with the difference being that rather than basing the penalty on the [[Euclidean Norm]], it's based on the [[Manhattan Distance]] that's multiplied by the $\lambda$ term.
+L1 regularization serves the same purpose as [[L2 Regularization]] with the difference being that rather than basing the penalty on the [[Euclidean Distance]], it's based on the [[Manhattan Distance]] that's multiplied by the $\lambda$ term.
 
 The regularized loss is then calculated as:
 

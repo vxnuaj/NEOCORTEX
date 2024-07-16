@@ -4,7 +4,7 @@ It involves adding a small term to a loss function which penalizes for large wei
 
 $J(w,b) = \sum L(\hat{y}, y) + \lambda \cdot Penalty$
 
->*The penalty is typically the [[Euclidean Norm]] squared or the [[Manhattan Distance]]*
+>*The penalty is typically the [[Euclidean Distance]] squared or the [[Manhattan Distance]]*
 
 This trades a decrease in training accuracy for an increase in generalizability.
 

@@ -1,6 +1,6 @@
 L2 regularization, as [[Regularization]], involves the addition of a penalty term to punish large weights.;
 
-The penalty term is based on the [[Euclidean Norm]] or [[Frobenius Norm]] squared, multiplied by a hyperparameter, $\lambda$.
+The penalty term is based on the [[Euclidean Distance]] or [[Frobenius Norm]] squared, multiplied by a hyperparameter, $\lambda$.
 
 L2 regularization can be often added to layers that are more prone to overfitting and may not need to be added to layers that aren't prone to it. This typically includes more dense layers with higher number of params.
 

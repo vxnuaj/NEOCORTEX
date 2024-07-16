@@ -1,0 +1,1 @@
+In [[Support Vector Machine]]s, the functional margin refers to the unnormalized margin defined by $w^T\cdot x+b$
