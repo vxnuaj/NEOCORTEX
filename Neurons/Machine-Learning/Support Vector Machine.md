@@ -4,6 +4,8 @@ A linear support vector machine is a linear classifier that aims to draw a bound
 
 The goal of a support vector machine is to find the line or hyper plane of a decision boundary that best separates the classes.
 
+The SVM then, aims to classify datapoints based on how they deviate from the line or hyper plane of a decision boundary.
+
 > *In a 2-dimensional space, a line is suitable. In $n$ dimensional spaces, where $n > 2$, a hyperplane is needed.*
 
 We want to find the [[Support Vectors]] which correspond to the largest gap[^1] between the decision boundary and the datapoints by minimizing the [[Hinge Loss]].
