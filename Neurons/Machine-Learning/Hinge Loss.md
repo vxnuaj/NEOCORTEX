@@ -8,6 +8,9 @@ $loss = max(0, 1 - y \cdot f(x))$
 
 where $y$ is the true class label and $f(x)$ corresponds to a prediction from the given classifier, typically a [[Support Vector Machine]].
 
+![[Pasted image 20240716131222.png | 450]]
+
+
 Thereby, if the classifier is uncertain about the classification where $f(x) = 0$, the $loss$ value will hit exactly $1$ as:
 
 $max(0, 1 - y \cdot 0) \rightarrow max(0, 1 - 0) \rightarrow 1$
