@@ -2,16 +2,20 @@ Regularization in SVMs allows for the decision boundary and the corresponding [[
 
 This serves the use-case to create [[soft margins]], where if the data isn't linearly separable, these [[soft margins]] help to generalize to the non-linear dataset. 
 
+Thereby, with soft margins we create [[slack variables]]
+
 This maximizes the accuracy rather than maximizing fit. A linear SVM won't be able to fit to a non-linear dataset, taking some error through regularization and [[soft margins]] turns out to be worth the trade off for better accuracy.
 
 Similar to [[L2 Regularization]] or [[L1 Regularization]], we add a penalty term to the [[hinge loss]] of an SVM.
 
-$L_{regularized} = SVMCost(\beta_i) + C ||\beta||$
+$L_{regularized} = SVMCost(\beta_i) + C ||w||$
 
 where $C$ is the tunable hyperparameter denoting the level of regularization we want.
 
 If $C$ is a large value, the regularization onto the model will be higher. 
 If $C$ is a small value, the regularization onto the model will be smaller.
+
+The gradient for $\frac{∂L_{regularized}}{∂Output}$ is then $C \cdot maximum(0, -y)$
 
 Note that if the [[hinge loss]] is smaller, the penalty term will be higher. Inversely, if the [[hinge loss]] is higher, the penalty term would be smaller.
 
