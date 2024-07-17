@@ -1,0 +1,1 @@
+The kernel trick involves the use of the [[kernel function]]
