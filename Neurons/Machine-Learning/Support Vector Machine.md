@@ -55,6 +55,6 @@ Thereby, we can rely on [[Regularization for SVMs]], similar to [[L2 Regularizat
 ___
 
 
-- [ ] Hard Margin SVMs
+- [x] Hard Margin SVMs
 - [ ] Soft Margin SVMs
 - [ ] Non-Linear SVMs.
