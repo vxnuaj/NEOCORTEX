@@ -23,3 +23,4 @@ Note that
 - The hinge loss does not punish correct classifications.
 - The as soon as a datapoint enters the margins defined by the [[support vectors]] the loss value begins to rise.
 - For the loss value corresponding to a decision boundary, the loss hits exactly 1.
+- The hinge loss only works for labels of $-1$ or $1$, unless modifications are made to accommodate the function to labels of $0$ of $1$
