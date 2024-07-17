@@ -1,1 +1,1 @@
-The kernel trick involves the use of the [[kernel function]]
+The kernel trick involves the use of the [[Kernel Function]]
