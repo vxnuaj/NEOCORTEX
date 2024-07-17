@@ -1,5 +1,9 @@
 Regularization in SVMs allows for the decision boundary and the corresponding [[support vectors]] to become non-complex, where the decision boundary doesn't overfit to nuanced features, and rather generalizes.
 
+This serves the use-case to create [[soft margins]], where if the data isn't linearly separable, these [[soft margins]] help to generalize to the non-linear dataset. 
+
+This maximizes the accuracy rather than maximizing fit. A linear SVM won't be able to fit to a non-linear dataset, taking some error through regularization and [[soft margins]] turns out to be worth the trade off for better accuracy.
+
 Similar to [[L2 Regularization]] or [[L1 Regularization]], we add a penalty term to the [[hinge loss]] of an SVM.
 
 $L_{regularized} = SVMCost(\beta_i) + C ||\beta||$
