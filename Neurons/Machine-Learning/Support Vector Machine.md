@@ -2,7 +2,7 @@ A linear support vector machine is a linear classifier, based on a [[maximal mar
 
 > *Note that support vector machines can be extended to [[Non-Linear Support Vector Machine]]s via the [[Kernel Trick]].*
 > 
-> *There are also [[Primal Form]] and [[dual form]] for SVMs.*
+> *There are also [[Primal Form]] and [[Dual Form]] for SVMs.*
 
 The goal of a support vector machine is to find the line or hyper plane of a decision boundary that best separates the classes.
 
@@ -25,7 +25,7 @@ The weights $w$, represent the distance of the hyperplane or decision boundary t
 > *[[Orthogonal]] meaning the vectors are perpendicular. 
 > $w \cdot x$ if $x$ is the hyperplane, will yield $0$*
 
-Therefore the $L_2$ norm of $w$, as $||w||$, will yield the distance between the decision boundary and it's corresponding [[Support Vectors]].
+Therefore $1$ over the $L_2$ norm of $w$, as $\frac{1}{||w||}$, will yield the distance between the decision boundary and it's corresponding [[Support Vectors]].
 
 If we have $w$ as:
 

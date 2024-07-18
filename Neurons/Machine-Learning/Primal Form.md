@@ -1,1 +1,1 @@
-The primal form of an SVM involves the computation of a functional margin as $wx + b$, with the [[hinge loss]] as $max(0, 1 - y f(x))$ with the goal of minimizing $||w||$.
+The primal form of an SVM involves the computation of a functional margin as $wx + b$, with the [[hinge loss]] as $max(0, 1 - y f(x))$ to penalize incorrect predictions, with the goal of minimizing $||w||^2$ or maximizing $\frac{1}{||w||}$ by tuning parameters $w$ and $b$ through a type of optimization.
