@@ -1,0 +1,1 @@
+The primal form of an SVM involves the computation of a functional margin as $wx + b$, with the [[hinge loss]] as $max(0, 1 - y f(x))$ with the goal of minimizing $||w||$.

@@ -1,6 +1,8 @@
 A linear support vector machine is a linear classifier, based on a [[maximal margin hyperplane]] that aims to draw a boundary between a set of datapoints, based on a linear decision boundary and "[[Support Vectors]]".
 
 > *Note that support vector machines can be extended to [[Non-Linear Support Vector Machine]]s via the [[Kernel Trick]].*
+> 
+> *There are also [[Primal Form]] and [[dual form]] for SVMs.*
 
 The goal of a support vector machine is to find the line or hyper plane of a decision boundary that best separates the classes.
 
