@@ -1,1 +1,1 @@
-The kernel trick involves the use of the [[Kernel Function]]
+The kernel trick involves the use of a [[Kernel Function]] to transform a set of non-linearly separable datapoints $X$ into a higher-dimensional space where $X$ might become linearly separable.
