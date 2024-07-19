@@ -8,7 +8,7 @@ $unit(\vec{u}) = \frac{\vec{u}}{||\vec{u}||}$
 
 Taking the magnitude of this result would then yield us $1$, hence the unit vector.
 
-Note that the [[dot product]] of two unit vectors, say $\vec{u}$ and $\vec{U}$ is:
+Note that the [[dot product]] of two unit vectors, say unit vectors $\vec{u}$ and $\vec{U}$ is:
 
 $\vec{u} \cdot \vec{U} = cos \theta$
 
