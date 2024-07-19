@@ -6,4 +6,6 @@ A vector, $w$, is orthogonal to another vector, $v$, if the [[dot product]] of t
 
 A matrix, $A$, is orthogonal to another matrix, $B$, if $A^TB = I$, where $I$ is the [[Identity Matrix]].
 
+An Orthogonal Matrix is where the columns and rows are [[Orthonormal]] vectors.
 
+Say if a matrix $A$ is orthogonal, `inverse(A) == transpose(A)` is `True`
