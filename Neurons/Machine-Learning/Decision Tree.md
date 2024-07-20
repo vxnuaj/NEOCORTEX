@@ -11,6 +11,9 @@ The depth of a decision tree defines the length of the longest path from the roo
 
 The root node is the first node while the leaf nodes represent the final decision or output. The internal nodes are the intermediary nodes that represent intermediary decisions between a root node and a leaf node. Branches are what connects the nodes.
 
-The decision tree continues to split until a node is ***pure***, meaning one class remains, a ***maximum depth*** is reached, or a ***performance metric*** is achieved.
+The decision tree continues to split until a node is ***pure***, meaning one class remains, a ***maximum depth*** is reached, or a ***performance metric***, say Entropy, is achieved.
 
-[[Greedy Search]] can be used to find the optimal decision path for a tree, based on the maximum information gained from the split, based
+There are different types of splitting criteria for a decision tree, such as the [[Gini Impurity]]
+
+[[Greedy Search]] can be used to find the optimal decision path for a tree, based on the maximum information gained from the split.
+
