@@ -19,4 +19,6 @@ There are different types of splitting criteria for a decision tree, such as the
 
 Decision Trees can tend to have high variance and overfit, given that it's non-parametric and is very flexible. 
 
-The solution to this is to prune the tree perhaps via maximum depth or a performance metric such as classification error or information gain.
+The solution to this is to prune the tree perhaps via maximum depth or a performance metric such as classification error or [[information gain]].
+
+Benefits of decision trees include the absence of a need for pre-processing
