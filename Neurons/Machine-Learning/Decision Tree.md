@@ -9,7 +9,7 @@ The depth of a decision tree defines the length of the longest path from the roo
 
 ![[Screenshot 2024-07-20 at 7.44.41 AM.png | 400]]
 
-The root node is the first node while the leaf nodes represent the final decision or output. The internal nodes are the intermediary nodes that represent intermediary decisions between a root node and a leaf node. Branches are what connects the nodes.
+The root node is the first node while the leaf nodes represent the final decision or output. The internal decision nodes are the intermediary nodes that represent intermediary decisions between a root node and a leaf node. Branches are what connects the nodes.
 
 The decision tree continues to split until a node is ***pure***, meaning one class remains, a ***maximum depth*** is reached, a ***minimum sample size*** is reached, or a ***performance metric***, say Entropy, is achieved.
 
@@ -21,4 +21,4 @@ Decision Trees can tend to have high variance and overfit, given that it's non-p
 
 The solution to this is to prune the tree perhaps via maximum depth or a performance metric such as classification error or [[information gain]].
 
-Benefits of decision trees include the absence of a need for pre-processing
+Benefits of decision trees include the absence of a need for pre-processing and being able to handle all types of data.
