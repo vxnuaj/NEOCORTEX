@@ -15,6 +15,8 @@ The decision tree continues to split until a node is ***pure***, meaning one cla
 
 There are different types of splitting criteria for a decision tree, such as the [[Gini Impurity]] or [[Entropy]]
 
+> See [[Splitting a Decision Tree]]
+
 [[Greedy Search]] can be used to find the optimal decision path for a tree, based on the maximum information gained from the split.
 
 Decision Trees can tend to have high variance and overfit, given that it's non-parametric and is very flexible. 
