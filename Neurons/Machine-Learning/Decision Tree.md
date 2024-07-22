@@ -15,7 +15,7 @@ The decision tree continues to split until a node is ***pure***, meaning one cla
 
 There are different types of splitting criteria for a decision tree, such as the [[Gini Impurity]] or [[Entropy]]
 
-> See [[Splitting a Decision Tree]]
+> *See [[Splitting a Decision Tree]], note that it is a recursive algorithm*
 
 [[Greedy Search]] can be used to find the optimal decision path for a tree, based on the maximum information gained from the split.
 
