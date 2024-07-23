@@ -7,3 +7,6 @@ When based on the [[information gain]] and the [[weighted entropy]] / [[Entropy]
 5. Compute the [[Information Gain]] for the given splits 
 6. Do this for all splits 
 7. Choose the best split, that maximizes information gain or minimizes weighted entropy
+
+
+----
