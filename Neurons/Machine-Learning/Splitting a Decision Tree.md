@@ -1,4 +1,4 @@
-When based on the [[information gain]] and the [[weighted entropy]] / [[Entropy]] on a binary split.
+When based on the [[information gain]] and the [[weighted entropy]] / [[Entropy]] on a binary split:
 
 1. Choose a [[Split Feature]] to split the data upon
 2. Then consider all possible splits of that feature, based on the [[Splitting Threshold]]
