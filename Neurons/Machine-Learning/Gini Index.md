@@ -1,8 +1,6 @@
 #mathematics 
 
-The splitting criteria for the original CART [[decision tree]] algorithm.
-
-It's used to quantify the impurity or disorder of a set of elements.
+Used to quantify the impurity or disorder of a set of elements, particularly in decision trees.
 
 It is defined as:
 

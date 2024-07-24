@@ -13,7 +13,7 @@ The root node is the first node while the leaf nodes represent the final decisio
 
 The decision tree continues to split until a node is ***pure***, meaning one class remains, a ***maximum depth*** is reached, a ***minimum sample size*** is reached, or a ***performance metric***, say Entropy, is achieved.
 
-There are different types of splitting criteria for a decision tree, such as the [[Gini Impurity]] or [[Entropy]]
+There are different types of splitting criteria for a decision tree, such as the [[Gini Index]] or [[Entropy]]
 
 > *See [[Splitting a Decision Tree]], note that it is a recursive algorithm*
 
