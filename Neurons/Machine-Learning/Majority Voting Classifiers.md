@@ -8,6 +8,10 @@ For every $\hat{y}_i$ that is made, the majority or the $mode()$ of all predicti
 
 We use majority voting to mitigate the impact of that [[Irreducible Error]][^1] has per each individual classifier $f_i$. If the [[Irreducible Error]] is uncorrelated amongst all $i$ models, taking the $mode()$ of all $\hat{y}_i$ can potentially yield a more accurate $\hat{Y}$.
 
-The error for an ensemble model can then be computed using the [[Binomial Theorem]]
+The error for an ensemble model can then be computed using the [[Binomial Theorem]], as:
+
+$\epsilon_{ens}= \sum_{k = 0}^n \begin{pmatrix}n \\ k \end{pmatrix} (1 - \epsilon)^{n - k} \epsilon^k$
+
+where $\epsilon_{ens}$ is the [[irreducible error]] a sum of the binomial probability over all $n$ models.
 
 [^1]: Or in [[Bayes Classifier]]s, the [[Bayes Error]].
