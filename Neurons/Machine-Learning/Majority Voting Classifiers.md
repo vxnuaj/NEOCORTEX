@@ -1,0 +1,11 @@
+Classifiers that leverage majority voting to make a final prediction are a form of [[Ensemble Learning]]. 
+
+Majority voting classifiers are made up of multiple distinct classifiers, say $f_i$ where $i$ is the $ith$ classifier.
+
+All $i$ classifiers are trained on the same data, to then make a final prediction of $\hat{y}_i$.
+
+For every $\hat{y}_i$ that is made, the majority or the $mode()$ of all predictions is taken to find the majority vote, which is then set as the final prediction, $\hat{Y}$.
+
+We use majority voting to mitigate the impact of that [[Irreducible Error]][^1] has per each individual classifier $f_i$. If the [[Irreducible Error]] is uncorrelated amongst models, taking the $mode()$
+
+[^1]: Or in [[Bayes Classifier]]s, the [[Bayes Error]].
