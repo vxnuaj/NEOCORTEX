@@ -1,4 +1,4 @@
-Classifiers that leverage majority voting to make a final prediction are a form of [[Ensemble Learning]]. 
+Classifiers that leverage majority voting to make a final prediction are a form of [[Ensemble Learning]].
 
 Majority voting classifiers are made up of multiple distinct classifiers, say $f_i$ where $i$ is the $ith$ classifier.
 

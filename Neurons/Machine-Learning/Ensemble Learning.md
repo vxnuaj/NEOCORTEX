@@ -1,0 +1,1 @@
+Ensemble learning is a form of learning where we combing multiple models, more commonly [[Decision Tree]]s to make more generalizable predictions through [[Majority Voting Classifiers]] or [[Soft Voting Classifiers]].
