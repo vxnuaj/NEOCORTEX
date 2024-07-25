@@ -12,6 +12,6 @@ The error for an ensemble model can then be computed using the [[Binomial Theore
 
 $\epsilon_{ens}= \sum_{k = 0}^n \begin{pmatrix}n \\ k \end{pmatrix} (1 - \epsilon)^{n - k} \epsilon^k$
 
-where $\epsilon_{ens}$ is the [[irreducible error]] a sum of the binomial probability over all $n$ models.
+where $\epsilon_{ens}$ is the [[irreducible error]] a sum of the binomial probability over all $n$ models and $k$ are the amount of models that predict the sample label.
 
 [^1]: Or in [[Bayes Classifier]]s, the [[Bayes Error]].

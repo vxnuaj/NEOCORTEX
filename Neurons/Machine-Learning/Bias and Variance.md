@@ -11,6 +11,6 @@ In an ideal model, it has a low bias and low variability, improving generalizabi
 >$Total Error = Bias^2 + Variance + Bayes Error$[^1]
 
 
-To find the the sweet spot, one can use [[Regularization]], [[boosting]], or [[bagging]]
+To find the the sweet spot, one can use [[Regularization]], [[boosting]], or [[Bagging]]
 
 [^1]: [[Bayes Error]] - wtf is this and the equation?? TODO.
