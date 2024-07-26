@@ -22,6 +22,6 @@ You can normalize the dataset by
 
 	$\sigma^2 = \frac{1}{m} \sum_{i = 1}^m (x_i - u)^2$ 
 
-	 $x = x / \sigma$
+	$X_{norm} = X / \sigma$
 
 
