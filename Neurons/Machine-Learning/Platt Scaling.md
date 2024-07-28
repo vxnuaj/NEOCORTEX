@@ -10,5 +10,6 @@ To avoid overfitting, platt scaling is typically applied to a subset of the trai
 
 TLDR (notes to self):
 
+- Fully train the [[Support Vector Machine]]
 - You train the logistic regression model on the raw outputs of the [[Support Vector Machine]] with respect to labels of a calibration set.
 - This model is used to then map the outputs of the [[Support Vector Machine]] to probabilities during testing/
