@@ -12,4 +12,4 @@ TLDR (notes to self):
 
 - Fully train the [[Support Vector Machine]]
 - You train the logistic regression model on the raw outputs of the [[Support Vector Machine]] with respect to labels of a calibration set, not the original dataset.
-- This model is used to then map the outputs of the [[Support Vector Machine]] to probabilities during testing/
+- This model is used to then map the outputs of the [[Support Vector Machine]] to probabilities during testing
