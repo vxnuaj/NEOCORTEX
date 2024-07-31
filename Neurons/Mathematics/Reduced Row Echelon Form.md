@@ -9,3 +9,5 @@ $\begin{pmatrix}1 & 2 & 0 & 5 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 0 & 0 \end{pmatrix}$
 Reduced Row Echelon Form can be attained via [[Gaussian Elimination]].
 
 Any matrix in Reduced Row Echelon Form is in [[Row Echelon Form]]
+
+Through Reduced Row Echelon Form, we're able to find the basis vectors of the row space of a matrix.
