@@ -28,3 +28,4 @@ which can be solved graphically as:
 In order for there to be exactly one solution to the system of linear equations, the number of independent equations has to equal the number of unknowns. 
 
 As well, to solve for a solution, if we had a set of $n$ unknowns, we'd need at least $n$ equations.
+

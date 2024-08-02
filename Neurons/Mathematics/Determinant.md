@@ -4,7 +4,7 @@ If a given vector within
 
 To find the determinant of a $2, 2$ matrix you subtract the product of the top left and lower right with the product of the top right and lower left.
 
-$A = \begin{bmatrix} a, b \\ c, d \end{bmatrix}$
+ $A = \begin{bmatrix} a, b \\ c, d \end{bmatrix}$
 
 $det(A) = ad - bc$
 
