@@ -18,3 +18,4 @@ $\det\begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix} = a \cdot
 
 $\det\begin{pmatrix} 1 & 2 & 3 \\ 0 & 1 & 4 \\ 5 & 6 & 0 \end{pmatrix} = 1 \cdot (1 \cdot 0 - 4 \cdot 6) - 2 \cdot (0 \cdot 0 - 4 \cdot 5) + 3 \cdot (0 \cdot 6 - 1 \cdot 5) = 1$
 
+Finding the determinant of a matrix can also be done through reduction via [[Row Echelon Form]]. All one needs to do is multiply the pivots of a reduced matrix, the upper triangular matrix, prior to computing the pivots to $1$, to get the determinant. 
