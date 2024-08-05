@@ -8,7 +8,6 @@ $\begin{pmatrix}a_{11}, a_{12}\\ a_{21}, a_{22}\end{pmatrix} \cdot \begin{pmatri
 
 $C = \begin{pmatrix} a_{11} \cdot b_{11} + a_{12} \cdot b_{21} & a_{11} \cdot b_{12} + a_{12} \cdot b_{22} \\ a_{21} \cdot b_{11} + a_{22} \cdot b_{21} & a_{21} \cdot b_{12} + a_{22} \cdot b_{22} \end{pmatrix}$
 
-
 A matrix multiplication of $A$ with shape $m, n$ and $B$ of shape $n, m$ can transform $B$ from $\mathbb{R}^n$ to $\mathbb{R}^m$.
 
 As another example:
@@ -20,3 +19,14 @@ The matrix $B$ is of dimensions $\mathbb{R}^{3x2}$ while matrix $A$ is of dimens
 When applying the linear combination, the matrix $B$ is transformed by $A$ to get output $C$ which has the dimensionality of $m, m$. 
 
 Thereby the output of a matrix multiplication is a dimensionality of the rows of the first matrix and the columns of a second matrix.
+
+Another key property of matrix multiplication is that it is associative, meaning for the given multiplication:
+
+$ABC$
+
+it can be expressed as the following equivalent forms:
+
+$(AB)C$
+$A(BC)$
+
+as it is **associative**.
