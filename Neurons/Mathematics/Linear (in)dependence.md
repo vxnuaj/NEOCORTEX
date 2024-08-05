@@ -16,4 +16,7 @@ It is not possible for a vector to be linearly independent amongst all possible 
 
 In terms of [[Linear Combination]]s, as long as all columns $A$ are linearly independent, we can map any vector within $Col(A)$[^1] that's $\in \mathbb{R}^m$, if $A$ is dimensions $m, n$.
 
+If we have the linear combination, $A\vec{x} = 0$, meaning a homogeneous system, and $\vec{x}$ is non-zero, therefore $A$ is linearly dependent and not full rank.
+
+
 [^1]: [[Column Space]]Space]]
