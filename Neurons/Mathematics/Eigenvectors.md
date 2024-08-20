@@ -7,4 +7,4 @@ $A\vec{x} = \lambda\vec{x}$
 where:
 
 - $\vec{x} ≠ \vec{0}$
-- 
+- $\lambda \in \mathbb{R}$
