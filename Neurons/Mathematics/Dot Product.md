@@ -6,6 +6,8 @@ $\begin{bmatrix}a_1 \\ a_2\end{bmatrix} \cdot \begin{bmatrix}x_1, x_2\end{bmatri
 
 where each element in $A$ is multiplied by each element in $X$, element-wise, and then summed to get the result $C$.
 
-
-
 The dot product then makes up a bigger [[Matrix Multiplication]].
+
+**Other**:
+
+- The dot product of 2 vectors is $0$ if they're [[orthogonal]] to each other.
