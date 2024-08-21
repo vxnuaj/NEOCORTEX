@@ -43,16 +43,7 @@ To reduce it, all we do is apply a [[Vector Projection]] as:
 $K = \frac{XP}{||P||^2}$ 
 $X_{kPCA} = PK$ 
 
-where $K$ is the multiple of the principal component $P$ that represents the 
-
-We want to maximize the variance,
-
-1. Finding the mean of $X$, $\bar{X}$
-2. Mean centering $X$ as $X = X - \bar{X}$
-3. Compute the covariance matrix of $X$ as $S = \frac{1}{N - 1} \sum_{k=1}^N (x_k - \bar{x})(x_k - \bar {x})^T$
-5. Find the Lagrange multipliers of $S$, ones that maximize the variability subject to the eigenvectors, $.
-6. Find the eigenvalues of $S$.
-7. Use the eigenvalues, $S$, to solve for the eigenvectors
+where $K$ is the multiplier of the principal component $P$ where their multiplication represents the projection of the vector $X$, as $X_{kPCA}$.
 
 Principal Component Analysis is useful for:
 1. Dimensionality Reduction
