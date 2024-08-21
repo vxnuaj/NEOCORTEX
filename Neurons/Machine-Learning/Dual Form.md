@@ -16,7 +16,7 @@ $f(u) = \sum_{i = 1}^m \alpha_iy_i K(x_i , u) + b$
 where 
 - $u$ is the unknown input vector
 - $x_i$ are the training samples or support vectors
-- $\alpha_i$ are the [[Lagrange Multipliers]] 
+- $\alpha_i$ are the [[Lagrange Multiplier]] 
 - $y_i$ are the class labels for the training examples of $-1$ or $1$
 - $b$ is the bias term.
 
