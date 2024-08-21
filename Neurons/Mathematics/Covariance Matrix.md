@@ -36,3 +36,13 @@ $$
 $$
 Covariance Matrix is symmetric, it's transpose is equal to the original matrix
 
+The closed form of the Covariance matrix is the form which can be determined by a deterministic formula.
+
+$Cov(X, Y) = \frac{1}{N-1} \sum_{k=1}^N(X_k - \bar{X})(Y_k - \bar{Y})^T$ 
+
+where $X_k$ and $Y_k$ are the individual $k$-th samples of $X$ and $Y$.
+
+You can also take the covariance of a matrix $X$ with itself with the same formula as:
+
+$Cov(X, Y) = \frac{1}{N-1} \sum_{k=1}^N(X_k - \bar{X})(X_k - \bar{X})^T$ 
+
