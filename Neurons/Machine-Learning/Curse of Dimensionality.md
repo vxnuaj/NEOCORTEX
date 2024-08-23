@@ -10,4 +10,7 @@ For example, if we had a set of data points $i$ in a $1$-dimensional space, and 
 
 Otherwise, the space becomes sparse.
 
+[TODO]:
+- [ ] I get what this is, but don't understand ***why*** mathematically. Need to know ***why***.
+
 [^1]: https://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/lecturenote02_kNN.html
