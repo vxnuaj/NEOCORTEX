@@ -16,7 +16,7 @@ Finding $\vec{p}$ is then a matter of finding the scalar $k$.
 
 This can be done as:
 
-$k = \frac{\vec{v} \cdot \vec{u}}{||\vec{u}||^2}$
+$k = \frac{\vec{v} \cdot \vec{u}}{||\vec{u}||^2}\vec{u}$
 
 and to get the final projection, we multiply it by $\vec{u}$:
 
