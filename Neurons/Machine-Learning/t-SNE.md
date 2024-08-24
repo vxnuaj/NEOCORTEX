@@ -20,6 +20,19 @@ This function, $f$, can be defined as:
 
 $P_{j|i} = \frac{e^\frac{-||x_i-x_j||}{2\sigma^2}}{\sum_{k≠i} e^{-\frac{||x_i - x_k||}{2\sigma^2}}}$
 
-where the numerator and the term being $\sum$med in the denominator is the [[Radial Basis Function]], where the output of the RBF
+where the numerator and the term being $\sum$med in the denominator is the [[Radial Basis Function]], where the output of the RBF higher is there is a higher similarity between 2 datapoints, in this case $x_i$ and $x_j$ and the inverse of there is a lower similarity.
+
+In this case, you can then see this function as a probability measure of a given $x_i$ and $x_j$ being neighbors compared with all other possible datapoints, $x_k$
+
+Now using that function, to compute the probability of drawing $x_i$ and $x_j$ if we pick a point at random, we can do so as:
+
+$P_{ij} = \frac{P_{j|i} + P_{i|j}}{N} = \frac{P_{j|i}}{N}+\frac{P_{i|j}}{N}$
+
+
+where $P_{ij}$ is the probability, serving as a similarity measure between $x_{i}$ and $x_j$.
+
+We use both probabilities, $P_{j|i}$ and $P_{i|j}$ to symmetrically consider the probability as a hole. Given that $x_i$ and $x_j$ are different datapoints in an $\mathbb{R}^n$ vector space, their position would account for different probabilities.
+
+We want to get both of their probabilities, to then comptue a more overarching view of the true probability, $P_{ij}$
 
 [^1]: [[Curse of Dimensionality]]
