@@ -16,6 +16,10 @@ $P_{j|i} = f(d_{ij}, d_{ik})$
 
 where $P_{j|i}$ is the probability that $x_j$ is the nearest neighbor to a given $x_i$.
 
-This function, $f$, can be defined as 
+This function, $f$, can be defined as:
+
+$P_{j|i} = \frac{e^\frac{-||x_i-x_j||}{2\sigma^2}}{\sum_{k≠i} e^{-\frac{||x_i - x_k||}{2\sigma^2}}}$
+
+where the numerator and the term being $\sum$med in the denominator is the [[Radial Basis Function]], where the output of the RBF
 
 [^1]: [[Curse of Dimensionality]]

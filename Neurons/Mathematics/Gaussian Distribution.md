@@ -8,6 +8,8 @@ $f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x - \mu}{\sigma})^2}$
 
 where $\mu$ controls the position of the curve on the $x$ axis while $\sigma$ controls the the height of the curve.
 
+It's analogous to the [[Gaussian Function]], the only difference being the normalization, $\sigma\sqrt{2\pi}$ limits $f(x)$ to be $f(x) \in [0, 1]$
+
 Note that $\mu$ is the mean and $\sigma$ is the standard deviation.
 
 $\sigma^2$ is then the variance.
