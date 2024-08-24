@@ -10,4 +10,6 @@ The kernel value, $K$, decreases as the distance between $x$ and $y$ increases, 
 
 Inversely, a higher similarity yields a higher $K$.
 
+As $\sigma$ decreases, the similarity measure becomes less sensitive to distance, points that are further apart will still have higher similarity scores compared to when $\sigma$ is a lower value.
 
+The $\Delta$ of the exponential decay in the RBF kernel will be lower when $\sigma$ is smaller, and conversely, higher when $\sigma$ is larger.
