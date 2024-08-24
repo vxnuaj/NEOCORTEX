@@ -26,13 +26,12 @@ In this case, you can then see this function as a probability measure of a given
 
 Now using that function, to compute the probability of drawing $x_i$ and $x_j$ if we pick a point at random, we can do so as:
 
-$P_{ij} = \frac{P_{j|i} + P_{i|j}}{N} = \frac{P_{j|i}}{N}+\frac{P_{i|j}}{N}$
+$P_{ij} = \frac{P_{j|i} + P_{i|j}}{2N} = \frac{P_{j|i}}{N}+\frac{P_{i|j}}{N}$
 
-
-where $P_{ij}$ is the probability, serving as a similarity measure between $x_{i}$ and $x_j$.
+where $P_{ij}$ is the probability, serving as a similarity measure between $x_{i}$ and $x_j$ and $N$ is the number of datapoints in $X$.
 
 We use both probabilities, $P_{j|i}$ and $P_{i|j}$ to symmetrically consider the probability as a hole. Given that $x_i$ and $x_j$ are different datapoints in an $\mathbb{R}^n$ vector space, their position would account for different probabilities.
 
-We want to get both of their probabilities, to then comptue a more overarching view of the true probability, $P_{ij}$
+We want to get both of their probabilities, to then compute a more overarching view of the similarity measure, $P_{ij}$
 
 [^1]: [[Curse of Dimensionality]]
