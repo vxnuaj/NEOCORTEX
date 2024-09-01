@@ -7,9 +7,11 @@ A challenge to mechanistic interpretability is overcoming the *[[Curse of Dimens
 Some solutions are:
 
 - Study smaller sized neural networks
-- Focus on the [[Saliency Maps]]
+- Focus on the [[Saliency Maps]], around a specific point of interest
 
+And ultimately, examining a neural network as it learns and builds it's complex function isn't as feasible as understanding and studying the parameters themselves. 
 
+Once trained, the parameters are what determine how a model works, through and through.
 
 
 
