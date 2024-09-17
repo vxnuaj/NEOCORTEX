@@ -12,4 +12,6 @@ prior to getting to the visual cortex, the electrical signals are sent to thalam
 
 more specifically, visual information is sent to the lateral geniculate nucleus (LGN) to process the visual information.
 
-the LGN processes information such as the contrast and brightne
+the LGN processes information such as the contrast and brightness, distinguishes colors, and spatial and temporal frequencies of the electrical signals.
+
+the LGN sends the processed electrical signals once more through sets of axon, which are contained in fibers called optic radiations. they directly connect the LGN to the visual cortex.
