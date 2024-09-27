@@ -35,6 +35,24 @@ The processing as we go forward becomes more abstracted and integrated, we have 
 
 The visual cortex also performs 'pooling', as as the simple cells and their multiple smaller receptive fields transfer information to the more complex cells and their larger receptive fields, the complex cells aggregate the activity from the simple cells through pooling. Essentially, the pooling allows for complex cells to have spatial invariance in their repsonse. Despite simple cells activating at different locations, the complex cells activated in similar regions due to the pooling mechanism
 
+The pooling mechanism is similar to how neural networks work, as a dot product of weights with the input:
+
+$O_{complex} = \sum_{i=1}^{N} w_i \cdot O_{simple, i}$
+
+where $O_i$ is the output of the previous simple cell and $w_i$ are the connections between the simple cells and the current complex cell.
+
+This can be seen as more of an aggregation but performs a similar 'pooling' mechanism, where it reduces the dimensionality of the input, as it's translated to an output of the complex cell.
+
+**Simple Cells**
+
+Have a spatial sensitivity, tried strongly to the location of the given stimulus. Not shift invariant
+
+**Complex Cells**
+
+Receive inputs to from multiple simple cells, and "pool" together the inputs, to form a singular output. Over multiple layers of the visual cortex, the receptive fields become shift invariant, being able to similarly respond to a stimulus without regard to the spatial position, up to a certian range.
+
+
+
 
 **Huber and Wiesel Experiment**
 
@@ -44,7 +62,7 @@ From this the peeps were able to derive how the visual cortex of a cat works
 
 **CNNs**
 
-1980,  Neocognitron was built by Kinihiko Fukushima, designed based on the current knoweldge about the biologicla visual system. Of course, LeCunn et al formulated this into the development of CNNs, to learn via backpropagation.
+1980,  Neocognitron was built by Kinihiko Fukushima, designed based on the current knoweldge about the biologicla visual system. Of course, LeCunn et al formulated this into the development of CNNs, to learn via backpropagation, to classify hand written digits, primarily the famous MNIST digits.
 
 
 ---
