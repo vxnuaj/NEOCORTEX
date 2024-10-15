@@ -43,3 +43,6 @@ $\frac{∂J}{∂Z_1} = (\frac{∂J}{∂A_2})(\frac{∂A_2}{∂Z_2})(\frac{∂Z_2
 $\frac{∂J}{∂W_1} = \frac{1}{m}(\frac{∂J}{∂Z_1})(\frac{∂Z_1}{∂W_1}) = \frac{1}{m}\frac{∂J}{∂Z_1}X^T$
 
 $\frac{∂J}{∂B_1} = \frac{1}{m}\sum_{i=1}^{m}(\frac{∂J}{∂Z_1})(\frac{∂Z_1}{∂B_1}) = \frac{1}{m}\sum_{i=1}^{m}W_2 \frac{∂J}{∂Z_2} * \frac{∂J}{∂A_1} = \frac{1}{m}\sum_{i=1}^{m}\frac{∂J}{∂Z_1}$
+
+
+$50, 32 \cdot 32, 10 => 50, 10$ holy shit
